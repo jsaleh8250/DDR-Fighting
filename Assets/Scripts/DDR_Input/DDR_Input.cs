@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class DDR_Input : MonoBehaviour
 {
-    private void Start()
-    {
-
-    }
-
     private void Update()
     {
 

@@ -300,7 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultImage: {fileID: -882840908, guid: 12e91c81c7102e246864aabffd0ba0fb, type: 3}
   pressedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  keyToPress: 276
+  keyToPress: 350
 --- !u!212 &296079191
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultImage: {fileID: -1028085798, guid: 12e91c81c7102e246864aabffd0ba0fb, type: 3}
   pressedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  keyToPress: 274
+  keyToPress: 351
 --- !u!212 &396292310
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 477772709}
   - component: {fileID: 477772710}
   m_Layer: 7
-  m_Name: Up Arrow
+  m_Name: Top
   m_TagString: Active
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultImage: {fileID: -1800356435, guid: 12e91c81c7102e246864aabffd0ba0fb, type: 3}
   pressedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  keyToPress: 273
+  keyToPress: 352
 --- !u!212 &477772707
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -843,10 +843,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1024, y: 768}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1172,10 +1172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1903,7 +1903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultImage: {fileID: 1080565178, guid: 12e91c81c7102e246864aabffd0ba0fb, type: 3}
   pressedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  keyToPress: 275
+  keyToPress: 353
 --- !u!212 &1654762242
 SpriteRenderer:
   m_ObjectHideFlags: 0
