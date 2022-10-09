@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyNote : MonoBehaviour
 {
-
+    public HealthBar healthBar;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Note")
@@ -12,6 +12,8 @@ public class DestroyNote : MonoBehaviour
             Destroy(collision.gameObject);
 
             StarBar.CurrentHealth =  StarBar.CurrentHealth - 10;
+            healthBar.Damage(.02f);
+
         }
     }
 }
