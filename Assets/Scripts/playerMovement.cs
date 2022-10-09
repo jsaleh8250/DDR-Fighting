@@ -4,17 +4,48 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    public float speed = 10f;
+    [SerializeField] private float horizontalSpeed = 10f;
+    [SerializeField] private float VerticalSpeed = 5f;
     private Rigidbody2D rb;
-    private float MoveDir;
+    private bool facingRight = true;
+    [SerializeField] float movementSmooth = 0.5f;
+    private Vector3 velocity = Vector3.zero;
+    private bool canMove = true;
+    public HealthBar healthBar;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    void Update()
+    public void Move(float horizMove, float vertMove)
     {
-        MoveDir = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(MoveDir * speed, rb.velocity.y);
+        if (canMove)
+        {
+            Vector3 targetVelocity = new Vector2(horizMove * horizontalSpeed, vertMove * VerticalSpeed);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmooth);
+
+           /* if(horizMove > 0 && !facingRight)
+            {
+                flip();
+            }else if(horizMove < 0 && facingRight)
+            {
+                flip();
+            }*/
+        }
+    }
+
+    /*private void flip()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(0, 180, 0);
+    } */
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            healthBar.Damage(0.002f);
+            Debug.Log("damage");
+        }
     }
 }
