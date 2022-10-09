@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SongManager : MonoBehaviour
 {
+    public Transform parent;
+
     //Song beats per minute
     public float bpm;
     //The number of seconds for each song beat
@@ -34,6 +37,7 @@ public class SongManager : MonoBehaviour
 
     //Spawn Note
     public List<GameObject> NotePrefab = new List<GameObject>();
+    public List<Transform> NoteTransform = new List<Transform>();
     public int randListObject;
 
     private void Awake()
@@ -70,6 +74,8 @@ public class SongManager : MonoBehaviour
     void InstantiateRandNote()
     {
         randListObject = Random.Range(0, NotePrefab.Count);
-        Instantiate(NotePrefab[randListObject], NotePrefab[randListObject].GetComponent<Transform>().position, Quaternion.identity);
+        GameObject note = Instantiate(NotePrefab[randListObject], NoteTransform[randListObject].position , Quaternion.identity);
+
+        note.transform.parent = parent.transform;
     }
 }

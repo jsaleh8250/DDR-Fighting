@@ -9,11 +9,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2082949482342456376, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
       propertyPath: canBePressed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7066645305365912457, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
       propertyPath: m_Name
       value: DDRPixelTest2 1_3 (1) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7066645305365912457, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
+      propertyPath: m_TagString
+      value: Note
       objectReference: {fileID: 0}
     - target: {fileID: 7066645305365912471, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
       propertyPath: m_RootOrder
