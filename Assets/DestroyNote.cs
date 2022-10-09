@@ -11,7 +11,7 @@ public class DestroyNote : MonoBehaviour
         {
             Destroy(collision.gameObject);
 
-            StarBar.CurrentHealth =  StarBar.CurrentHealth - 25;
+            StarBar.CurrentHealth =  StarBar.CurrentHealth - 10;
         }
     }
 }

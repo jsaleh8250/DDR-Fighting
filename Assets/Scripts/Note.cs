@@ -13,6 +13,7 @@ public class Note : MonoBehaviour
             if (canBePressed)
             {
                 gameObject.SetActive(false);
+                StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
             }
         }
     }
