@@ -22,4 +22,6 @@ public class PlayerInput : MonoBehaviour
     {
         playermove.Move(horizontalMove, verticalMove);
     }
+
+    
 }

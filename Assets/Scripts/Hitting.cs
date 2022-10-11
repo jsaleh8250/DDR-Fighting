@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class Hitting : MonoBehaviour
 {
-   
-
-    void Update()
+    private Note canBePressed;
+    void Start()
     {
-       
+        canBePressed = GetComponent<Note>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var enemy = collision.collider.GetComponent<Enemy>();
-        if (enemy)
+        if (canBePressed == true)
         {
-            enemy.TakeDamage(1);
-            Debug.Log("EnemyDamage");
+            var enemy = collision.collider.GetComponent<Enemy>();
+            if (enemy)
+            {
+                enemy.TakeDamage(1);
+                Debug.Log("EnemyDamage");
+            }
         }
     }
 }
