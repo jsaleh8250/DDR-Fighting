@@ -14,6 +14,7 @@ public class Note : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
+               // GetComponent<Hitting>().enabled = true;
             }
         }
     }
