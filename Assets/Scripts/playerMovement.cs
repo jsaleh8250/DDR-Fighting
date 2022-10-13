@@ -44,7 +44,7 @@ public class playerMovement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            healthBar.Damage(0.002f);
+            healthBar.Damage(0.02f);
             Debug.Log("damage");
         }
     }
