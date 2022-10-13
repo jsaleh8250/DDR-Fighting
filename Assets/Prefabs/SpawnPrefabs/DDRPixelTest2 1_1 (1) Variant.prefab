@@ -19,6 +19,26 @@ PrefabInstance:
       propertyPath: canBePressed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 648367995582753833, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648367995582753833, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.6410257
+      objectReference: {fileID: 0}
+    - target: {fileID: 648367995582753833, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.6410257
+      objectReference: {fileID: 0}
+    - target: {fileID: 648367995582753834, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1480734061, guid: c25cb5e73ce6b724e8f37b07e063e736, type: 3}
+    - target: {fileID: 648367995582753834, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 648367995582753835, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
       propertyPath: m_RootOrder
       value: 0

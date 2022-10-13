@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: canBePressed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748215145229546076, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748215145229546076, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.6410257
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748215145229546076, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.6410257
+      objectReference: {fileID: 0}
     - target: {fileID: 7066645305365912457, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
       propertyPath: m_Name
       value: DDRPixelTest2 1_3 (1) Variant
@@ -18,6 +30,14 @@ PrefabInstance:
     - target: {fileID: 7066645305365912457, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
       propertyPath: m_TagString
       value: Note
+      objectReference: {fileID: 0}
+    - target: {fileID: 7066645305365912470, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -552939763, guid: c25cb5e73ce6b724e8f37b07e063e736, type: 3}
+    - target: {fileID: 7066645305365912470, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7066645305365912471, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
       propertyPath: m_RootOrder

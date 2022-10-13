@@ -59,6 +59,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1171497342558925537, guid: ca33d425bbb530244baf62c4003ec3d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2096343883, guid: c25cb5e73ce6b724e8f37b07e063e736, type: 3}
+    - target: {fileID: 1171497342558925537, guid: ca33d425bbb530244baf62c4003ec3d4, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171497342558925538, guid: ca33d425bbb530244baf62c4003ec3d4, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171497342558925538, guid: ca33d425bbb530244baf62c4003ec3d4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.6410257
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171497342558925538, guid: ca33d425bbb530244baf62c4003ec3d4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.6410257
+      objectReference: {fileID: 0}
     - target: {fileID: 1171497342558925539, guid: ca33d425bbb530244baf62c4003ec3d4, type: 3}
       propertyPath: canBePressed
       value: 0

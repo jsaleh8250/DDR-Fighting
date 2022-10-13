@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 12e91c81c7102e246864aabffd0ba0fb
+guid: 8eef0275c4b72ff4e8f339142a3b87ac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,11 +63,12 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -116,85 +117,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DDRPixelTest2_0
+      name: DDRarrowst_0
       rect:
         serializedVersion: 2
-        x: 261
-        y: 7
-        width: 130
-        height: 128
-      alignment: 9
+        x: 0
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd0ae3bf34b4cd1409e60197830eca2c
-      internalID: -882840908
+      spriteID: edde5d5df3201b443bc5e45256882b98
+      internalID: -1526095749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDRPixelTest2_1
+      name: DDRarrowst_1
       rect:
         serializedVersion: 2
-        x: 390
-        y: 7
-        width: 130
-        height: 128
-      alignment: 9
+        x: 32
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8c6bf6d46d2e3c4688c3fafcd0ed307
-      internalID: -1028085798
+      spriteID: 4c0f15b6dea6d804e8f92cbf2c7ea2e4
+      internalID: 1184594829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDRPixelTest2_2
+      name: DDRarrowst_2
       rect:
         serializedVersion: 2
-        x: 518
-        y: 9
-        width: 130
-        height: 128
-      alignment: 9
+        x: 64
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbc1b27707b7bc4479b8a9617f4147aa
-      internalID: -1800356435
+      spriteID: 80e43cc80729d004f980019a870329dc
+      internalID: 340323203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDRPixelTest2_3
+      name: DDRarrowst_3
       rect:
         serializedVersion: 2
-        x: 647
-        y: 9
-        width: 130
-        height: 128
-      alignment: 9
+        x: 96
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0be6736e2f35b564d99ddc761e78353a
-      internalID: 1080565178
+      spriteID: 25ca5609d65d3dd439a44247a352da64
+      internalID: -2010288686
       vertices: []
       indices: 
       edges: []
@@ -210,10 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DDRPixelTest2_2: -1800356435
-      DDRPixelTest2_1: -1028085798
-      DDRPixelTest2_3: 1080565178
-      DDRPixelTest2_0: -882840908
+      DDRarrowst_1: 1184594829
+      DDRarrowst_2: 340323203
+      DDRarrowst_3: -2010288686
+      DDRarrowst_0: -1526095749
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
