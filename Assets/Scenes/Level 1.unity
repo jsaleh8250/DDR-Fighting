@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d93f81ae708eae46ac7417d7d2226a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: -882840908, guid: 12e91c81c7102e246864aabffd0ba0fb, type: 3}
+  defaultImage: {fileID: -1526095749, guid: 8eef0275c4b72ff4e8f339142a3b87ac, type: 3}
   pressedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   keyToPress: 350
 --- !u!212 &296079191
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d93f81ae708eae46ac7417d7d2226a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: -1028085798, guid: 12e91c81c7102e246864aabffd0ba0fb, type: 3}
+  defaultImage: {fileID: 1184594829, guid: 8eef0275c4b72ff4e8f339142a3b87ac, type: 3}
   pressedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   keyToPress: 351
 --- !u!212 &396292310
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d93f81ae708eae46ac7417d7d2226a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: -1800356435, guid: 12e91c81c7102e246864aabffd0ba0fb, type: 3}
+  defaultImage: {fileID: 340323203, guid: 8eef0275c4b72ff4e8f339142a3b87ac, type: 3}
   pressedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   keyToPress: 352
 --- !u!212 &477772707
@@ -1317,7 +1317,6 @@ GameObject:
   - component: {fileID: 1467240009}
   - component: {fileID: 1467240008}
   - component: {fileID: 1467240013}
-  - component: {fileID: 1467240014}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -1453,6 +1452,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 519420032}
+  - {fileID: 1579298480}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1469,18 +1469,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playermove: {fileID: 1467240010}
---- !u!114 &1467240014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1467240007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cc98ed9f382b1f4ba10f675bed5d65d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1486681371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,6 +1843,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14dffa2944d4284ab019b0e0e4a4554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1579298478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1579298480}
+  - component: {fileID: 1579298479}
+  - component: {fileID: 1579298481}
+  m_Layer: 0
+  m_Name: HitBox
+  m_TagString: HitBox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1579298479
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579298478}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1579298480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579298478}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.21, y: -0.01, z: -3.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1467240012}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1579298481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579298478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc98ed9f382b1f4ba10f675bed5d65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 0
 --- !u!1 &1654762240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,7 +1947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d93f81ae708eae46ac7417d7d2226a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: 1080565178, guid: 12e91c81c7102e246864aabffd0ba0fb, type: 3}
+  defaultImage: {fileID: -2010288686, guid: 8eef0275c4b72ff4e8f339142a3b87ac, type: 3}
   pressedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   keyToPress: 353
 --- !u!212 &1654762242

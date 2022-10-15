@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-    public bool canBePressed;
+    public bool canBePressed; 
+    public bool hit;
     public KeyCode keyToPress;
+    private Hitting hitting;
+
+    private void Start()
+    {
+        hitting = GetComponent<Hitting>();
+    }
     void Update()
     {
         if (Input.GetKeyDown(keyToPress))
@@ -16,6 +23,10 @@ public class Note : MonoBehaviour
                 StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
                 
             }
+            if (hit)
+            {
+                hitting.attack = true;
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,6 +34,7 @@ public class Note : MonoBehaviour
         if(collision.tag == "Active")
         {
             canBePressed = true;
+            hit = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -30,6 +42,7 @@ public class Note : MonoBehaviour
         if (collision.tag == "Active")
         {
             canBePressed = false;
+            hit = false;
         }
     }
 }

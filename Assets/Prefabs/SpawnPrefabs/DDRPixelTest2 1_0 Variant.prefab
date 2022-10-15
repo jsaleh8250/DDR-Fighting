@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5760222210651593956, guid: 8dd99484fac37d64da8591c0a8132118, type: 3}
+      propertyPath: keyToPress
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760222210651593956, guid: 8dd99484fac37d64da8591c0a8132118, type: 3}
       propertyPath: canBePressed
       value: 0
       objectReference: {fileID: 0}

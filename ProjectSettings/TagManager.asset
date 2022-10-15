@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Note
   - Delete
+  - HitBox
   layers:
   - Default
   - TransparentFX

@@ -80,6 +80,10 @@ PrefabInstance:
       value: 1.6410257
       objectReference: {fileID: 0}
     - target: {fileID: 1171497342558925539, guid: ca33d425bbb530244baf62c4003ec3d4, type: 3}
+      propertyPath: keyToPress
+      value: 352
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171497342558925539, guid: ca33d425bbb530244baf62c4003ec3d4, type: 3}
       propertyPath: canBePressed
       value: 0
       objectReference: {fileID: 0}

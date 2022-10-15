@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public float Hitpoints;
     public float MaxHitpoints = 5f;
     public EnemyHealthBar Healthbar;
+    Note canBePressed;
     void Start()
     {
         Hitpoints = MaxHitpoints;
@@ -22,4 +23,13 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "HitBox")
+        {
+            TakeDamage(1);
+            Debug.Log("EnemyDamage");
+        }
+    }
+   
 }
