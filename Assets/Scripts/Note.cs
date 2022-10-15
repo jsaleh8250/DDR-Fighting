@@ -4,28 +4,23 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-    public bool canBePressed; 
+    public bool canBePressed;
     public bool hit;
     public KeyCode keyToPress;
-    private Hitting hitting;
+    public static bool isPressed;
 
-    private void Start()
-    {
-        hitting = GetComponent<Hitting>();
-    }
     void Update()
     {
         if (Input.GetKeyDown(keyToPress))
         {
             if (canBePressed)
             {
-                gameObject.SetActive(false);
                 StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
-                
-            }
-            if (hit)
-            {
-                hitting.attack = true;
+                isPressed = true;
+                Debug.Log("Key Pressed");
+                Debug.Log(isPressed);
+                Destroy(gameObject);
+
             }
         }
     }
