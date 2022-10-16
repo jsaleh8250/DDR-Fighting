@@ -16,6 +16,16 @@ public class Enemy : MonoBehaviour
         Healthbar.SetHealth(Hitpoints, MaxHitpoints);
     }
 
+    private void Update()
+    {
+        if(damageRange && GameManager.isPressed)
+            {
+                TakeDamage(5);
+                Debug.Log("Enemy Damaged");
+                Debug.Log(GameManager.isPressed);
+            }
+    }
+
     public void TakeDamage(float damage)
     {
         Hitpoints -= damage;
@@ -34,19 +44,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(UnityEngine.Collider2D collision)
+    public void OnTriggerStay2D(UnityEngine.Collider2D collision)
     {
         if (collision.tag == "HitBox")
         {
             damageRange = true;
 
-            if (Note.isPressed)
-            {
-                TakeDamage(5);
-                Debug.Log("Enemy Damaged");
-                Debug.Log(Note.isPressed);
-                Note.isPressed = false;
-            }
         }
     }
 

@@ -15,11 +15,34 @@ public class ScoreHandler : MonoBehaviour
 
     public static int currentMultiplier = 0;
     public static int multiplierTracker;
-    int[] multiplierThresholds;
+    public int[] multiplierThresholds;
 
     private void Awake()
     {
         currentMultiplier = 1;
+    }
+
+    public void Update()
+    {
+        //Debug.Log(Note.isPressed);
+        if (GameManager.isPressed)
+        {
+            if (Mathf.Abs(GameObject.FindWithTag("Note").transform.position.y) > 2.6f)
+            {
+                NormalHit();
+                //Debug.Log("Normal Hit");
+            }
+            else if (Mathf.Abs(GameObject.FindWithTag("Note").transform.position.y) > 2.7f)
+            {
+                GoodHit();
+                Debug.Log("Good Hit");
+            }
+            else if (Mathf.Abs(GameObject.FindWithTag("Note").transform.position.y) >= 2.8f)
+            {
+                PerfectHit();
+                Debug.Log("Perfect Hit");
+            }
+        }
     }
 
     public void NoteHit()
