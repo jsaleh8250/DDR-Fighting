@@ -17,6 +17,8 @@ public class ScoreHandler : MonoBehaviour
     public static int multiplierTracker;
     public int[] multiplierThresholds;
 
+    public static bool missedNote = false;
+
     private void Awake()
     {
         currentMultiplier = 1;
@@ -27,22 +29,33 @@ public class ScoreHandler : MonoBehaviour
         //Debug.Log(Note.isPressed);
         if (GameManager.isPressed)
         {
-            if (Mathf.Abs(GameObject.FindWithTag("Note").transform.position.y) > 2.6f)
-            {
-                NormalHit();
-                //Debug.Log("Normal Hit");
-            }
-            else if (Mathf.Abs(GameObject.FindWithTag("Note").transform.position.y) > 2.7f)
-            {
-                GoodHit();
-                Debug.Log("Good Hit");
-            }
-            else if (Mathf.Abs(GameObject.FindWithTag("Note").transform.position.y) >= 2.8f)
+            NormalHit();
+
+            /*
+            if (GameObject.FindWithTag("Note").transform.position.y <= 1.7f)
             {
                 PerfectHit();
                 Debug.Log("Perfect Hit");
             }
+            else if (GameObject.FindWithTag("Note").transform.position.y < 1.6f)
+            {
+                GoodHit();
+                Debug.Log("Good Hit");
+            }
+            else if (GameObject.FindWithTag("Note").transform.position.y < 1.5f)
+            {
+                NormalHit();
+                Debug.Log("Normal Hit");
+            }
+            */
         }
+
+        if (missedNote)
+        {
+            NoteMissed();
+        }
+
+        //Debug.Log(GameObject.FindWithTag("Note").transform.position.y);
     }
 
     public void NoteHit()
@@ -80,5 +93,15 @@ public class ScoreHandler : MonoBehaviour
     {
         currentScore += ScorePerPerfectNote * currentMultiplier;
         NoteHit();
+    }
+
+    public void NoteMissed()
+    {
+        currentMultiplier = 1;
+        multiplierTracker = 0;
+
+        MultiText.SetText("Multiplier: x" + currentMultiplier);
+
+        missedNote = false;
     }
 }

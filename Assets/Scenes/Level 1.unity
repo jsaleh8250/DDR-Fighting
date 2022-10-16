@@ -3859,7 +3859,7 @@ GameObject:
   - component: {fileID: 1064718275764685796}
   m_Layer: 7
   m_Name: LEFTSPAWN
-  m_TagString: Note
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3891,7 +3891,7 @@ GameObject:
   - component: {fileID: 4581405874365479578}
   m_Layer: 7
   m_Name: RIGHTSPAWN
-  m_TagString: Note
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3975,7 +3975,7 @@ GameObject:
   - component: {fileID: 4624885781229695305}
   m_Layer: 7
   m_Name: DOWNSPAWN
-  m_TagString: Note
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4126,7 +4126,7 @@ GameObject:
   - component: {fileID: 4674599226948855233}
   m_Layer: 7
   m_Name: UPSPAWN
-  m_TagString: Note
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
