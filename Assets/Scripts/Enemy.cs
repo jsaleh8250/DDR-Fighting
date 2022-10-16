@@ -10,6 +10,11 @@ public class Enemy : MonoBehaviour
 
     public bool damageRange;
 
+
+    public Transform player;
+    public float speed;
+    private float distance;
+
     void Start()
     {
         Hitpoints = MaxHitpoints;
@@ -18,7 +23,13 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if(damageRange && GameManager.isPressed)
+        distance = Vector2.Distance(transform.position, player.transform.position);
+        Vector2 direction = player.transform.position - transform.position;
+        direction.Normalize();
+
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), speed * Time.deltaTime);
+
+        if (damageRange && GameManager.isPressed)
             {
                 TakeDamage(5);
                 Debug.Log("Enemy Damaged");

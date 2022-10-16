@@ -1547,6 +1547,8 @@ MonoBehaviour:
   MaxHitpoints: 5
   Healthbar: {fileID: 1040625143}
   damageRange: 0
+  player: {fileID: 1467240012}
+  speed: 1
 --- !u!61 &1038430384
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3494,6 +3496,8 @@ MonoBehaviour:
   MaxHitpoints: 5
   Healthbar: {fileID: 491474907}
   damageRange: 0
+  player: {fileID: 1467240012}
+  speed: 1
 --- !u!1 &2101331577
 GameObject:
   m_ObjectHideFlags: 0
