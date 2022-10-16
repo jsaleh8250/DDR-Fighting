@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Note : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Note : MonoBehaviour
     public bool hit;
     public KeyCode keyToPress;
     public static bool isPressed;
+
 
     void Update()
     {
@@ -19,11 +21,18 @@ public class Note : MonoBehaviour
                 isPressed = true;
                 Debug.Log("Key Pressed");
                 Debug.Log(isPressed);
+
+                if (transform.position.y > 3.1)
+                {
+
+                }
+
                 Destroy(gameObject);
 
             }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Active")

@@ -12,6 +12,8 @@ public class DestroyNote : MonoBehaviour
             Destroy(collision.gameObject);
 
             StarBar.CurrentHealth =  StarBar.CurrentHealth - 10;
+            ScoreHandler.currentMultiplier = 1;
+            ScoreHandler.multiplierTracker = 0;
             healthBar.Damage(.02f);
 
         }
