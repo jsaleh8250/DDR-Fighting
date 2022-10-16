@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public Transform player;
     public float speed;
     private float distance;
+    public float stoppingDis;
 
     void Start()
     {
@@ -22,13 +23,15 @@ public class Enemy : MonoBehaviour
     }
 
     private void Update()
-    {
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.position - transform.position;
-        direction.Normalize();
-
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), speed * Time.deltaTime);
-
+    {       
+        
+           distance = Vector2.Distance(transform.position, player.transform.position);
+            Vector2 direction = player.transform.position - transform.position;
+            direction.Normalize();
+        if (Vector2.Distance(transform.position, player.position) > stoppingDis)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), speed * Time.deltaTime);
+        }
         if (damageRange && GameManager.isPressed)
             {
                 TakeDamage(5);
