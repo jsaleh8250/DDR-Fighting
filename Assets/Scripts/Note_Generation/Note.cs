@@ -13,6 +13,7 @@ public class Note : MonoBehaviour
     {
         if (Input.GetKeyDown(keyToPress))
         {
+            Debug.Log("note: " + keyToPress);
             if (canBePressed)
             {
                 StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
