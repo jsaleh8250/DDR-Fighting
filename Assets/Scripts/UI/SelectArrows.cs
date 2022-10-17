@@ -8,9 +8,17 @@ public class SelectArrows : MonoBehaviour
     public Sprite defaultImage;
     public Sprite pressedImage;
     public KeyCode keyToPress;
+
+    public string buttonToPress;
+    string controllerString;
+
     void Start()
     {
         SR = GetComponent<SpriteRenderer>();
+
+        controllerString = "Joystick" + GameManager.DDR_PAD_NUM + buttonToPress;
+
+        keyToPress = (KeyCode)System.Enum.Parse(typeof(KeyCode), controllerString);
     }
 
     //The arrow will change sprites when pressed from orginal sprite to pressed sprite

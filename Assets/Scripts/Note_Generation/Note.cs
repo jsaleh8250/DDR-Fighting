@@ -7,7 +7,6 @@ public class Note : MonoBehaviour
 {
     public bool canBePressed;
 
-    public string controllerNum;
     public string buttonToPress;
     public KeyCode keyToPress;
 
@@ -38,11 +37,6 @@ public class Note : MonoBehaviour
         }
         
 
-    }
-
-    void AssignKeyPress()
-    {
-        string controllerNum = "JoyStick" + GameManager.DDR_PAD_NUM;
     }
 
     //If the note enters the Arrow area it can be pressed

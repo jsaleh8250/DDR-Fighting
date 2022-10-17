@@ -436,6 +436,7 @@ MonoBehaviour:
   defaultImage: {fileID: -1526095749, guid: 8eef0275c4b72ff4e8f339142a3b87ac, type: 3}
   pressedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   keyToPress: 350
+  buttonToPress: Button0
 --- !u!212 &296079191
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -714,6 +715,7 @@ MonoBehaviour:
   defaultImage: {fileID: 1184594829, guid: 8eef0275c4b72ff4e8f339142a3b87ac, type: 3}
   pressedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   keyToPress: 351
+  buttonToPress: Button1
 --- !u!212 &396292310
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -863,6 +865,7 @@ MonoBehaviour:
   defaultImage: {fileID: 340323203, guid: 8eef0275c4b72ff4e8f339142a3b87ac, type: 3}
   pressedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   keyToPress: 352
+  buttonToPress: Button2
 --- !u!212 &477772707
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2504,6 +2507,7 @@ MonoBehaviour:
   defaultImage: {fileID: -2010288686, guid: 8eef0275c4b72ff4e8f339142a3b87ac, type: 3}
   pressedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   keyToPress: 353
+  buttonToPress: Button3
 --- !u!212 &1654762242
 SpriteRenderer:
   m_ObjectHideFlags: 0
