@@ -13,7 +13,7 @@ public class SelectArrows : MonoBehaviour
         SR = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+    //The arrow will change sprites when pressed from orginal sprite to pressed sprite
     void Update()
     {
         if (Input.GetKeyDown(keyToPress))

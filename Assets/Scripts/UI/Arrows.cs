@@ -11,7 +11,7 @@ public class Arrows : MonoBehaviour
         beatTemp = beatTemp / 60f;
     }
 
-    // Update is called once per frame
+    //The notes will move up at the beat
     void Update()
     {
         if (!Started)

@@ -28,10 +28,13 @@ public class Enemy : MonoBehaviour
            distance = Vector2.Distance(transform.position, player.transform.position);
             Vector2 direction = player.transform.position - transform.position;
             direction.Normalize();
+        //If at a distance from player it will stop moving towards player
         if (Vector2.Distance(transform.position, player.position) > stoppingDis)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), speed * Time.deltaTime);
         }
+
+        //If in the damage range and arrow is pressed enemy will take damage
         if (damageRange && GameManager.isPressed)
             {
                 TakeDamage(5);
@@ -40,6 +43,7 @@ public class Enemy : MonoBehaviour
             }
     }
 
+    //If all the enemy health is gone it will be deleted
     public void TakeDamage(float damage)
     {
         Hitpoints -= damage;

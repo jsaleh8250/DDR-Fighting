@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Player movement to go Horizontal or vertical
 public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private playerMovement playermove;

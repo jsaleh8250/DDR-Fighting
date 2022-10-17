@@ -6,10 +6,9 @@ using TMPro;
 public class Note : MonoBehaviour
 {
     public bool canBePressed;
-    public bool hit;
     public KeyCode keyToPress;
 
-
+    //If pressed will give points to the starbar and gives access to enable attack
     void Update()
     {
         if (Input.GetKeyDown(keyToPress))
@@ -25,20 +24,21 @@ public class Note : MonoBehaviour
         }
     }
 
+    //If the note enters the Arrow area it can be pressed
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Active")
         {
             canBePressed = true;
-            hit = true;
         }
     }
+
+    //If the note isn't in the Arrow area it can not be pressed
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Active")
         {
             canBePressed = false;
-            hit = false;
         }
     }
 }

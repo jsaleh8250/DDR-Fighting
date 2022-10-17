@@ -5,6 +5,8 @@ using UnityEngine;
 public class HealthBar : MonoBehaviour
 {
     private RectTransform bar;
+
+    //Health bar for the player 
     void Start()
     {
         bar = GetComponent<RectTransform>();
@@ -12,6 +14,7 @@ public class HealthBar : MonoBehaviour
 
     }
 
+    //If player takes damage the health will decrease from the amount damaged but will not go negative
     public void Damage(float damage)
     {
         if ((Health.totalHealth -= damage)>= 0f)

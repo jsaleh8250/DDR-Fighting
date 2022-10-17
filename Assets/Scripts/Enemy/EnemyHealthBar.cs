@@ -10,9 +10,9 @@ public class EnemyHealthBar : MonoBehaviour
     public Color High;
     public Vector3 Offset;
 
+    //The health bar will activate when the enemy takes damage and is not at max health
     public void SetHealth(float health, float maxHealth)
     {
-       
         Slider.gameObject.SetActive(health < maxHealth); 
         Slider.value = health;
         Slider.maxValue = maxHealth;

@@ -20,6 +20,8 @@ public class playerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
     }
+
+    //Makes the player movement feel smooth and will flip the sprite to face in the correct direction
     public void Move(float horizMove, float vertMove)
     {
         if (canMove)
@@ -45,6 +47,7 @@ public class playerMovement : MonoBehaviour
         facingRight = !facingRight;
     } 
 
+    //If collides with Enemy player will take damage
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Enemy")
