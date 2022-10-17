@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     {
         Hitpoints = MaxHitpoints;
         Healthbar.SetHealth(Hitpoints, MaxHitpoints);
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void Update()
