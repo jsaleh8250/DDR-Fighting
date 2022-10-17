@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static bool isPressed = false;
 
+    public static int DDR_PAD_NUM;
+
     private void FixedUpdate()
     {
         isPressed = false;

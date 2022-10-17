@@ -6,14 +6,27 @@ using TMPro;
 public class Note : MonoBehaviour
 {
     public bool canBePressed;
+
+    public string controllerNum;
+    public string buttonToPress;
     public KeyCode keyToPress;
+
+    string controllerString;
+
+    private void Awake()
+    {
+        controllerString = "Joystick" + GameManager.DDR_PAD_NUM + buttonToPress;
+
+        keyToPress = (KeyCode)System.Enum.Parse(typeof(KeyCode), controllerString);
+    }
 
     //If pressed will give points to the starbar and gives access to enable attack
     void Update()
     {
+        
         if (Input.GetKeyDown(keyToPress))
         {
-            Debug.Log("note: " + keyToPress);
+            //Debug.Log("note: " + keyToPress);
             if (canBePressed)
             {
                 StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
@@ -23,6 +36,13 @@ public class Note : MonoBehaviour
             }
 
         }
+        
+
+    }
+
+    void AssignKeyPress()
+    {
+        string controllerNum = "JoyStick" + GameManager.DDR_PAD_NUM;
     }
 
     //If the note enters the Arrow area it can be pressed

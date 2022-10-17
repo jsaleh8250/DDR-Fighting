@@ -15,6 +15,14 @@ PrefabInstance:
       propertyPath: canBePressed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2082949482342456376, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
+      propertyPath: buttonToPress
+      value: Button3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2082949482342456376, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
+      propertyPath: controllerNum
+      value: Joystick
+      objectReference: {fileID: 0}
     - target: {fileID: 5748215145229546076, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0
