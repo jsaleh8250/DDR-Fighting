@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBePressed: 0
-  buttonToPress: Button0
+  buttonToPress: Button1
   keyToPress: 351
 --- !u!50 &2731422307153877003
 Rigidbody2D:
