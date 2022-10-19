@@ -8,7 +8,8 @@ public class playerMovement : MonoBehaviour
     [SerializeField] private float VerticalSpeed = 0f;
     private Rigidbody2D rb;
     private SpriteRenderer sp;
-   
+    private Animator animator;
+
     [SerializeField] float movementSmooth = 0.5f;
     private Vector3 velocity = Vector3.zero;
     private bool canMove = true;
@@ -19,6 +20,7 @@ public class playerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     //Makes the player movement feel smooth and will flip the sprite to face in the correct direction
@@ -41,6 +43,17 @@ public class playerMovement : MonoBehaviour
             }
         }
     }
+
+    public void Attack()
+    {
+        int randNum = Random.Range(1, 4);
+        animator.SetTrigger("atk" + randNum);
+
+        Debug.Log("ATTACK IS PRESSED: " + randNum);
+
+
+    }
+
 
     private void flip()
     {

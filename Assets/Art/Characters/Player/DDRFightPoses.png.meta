@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8eef0275c4b72ff4e8f339142a3b87ac
+guid: 76058e6ec2d93354f961e1df11a84b41
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -113,17 +113,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DDRarrowst_0
+      name: DDRFightPoses_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 32
-        height: 32
+        y: 0
+        width: 40
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edde5d5df3201b443bc5e45256882b98
-      internalID: -1526095749
+      spriteID: d461bd18762f644449764900ec4ede5f
+      internalID: 2036079476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDRarrowst_1
+      name: DDRFightPoses_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
-        width: 32
-        height: 32
+        x: 70
+        y: 12
+        width: 55
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c0f15b6dea6d804e8f92cbf2c7ea2e4
-      internalID: 1184594829
+      spriteID: 3a03b068ae4f2344996e4e87baf93fcb
+      internalID: 1315357883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDRarrowst_2
+      name: DDRFightPoses_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 16
-        width: 32
-        height: 32
+        x: 148
+        y: 15
+        width: 43
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80e43cc80729d004f980019a870329dc
-      internalID: 340323203
+      spriteID: e9483fe2640bfb84ea1dc1f8cea1b6d6
+      internalID: -960590598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDRarrowst_3
+      name: DDRFightPoses_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 16
-        width: 32
-        height: 32
+        x: 197
+        y: 12
+        width: 57
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,8 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25ca5609d65d3dd439a44247a352da64
-      internalID: -2010288686
+      spriteID: 7cde2f41ab904514db41b8d7f3f9941e
+      internalID: 513759599
       vertices: []
       indices: 
       edges: []
@@ -211,10 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DDRarrowst_1: 1184594829
-      DDRarrowst_2: 340323203
-      DDRarrowst_3: -2010288686
-      DDRarrowst_0: -1526095749
+      DDRFightPoses_2: -960590598
+      DDRFightPoses_3: 513759599
+      DDRFightPoses_0: 2036079476
+      DDRFightPoses_1: 1315357883
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

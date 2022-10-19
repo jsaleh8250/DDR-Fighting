@@ -77,8 +77,6 @@ public class SongManager : MonoBehaviour
 
     void InstantiateRandNote()
     {
-
-
         randListObject = Random.Range(0, NotePrefab.Length);
         GameObject note = Instantiate(NotePrefab[randListObject], NoteTransform[randListObject].position , Quaternion.identity);
         if (Random.value > percentChance)
