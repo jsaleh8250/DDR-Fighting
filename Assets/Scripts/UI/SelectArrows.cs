@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectArrows : MonoBehaviour
 {
-    private SpriteRenderer SR;
+    private Image SR;
     public Sprite defaultImage;
     public Sprite pressedImage;
     public KeyCode keyToPress;
@@ -14,7 +15,7 @@ public class SelectArrows : MonoBehaviour
 
     void Start()
     {
-        SR = GetComponent<SpriteRenderer>();
+        SR = GetComponent<Image>();
 
         controllerString = "Joystick" + GameManager.DDR_PAD_NUM + buttonToPress;
 

@@ -9,6 +9,7 @@ public class SongManager : MonoBehaviour
 
     //Song beats per minute
     public float bpm;
+    public static float bpmCurrentSong;
     //The number of seconds for each song beat
     public float spb;
     public float songPos;
@@ -48,6 +49,7 @@ public class SongManager : MonoBehaviour
     private void Start()
     {
         //musicSource = GetComponent<AudioSource>();
+        bpmCurrentSong = bpm;
         spb = 60f / bpm;
         dspSongTime = (float)AudioSettings.dspTime;
         musicSource.Play();

@@ -8,7 +8,12 @@ public class Arrows : MonoBehaviour
     public bool Started;
     void Start()
     {
-        beatTemp = beatTemp / 60f;
+        beatTemp = SongManager.bpmCurrentSong;
+
+        beatTemp = beatTemp;
+
+        Debug.Log(beatTemp);
+        Debug.Log(SongManager.bpmCurrentSong);
     }
 
     //The notes will move up at the beat
