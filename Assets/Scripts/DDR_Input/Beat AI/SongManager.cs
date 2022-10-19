@@ -36,9 +36,12 @@ public class SongManager : MonoBehaviour
     public static SongManager instance;
 
     //Spawn Note
-    public List<GameObject> NotePrefab = new List<GameObject>();
-    public List<Transform> NoteTransform = new List<Transform>();
+    public GameObject[] NotePrefab;
+    public Transform[] NoteTransform;
     public int randListObject;
+
+    //Chance
+    public float percentChance;
 
     private void Awake()
     {
@@ -69,13 +72,29 @@ public class SongManager : MonoBehaviour
         }
         loopPosInBeats = songPosInBeat - completedLoops * bpl;
 
+
     }
 
     void InstantiateRandNote()
     {
-        randListObject = Random.Range(0, NotePrefab.Count);
-        GameObject note = Instantiate(NotePrefab[randListObject], NoteTransform[randListObject].position , Quaternion.identity);
 
+
+        randListObject = Random.Range(0, NotePrefab.Length);
+        GameObject note = Instantiate(NotePrefab[randListObject], NoteTransform[randListObject].position , Quaternion.identity);
+        if (Random.value > percentChance)
+        {
+            int randSecondNote;
+            randSecondNote = Random.Range(0, NotePrefab.Length);
+
+            if (randSecondNote != randListObject)
+            {
+                GameObject secondnote = Instantiate(NotePrefab[randSecondNote], NoteTransform[randSecondNote].position, Quaternion.identity);
+
+                secondnote.transform.parent = parent.transform;
+            }
+        }
         note.transform.parent = parent.transform;
     }
+    
+
 }
