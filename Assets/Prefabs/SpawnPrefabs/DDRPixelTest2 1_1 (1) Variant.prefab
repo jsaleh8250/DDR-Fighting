@@ -32,6 +32,18 @@ PrefabInstance:
       value: Joystick
       objectReference: {fileID: 0}
     - target: {fileID: 648367995582753833, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 648367995582753833, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 648367995582753833, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 648367995582753833, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0
       objectReference: {fileID: 0}
@@ -65,11 +77,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 648367995582753835, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 648367995582753835, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 648367995582753835, guid: 91e1db02ba5a0fb409d48593aaa08775, type: 3}
       propertyPath: m_LocalPosition.z

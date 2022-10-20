@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public float MaxHitpoints = 5f;
     public EnemyHealthBar Healthbar;
 
-    public bool damageRange;
+    public static bool damageRange;
 
 
     public Transform player;
@@ -39,8 +39,7 @@ public class Enemy : MonoBehaviour
         if (damageRange && GameManager.isPressed)
             {
                 TakeDamage(5);
-                Debug.Log("Enemy Damaged");
-                Debug.Log(GameManager.isPressed);
+                //Debug.Log("Enemy Damaged");
             }
     }
 

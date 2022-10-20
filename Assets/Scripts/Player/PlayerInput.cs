@@ -19,13 +19,13 @@ public class PlayerInput : MonoBehaviour
         horizontalMove = Input.GetAxis("Horizontal");
         verticalMove = Input.GetAxis("Vertical");
 
-
         /*
         if (GameManager.isPressed)
         {
-            //StartCoroutine(timerAnim());
+            playermove.Attack();
         }
         */
+
     }
     private void FixedUpdate()
     {
@@ -33,9 +33,4 @@ public class PlayerInput : MonoBehaviour
 
     }
 
-    IEnumerator timerAnim()
-    {
-        playermove.Attack();
-        yield return new WaitForSeconds(1);
-    }
 }

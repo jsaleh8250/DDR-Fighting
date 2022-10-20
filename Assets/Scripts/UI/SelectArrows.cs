@@ -12,6 +12,8 @@ public class SelectArrows : MonoBehaviour
     public string buttonToPress;
     string controllerString;
 
+    bool canBePressed;
+
     void Start()
     {
         SR = GetComponent<SpriteRenderer>();
@@ -27,10 +29,12 @@ public class SelectArrows : MonoBehaviour
         if (Input.GetKeyDown(keyToPress))
         {
             SR.sprite = pressedImage;
+            
         }
         if (Input.GetKeyUp(keyToPress))
         {
             SR.sprite = defaultImage;
         }
     }
+
 }

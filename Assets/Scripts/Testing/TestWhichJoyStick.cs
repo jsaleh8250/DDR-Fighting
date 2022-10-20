@@ -11,11 +11,6 @@ public class TestWhichJoyStick : MonoBehaviour
     public GameObject DDRPadSelectScreen;
     public GameObject mainMenu;
 
-    //public static int ddrPadNumber;
-
-    //bool isControllerConnected = false;
-    //public string Controller = "";
-
     // Update is called once per frame
     void Update()
     {

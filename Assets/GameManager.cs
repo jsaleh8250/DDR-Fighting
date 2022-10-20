@@ -14,4 +14,12 @@ public class GameManager : MonoBehaviour
     {
         isPressed = false;
     }
+
+    private void Update()
+    {
+        if (isPressed)
+        {
+            Debug.Log("It's TRUE");
+        }
+    }
 }

@@ -28,14 +28,13 @@ public class Note : MonoBehaviour
             //Debug.Log("note: " + keyToPress);
             if (canBePressed)
             {
-                StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
                 GameManager.isPressed = true;
-                Debug.Log("Key Pressed");
+                StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
                 Destroy(gameObject);
             }
 
         }
-        
+
 
     }
 
