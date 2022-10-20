@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public float MaxHitpoints = 5f;
     public EnemyHealthBar Healthbar;
 
-    public static bool damageRange;
+    public bool damageRange;
 
 
     public Transform player;

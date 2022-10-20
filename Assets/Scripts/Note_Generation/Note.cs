@@ -31,6 +31,7 @@ public class Note : MonoBehaviour
                 GameManager.isPressed = true;
                 StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
                 Destroy(gameObject);
+
             }
 
         }

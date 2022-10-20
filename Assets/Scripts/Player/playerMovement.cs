@@ -49,7 +49,7 @@ public class playerMovement : MonoBehaviour
         int randNum = Random.Range(1, 4);
         animator.SetTrigger("atk" + randNum);
 
-        //Debug.Log("ATTACK IS PRESSED: " + randNum);
+        Debug.Log("ATTACK IS PRESSED: " + randNum);
 
 
     }
