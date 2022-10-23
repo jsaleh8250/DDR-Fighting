@@ -9,12 +9,29 @@ public class Enemy : MonoBehaviour
     public EnemyHealthBar Healthbar;
 
     public bool damageRange;
-
+    public bool canAttack = false;
+    public float enemyCooldown = 5f;
 
     public Transform player;
     public float speed;
     private float distance;
     public float stoppingDis;
+
+    //Advanced AI
+    //public EnemyState currentState;
+
+    // For Later for more advanced Enemy AI
+    /*
+    public enum EnemyState
+    {
+        initializing,
+        idle,
+        sawPlayer,
+        chasing,
+        attacking,
+        fleeing
+    }
+    */
 
     void Start()
     {
@@ -37,10 +54,17 @@ public class Enemy : MonoBehaviour
 
         //If in the damage range and arrow is pressed enemy will take damage
         if (damageRange && GameManager.isPressed)
-            {
+        {
                 TakeDamage(5);
                 //Debug.Log("Enemy Damaged");
-            }
+        }
+
+
+        if (damageRange && !canAttack)
+        {
+            StartCoroutine(AttackCooldown(enemyCooldown));
+            GameObject.Find("Health Bar Bar").GetComponent<HealthBar>().Damage(.05f);
+        }
     }
 
     //If all the enemy health is gone it will be deleted
@@ -61,7 +85,7 @@ public class Enemy : MonoBehaviour
             damageRange = false;
         }
     }
-
+    /*
     public void OnTriggerStay2D(UnityEngine.Collider2D collision)
     {
         if (collision.tag == "HitBox")
@@ -69,6 +93,22 @@ public class Enemy : MonoBehaviour
             damageRange = true;
 
         }
+    }
+    */
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "HitBox")
+        {
+            damageRange = true;
+
+        }
+    }
+
+    IEnumerator AttackCooldown(float coolDown)
+    {
+        canAttack = false;
+        yield return new WaitForSeconds(coolDown);
+        canAttack = true;
     }
 
 }
