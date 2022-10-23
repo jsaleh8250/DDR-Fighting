@@ -39,18 +39,18 @@ public class Note : MonoBehaviour
                 {
                     Debug.Log("Normal Hit");
                     ScoreHandler.instance.NormalHit();
-                    //Instantiate(normalEffect, transform.position, normalEffect.transform.rotation);
+                    Instantiate(normalEffect, transform.position, normalEffect.transform.rotation);
                 }else if(transform.position.y < 1.6f)
                 {
                     Debug.Log("Good Hit");
                     ScoreHandler.instance.GoodHit();
-                    //Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
+                    Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
                 }
                 else if(transform.position.y < 1.7f)
                 {
                     ScoreHandler.instance.PerfectHit();
                     Debug.Log("Perfect");
-                    //Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
+                    Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
                 }
 
             }
