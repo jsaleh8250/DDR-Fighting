@@ -8,13 +8,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2082949482342456376, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
+      propertyPath: goodEffect
+      value: 
+      objectReference: {fileID: 5403674524392725843, guid: 539a2ab9e5bf5b54a8dc87d332603254, type: 3}
+    - target: {fileID: 2082949482342456376, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
       propertyPath: keyToPress
       value: 353
       objectReference: {fileID: 0}
     - target: {fileID: 2082949482342456376, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
+      propertyPath: missEffect
+      value: 
+      objectReference: {fileID: 1742921960739223084, guid: 24de3792ee182a847b27ff838faf3204, type: 3}
+    - target: {fileID: 2082949482342456376, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
       propertyPath: canBePressed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2082949482342456376, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
+      propertyPath: normalEffect
+      value: 
+      objectReference: {fileID: 7231915196314396680, guid: 0e7c550d0332d6341999caee53d2133c, type: 3}
     - target: {fileID: 2082949482342456376, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
       propertyPath: buttonToPress
       value: Button3
@@ -23,6 +35,10 @@ PrefabInstance:
       propertyPath: controllerNum
       value: Joystick
       objectReference: {fileID: 0}
+    - target: {fileID: 2082949482342456376, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
+      propertyPath: perfectEffect
+      value: 
+      objectReference: {fileID: 515960964531892093, guid: aaefd7ae1783d0c47b411f7fa1d8413e, type: 3}
     - target: {fileID: 5748215145229546076, guid: 98c55619d5db858458289ba06f3b1df4, type: 3}
       propertyPath: m_Size.x
       value: 1.6

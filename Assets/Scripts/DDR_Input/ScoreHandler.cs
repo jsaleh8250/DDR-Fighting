@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ScoreHandler : MonoBehaviour
 {
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI MultiText;
+
+    public static ScoreHandler instance;
 
     int currentScore;
     int scorePerNote = 100;
@@ -21,7 +24,9 @@ public class ScoreHandler : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         currentMultiplier = 1;
+        ScoreText.text = "Score: 0";
     }
 
     public void Update()
@@ -31,23 +36,7 @@ public class ScoreHandler : MonoBehaviour
         {
             NormalHit();
 
-            /*
-            if (GameObject.FindWithTag("Note").transform.position.y <= 1.7f)
-            {
-                PerfectHit();
-                Debug.Log("Perfect Hit");
-            }
-            else if (GameObject.FindWithTag("Note").transform.position.y < 1.6f)
-            {
-                GoodHit();
-                Debug.Log("Good Hit");
-            }
-            else if (GameObject.FindWithTag("Note").transform.position.y < 1.5f)
-            {
-                NormalHit();
-                Debug.Log("Normal Hit");
-            }
-            */
+           
         }
 
         if (missedNote)
@@ -55,7 +44,7 @@ public class ScoreHandler : MonoBehaviour
             NoteMissed();
         }
 
-        //Debug.Log(GameObject.FindWithTag("Note").transform.position.y);
+       
     }
 
     public void NoteHit()
@@ -63,17 +52,14 @@ public class ScoreHandler : MonoBehaviour
         if (currentMultiplier - 1 < multiplierThresholds.Length)
         {
             multiplierTracker++;
-
             if (multiplierThresholds[currentMultiplier - 1] <= multiplierTracker)
             {
                 multiplierTracker = 0;
                 currentMultiplier++;
             }
         }
-
+        
         MultiText.SetText("Multiplier: x" + currentMultiplier);
-
-        //currentScore += scorePerNote * currentMultiplier;
         ScoreText.SetText("Score: " + currentScore);
     }
 

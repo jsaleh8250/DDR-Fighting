@@ -12,6 +12,8 @@ public class Note : MonoBehaviour
 
     string controllerString;
 
+    public GameObject missEffect, goodEffect, normalEffect, perfectEffect;
+
     private void Awake()
     {
         controllerString = "Joystick" + GameManager.DDR_PAD_NUM + buttonToPress;
@@ -31,6 +33,25 @@ public class Note : MonoBehaviour
                 GameManager.isPressed = true;
                 StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
                 Destroy(gameObject);
+
+                
+                if(transform.position.y < 1.5f)
+                {
+                    Debug.Log("Normal Hit");
+                    ScoreHandler.instance.NormalHit();
+                    //Instantiate(normalEffect, transform.position, normalEffect.transform.rotation);
+                }else if(transform.position.y < 1.6f)
+                {
+                    Debug.Log("Good Hit");
+                    ScoreHandler.instance.GoodHit();
+                    //Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
+                }
+                else if(transform.position.y < 1.7f)
+                {
+                    ScoreHandler.instance.PerfectHit();
+                    Debug.Log("Perfect");
+                    //Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
+                }
 
             }
 
@@ -54,6 +75,8 @@ public class Note : MonoBehaviour
         if (collision.tag == "Active")
         {
             canBePressed = false;
+            ScoreHandler.instance.NoteMissed();
+            //Instantiate(missEffect, transform.position, missEffect.transform.rotation);
         }
     }
 }

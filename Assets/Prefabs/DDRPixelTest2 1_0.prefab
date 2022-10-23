@@ -83,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 2.55, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5760222210651593956
@@ -99,7 +99,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBePressed: 0
+  buttonToPress: 
   keyToPress: 350
+  missEffect: {fileID: 1742921960739223084, guid: 24de3792ee182a847b27ff838faf3204, type: 3}
+  goodEffect: {fileID: 5403674524392725843, guid: 539a2ab9e5bf5b54a8dc87d332603254, type: 3}
+  normalEffect: {fileID: 7231915196314396680, guid: 0e7c550d0332d6341999caee53d2133c, type: 3}
+  perfectEffect: {fileID: 515960964531892093, guid: aaefd7ae1783d0c47b411f7fa1d8413e, type: 3}
 --- !u!61 &5760222210651593963
 BoxCollider2D:
   m_ObjectHideFlags: 0
