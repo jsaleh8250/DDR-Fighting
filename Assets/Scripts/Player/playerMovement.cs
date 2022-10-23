@@ -23,6 +23,7 @@ public class playerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+
     //Makes the player movement feel smooth and will flip the sprite to face in the correct direction
     public void Move(float horizMove, float vertMove)
     {
@@ -60,6 +61,7 @@ public class playerMovement : MonoBehaviour
         facingRight = !facingRight;
     } 
 
+    /*
     //If collides with Enemy player will take damage
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -69,4 +71,16 @@ public class playerMovement : MonoBehaviour
             Debug.Log("damage");
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            healthBar.Damage(.02f);
+            StartCoroutine(waitForAttack());
+            //play enemy attack anim
+        }
+    }
+    */
+
 }

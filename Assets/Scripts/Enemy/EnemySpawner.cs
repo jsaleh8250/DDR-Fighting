@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     private int waveNumber = 1;
 
     public float timeBetweenEnemySpawn;
-    public float timeBetweenWaves = 30f;
+    public float timeBetweenWaves;
 
     bool spawningWave;
 
