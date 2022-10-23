@@ -35,8 +35,7 @@ public class ScoreHandler : MonoBehaviour
         if (GameManager.isPressed)
         {
             NormalHit();
-
-           
+                       
         }
 
         if (missedNote)

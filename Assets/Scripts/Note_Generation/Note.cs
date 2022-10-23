@@ -35,18 +35,18 @@ public class Note : MonoBehaviour
                 Destroy(gameObject);
 
                 
-                if(transform.position.y < 1.5f)
+                if(transform.position.y < 1.6f)
                 {
                     Debug.Log("Normal Hit");
                     ScoreHandler.instance.NormalHit();
                     Instantiate(normalEffect, transform.position, normalEffect.transform.rotation);
-                }else if(transform.position.y < 1.6f)
+                }else if(transform.position.y < 1.7f)
                 {
                     Debug.Log("Good Hit");
                     ScoreHandler.instance.GoodHit();
                     Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
                 }
-                else if(transform.position.y < 1.7f)
+                else if(transform.position.y < 1.65f)
                 {
                     ScoreHandler.instance.PerfectHit();
                     Debug.Log("Perfect");

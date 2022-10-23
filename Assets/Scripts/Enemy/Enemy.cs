@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour
         if (damageRange && !canAttack)
         {
             StartCoroutine(AttackCooldown(enemyCooldown));
-            GameObject.Find("Health Bar Bar").GetComponent<HealthBar>().Damage(.05f);
+            GameObject.Find("HealthBar").GetComponent<HealthBar>().Damage(.05f);
         }
     }
 
