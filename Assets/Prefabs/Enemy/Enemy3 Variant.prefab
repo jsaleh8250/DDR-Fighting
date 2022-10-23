@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4214903543476556196, guid: 817d0072c31f8ee45878e69b1867c011, type: 3}
       propertyPath: m_Name
-      value: Enemy3
+      value: Enemy3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4214903543476556197, guid: 817d0072c31f8ee45878e69b1867c011, type: 3}
       propertyPath: m_Size.x
@@ -32,6 +32,10 @@ PrefabInstance:
       value: 0.0016960204
       objectReference: {fileID: 0}
     - target: {fileID: 4214903543476556197, guid: 817d0072c31f8ee45878e69b1867c011, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214903543476556197, guid: 817d0072c31f8ee45878e69b1867c011, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.39
       objectReference: {fileID: 0}
@@ -45,11 +49,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4214903543476556216, guid: 817d0072c31f8ee45878e69b1867c011, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.78
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4214903543476556216, guid: 817d0072c31f8ee45878e69b1867c011, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.81
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4214903543476556216, guid: 817d0072c31f8ee45878e69b1867c011, type: 3}
       propertyPath: m_LocalPosition.z

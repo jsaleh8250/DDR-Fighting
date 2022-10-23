@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         Hitpoints = MaxHitpoints;
-        Healthbar.SetHealth(Hitpoints, MaxHitpoints);
+        //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -77,6 +77,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    /*
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -85,7 +86,7 @@ public class Enemy : MonoBehaviour
             damageRange = false;
         }
     }
-    /*
+    */
     public void OnTriggerStay2D(UnityEngine.Collider2D collision)
     {
         if (collision.tag == "HitBox")
@@ -94,7 +95,7 @@ public class Enemy : MonoBehaviour
 
         }
     }
-    */
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "HitBox")
