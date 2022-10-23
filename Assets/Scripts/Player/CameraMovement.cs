@@ -14,5 +14,17 @@ public class CameraMovement : MonoBehaviour
     private void Update()
     {
         this.gameObject.transform.position = new Vector3(player.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+
+        if (transform.position.x >= 11f)
+        {
+            this.transform.position = new Vector3(11, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+        }
+
+        if (transform.position.x <= -5f)
+        {
+            this.transform.position = new Vector3(-5, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+        }
+
     }
+
 }
