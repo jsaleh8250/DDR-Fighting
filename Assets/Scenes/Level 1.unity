@@ -11696,7 +11696,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1944d2a6b53e62a4697fda26a12a4655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3861188296198556577, guid: b5c90db99be11834dbc905ca1324c5f6, type: 3}
+  enemyPrefab:
+  - {fileID: 4214903543476556196, guid: 817d0072c31f8ee45878e69b1867c011, type: 3}
+  - {fileID: 2290654205582887488, guid: fe200c8f23e917d4e9c62949c2e3a613, type: 3}
+  - {fileID: 3861188296198556577, guid: b5c90db99be11834dbc905ca1324c5f6, type: 3}
   timeBetweenEnemySpawn: 2
   timeBetweenWaves: 1
 --- !u!1 &1443313732
@@ -13434,6 +13437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy2
       objectReference: {fileID: 0}
+    - target: {fileID: 2290654205582887488, guid: fe200c8f23e917d4e9c62949c2e3a613, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2290654205582887489, guid: fe200c8f23e917d4e9c62949c2e3a613, type: 3}
       propertyPath: player
       value: 
@@ -13504,7 +13511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2290654205998009545, guid: fe200c8f23e917d4e9c62949c2e3a613, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe200c8f23e917d4e9c62949c2e3a613, type: 3}
@@ -13684,6 +13691,10 @@ PrefabInstance:
     - target: {fileID: 3861188296198556577, guid: b5c90db99be11834dbc905ca1324c5f6, type: 3}
       propertyPath: m_Name
       value: Enemy3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3861188296198556577, guid: b5c90db99be11834dbc905ca1324c5f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3861188296198556605, guid: b5c90db99be11834dbc905ca1324c5f6, type: 3}
       propertyPath: m_RootOrder

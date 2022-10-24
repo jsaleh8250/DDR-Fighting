@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefab;
     private int enemyCount;
     private int waveNumber = 1;
 
@@ -31,7 +31,8 @@ public class EnemySpawner : MonoBehaviour
 
         for (int i = 0; i < enemiesToSpawn; i++)
         {
-            Instantiate(enemyPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+            int randEnemy = Random.Range(0, enemyPrefab.Length);
+            Instantiate(enemyPrefab[randEnemy], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
             yield return new WaitForSeconds(timeBetweenEnemySpawn);
         }
 
