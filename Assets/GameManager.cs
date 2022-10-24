@@ -10,8 +10,21 @@ public class GameManager : MonoBehaviour
 
     public static int CONTROLLER_NUM;
 
-    private void Update()
+    public void Update()
     {
         isPressed = false;
+
+        if (isPressed == true)
+        {
+            Debug.Log(" PUBLIC Game Manager: " + isPressed);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (isPressed == true)
+        {
+            Debug.Log(" FIXED UPDATE Game Manager: " + isPressed);
+        }
     }
 }

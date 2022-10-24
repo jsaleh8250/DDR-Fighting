@@ -32,6 +32,8 @@ public class Note : MonoBehaviour
                 StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
                 Destroy(gameObject);
 
+                Debug.Log("NOTE SCRIPT: " + GameManager.isPressed);
+
             }
 
         }

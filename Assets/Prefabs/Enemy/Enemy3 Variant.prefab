@@ -91,6 +91,10 @@ PrefabInstance:
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4214903543476556217, guid: 817d0072c31f8ee45878e69b1867c011, type: 3}
+      propertyPath: stoppingDis
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4214903543476556219, guid: 817d0072c31f8ee45878e69b1867c011, type: 3}
       propertyPath: m_Sprite
       value: 

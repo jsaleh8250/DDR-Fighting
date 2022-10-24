@@ -17,7 +17,12 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxis("Horizontal");
-        verticalMove = Input.GetAxis("Vertical");        
+        verticalMove = Input.GetAxis("Vertical");
+
+        if (GameManager.isPressed)
+        {
+            playermove.Attack();
+        }
 
     }
     private void FixedUpdate()
