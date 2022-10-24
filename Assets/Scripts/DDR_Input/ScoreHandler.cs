@@ -16,7 +16,7 @@ public class ScoreHandler : MonoBehaviour
     int ScorePerGoodNote = 125;
     int ScorePerPerfectNote = 150;
 
-    public static int currentMultiplier = 0;
+    public static int currentMultiplier = 1;
     public static int multiplierTracker;
     public int[] multiplierThresholds;
 
