@@ -40,18 +40,22 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    private void Update()
-    {       
-        
+    public void Update()
+    {
+
            distance = Vector2.Distance(transform.position, player.transform.position);
             Vector2 direction = player.transform.position - transform.position;
             direction.Normalize();
+
+        //Debug.Log("Moving");
+
         //If at a distance from player it will stop moving towards player
         if (Vector2.Distance(transform.position, player.position) > stoppingDis)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), speed * Time.deltaTime);
-        }
 
+            //Debug.Log("Stopping");
+        }
         //If in the damage range and arrow is pressed enemy will take damage
         if (damageRange && GameManager.isPressed)
         {
@@ -63,7 +67,9 @@ public class Enemy : MonoBehaviour
         if (damageRange && !canAttack)
         {
             StartCoroutine(AttackCooldown(enemyCooldown));
-            GameObject.Find("HealthBar").GetComponent<HealthBar>().Damage(.05f);
+            GameObject.Find("Health Bar Bar").GetComponent<HealthBar>().Damage(.05f);
+
+            //Debug.Log("Damaging Player");
         }
     }
 

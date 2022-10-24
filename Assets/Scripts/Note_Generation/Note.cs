@@ -24,7 +24,7 @@ public class Note : MonoBehaviour
     //If pressed will give points to the starbar and gives access to enable attack
     void Update()
     {
-        
+
         if (Input.GetKeyDown(keyToPress))
         {
             //Debug.Log("note: " + keyToPress);
@@ -33,8 +33,9 @@ public class Note : MonoBehaviour
                 GameManager.isPressed = true;
                 StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
                 Destroy(gameObject);
+                Debug.Log("NOTE SCRIPT: " + GameManager.isPressed);
 
-                
+              
                 if(transform.position.y < 1.6f)
                 {
                     Debug.Log("Normal Hit");
