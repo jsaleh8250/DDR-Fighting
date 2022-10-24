@@ -14058,7 +14058,7 @@ MonoBehaviour:
   - {fileID: 4674599226948855232}
   - {fileID: 4581405874365479579}
   randListObject: 0
-  percentChance: 0.7
+  percentChance: 0.9
 --- !u!82 &1700941370
 AudioSource:
   m_ObjectHideFlags: 0
