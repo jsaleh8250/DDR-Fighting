@@ -7,7 +7,7 @@ public class StarBar : MonoBehaviour
 {
     public HealthBar healthBar;
     private Slider starHealth;
-    public static int CurrentHealth = 100;
+    public static int CurrentHealth = 0;
 
     private void Start()
     {

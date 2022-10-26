@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour
         if (damageRange && GameManager.isPressed)
         {
                 TakeDamage(5);
-                //Debug.Log("Enemy Damaged");
+                Debug.Log("Enemy Damaged" + Hitpoints);
         }
 
 
@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
             StartCoroutine(AttackCooldown(enemyCooldown));
             GameObject.Find("Health Bar Bar").GetComponent<HealthBar>().Damage(.05f);
 
-            //Debug.Log("Damaging Player");
+            Debug.Log("Damaging Player");
         }
     }
 
