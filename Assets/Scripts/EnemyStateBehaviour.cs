@@ -163,6 +163,13 @@ public class EnemyStateBehaviour : MonoBehaviour
     }
 
     //Enemy Sprite\\
+    void Flip()
+    {
+        isFacingPlayer = !isFacingPlayer;
+        Vector3 theScale = this.transform.localScale;
+        theScale.x *= -1;
+        this.transform.localScale = theScale;
+    }
     void PosFront()
     {
         enemySprite.transform.localScale.Equals(1);
@@ -175,14 +182,6 @@ public class EnemyStateBehaviour : MonoBehaviour
     void ChangeEnemySortingLayer()
     {
         enemySprite.sortingOrder = (int)(transform.position.y * -2);
-    }
-
-    void Flip()
-    {
-        isFacingPlayer = !isFacingPlayer;
-        Vector3 theScale = enemySprite.transform.localScale;
-        theScale.x *= -1;
-        enemySprite.transform.localScale = theScale;
     }
 
     void FaceThePlayer()

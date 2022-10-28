@@ -7,6 +7,8 @@ public class EnemyTesting : EnemyStateBehaviour
     CircleCollider2D circleCollider;
     GameObject closeEnemy;
 
+    public bool damageRange;
+
     private void Start()
     {
         circleCollider = GetComponent<CircleCollider2D>();
@@ -18,6 +20,11 @@ public class EnemyTesting : EnemyStateBehaviour
         base.Update();
 
         CheckForEnemies();
+
+        if (damageRange && GameManager.isPressed)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -27,6 +34,7 @@ public class EnemyTesting : EnemyStateBehaviour
         {
             CURRENT_STATE = EnemyState.chase;
             circleCollider.enabled = false;
+            damageRange = true;
         }
     }
 

@@ -17,22 +17,6 @@ public class Enemy : MonoBehaviour
     private float distance;
     public float stoppingDis;
 
-    //Advanced AI
-    //public EnemyState currentState;
-
-    // For Later for more advanced Enemy AI
-    /*
-    public enum EnemyState
-    {
-        initializing,
-        idle,
-        sawPlayer,
-        chasing,
-        attacking,
-        fleeing
-    }
-    */
-
     void Start()
     {
         Hitpoints = MaxHitpoints;
