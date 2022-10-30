@@ -32,6 +32,9 @@ public class playerMovement : MonoBehaviour
             Vector3 targetVelocity = new Vector2(horizMove * horizontalSpeed, vertMove * VerticalSpeed);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmooth);
 
+            animator.SetFloat("SpeedH", Mathf.Abs(horizMove)); 
+            animator.SetFloat("SpeedV", Mathf.Abs(vertMove));
+
             if(horizMove < 0 && !facingRight)
             {
                 flip();

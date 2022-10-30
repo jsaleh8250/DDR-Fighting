@@ -19,7 +19,7 @@ public class StarBar : MonoBehaviour
         starHealth.value = CurrentHealth;
         if(CurrentHealth == 0)
         {
-          healthBar.Damage(.05f);
+          healthBar.Damage(.01f);
         }
     }
 

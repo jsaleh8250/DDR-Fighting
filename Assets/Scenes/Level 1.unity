@@ -13299,7 +13299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75058646a0405474889ce237bcab6837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 10
+  horizontalSpeed: 5
   VerticalSpeed: 5
   movementSmooth: 0.05
   healthBar: {fileID: 1554861945}
@@ -13363,7 +13363,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467240007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.15, y: -2.73, z: 0}
+  m_LocalPosition: {x: -3.15, y: -2.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16025,6 +16025,7 @@ MonoBehaviour:
   speed: 2
   CURRENT_STATE: 0
   playerRef: {fileID: 0}
+  damageRange: 0
 --- !u!58 &5118506914665666899
 CircleCollider2D:
   m_ObjectHideFlags: 0
