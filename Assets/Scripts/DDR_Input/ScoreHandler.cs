@@ -16,7 +16,6 @@ public class ScoreHandler : MonoBehaviour
     int ScorePerGoodNote = 55;
     int ScorePerPerfectNote = 150;
 
-    public  int currentMultiplier;
     public int combo;
    
     public static bool missedNote = false;
@@ -83,10 +82,6 @@ public class ScoreHandler : MonoBehaviour
 
     public void NoteMissed()
     {
-        currentMultiplier = 1;
-        
-       MultiText.SetText("Multiplier: x" + currentMultiplier);
-
-        missedNote = false;
+       missedNote = false;
     }
 }

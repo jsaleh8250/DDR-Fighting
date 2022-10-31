@@ -14409,7 +14409,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 220735883}
   MultiText: {fileID: 2104186347}
-  currentMultiplier: 0
   combo: 0
 --- !u!1001 &1835525202
 PrefabInstance:
@@ -16027,6 +16026,7 @@ MonoBehaviour:
   CURRENT_STATE: 0
   playerRef: {fileID: 1467240007}
   damageRange: 0
+  facingRight: 0
 --- !u!58 &5118506914665666899
 CircleCollider2D:
   m_ObjectHideFlags: 0

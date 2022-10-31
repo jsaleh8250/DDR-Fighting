@@ -51,7 +51,7 @@ public class Note : MonoBehaviour
                     ScoreHandler.instance.GoodHit();
                     Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
                 }
-               if (transform.position.y == 2.55f)
+               if (transform.position.y == 1.5f)
                 {
                     ScoreHandler.instance.PerfectHit();
                     Debug.Log("Perfect");

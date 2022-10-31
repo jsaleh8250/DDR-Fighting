@@ -8,6 +8,7 @@ public class EnemyTesting : EnemyStateBehaviour
     GameObject closeEnemy;
 
     public bool damageRange;
+    public bool facingRight = false;
 
     private void Start()
     {
@@ -21,12 +22,24 @@ public class EnemyTesting : EnemyStateBehaviour
 
         CheckForEnemies();
 
+        if (playerRef.transform.position.x < gameObject.transform.position.x && facingRight)
+            Flip();
+        if (playerRef.transform.position.x > gameObject.transform.position.x && !facingRight)
+            Flip();
+
         if (damageRange && GameManager.isPressed)
         {
             Destroy(gameObject);
         }
     }
 
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector2 tmpScale = gameObject.transform.localScale;
+        tmpScale.x *= -1;
+        gameObject.transform.localScale = tmpScale;
+    }
     void OnTriggerEnter2D(Collider2D col)
 
     {
@@ -53,6 +66,7 @@ public class EnemyTesting : EnemyStateBehaviour
     void OnCollisionExit2D(Collision2D col)
     {
         CURRENT_STATE = EnemyState.chase;
+
     }
 
     void CheckForEnemies()
