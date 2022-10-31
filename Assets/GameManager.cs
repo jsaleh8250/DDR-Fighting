@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public static int CONTROLLER_NUM;
 
+
     public void Update()
     {
         isPressed = false;
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log(" PUBLIC Game Manager: " + isPressed);
         }
+
     }
 
     private void FixedUpdate()

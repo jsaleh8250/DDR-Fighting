@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Note : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Note : MonoBehaviour
     string controllerString;
 
     public GameObject missEffect, goodEffect, normalEffect, perfectEffect;
+
+    public static event Action<string> AttackButton = delegate { };
 
     private void Awake()
     {
@@ -32,6 +35,8 @@ public class Note : MonoBehaviour
                 GameManager.isPressed = true;
                 StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
                 Destroy(gameObject);
+
+                AttackButton.Invoke(buttonToPress);
                 Debug.Log("NOTE SCRIPT: " + GameManager.isPressed);
 
               

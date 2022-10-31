@@ -23,6 +23,17 @@ public class playerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    void OnDisable()
+    {
+        Note.AttackButton -= Attack;
+    }
+
+    void OnEnable()
+    {
+        Note.AttackButton += Attack;
+    }
+
+
 
     //Makes the player movement feel smooth and will flip the sprite to face in the correct direction
     public void Move(float horizMove, float vertMove)
@@ -48,7 +59,7 @@ public class playerMovement : MonoBehaviour
         }
     }
 
-    public void Attack()
+    public void Attack(string buttonToPress)
     {
        int randNum = Random.Range(1, 3);
         animator.SetTrigger("atk1");
