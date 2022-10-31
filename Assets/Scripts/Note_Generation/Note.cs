@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class Note : MonoBehaviour
 {
@@ -36,18 +35,18 @@ public class Note : MonoBehaviour
                 Debug.Log("NOTE SCRIPT: " + GameManager.isPressed);
 
               
-                if(transform.position.y < 1.6f)
+                if(transform.position.y <= 1.4f)
                 {
                     Debug.Log("Normal Hit");
                     ScoreHandler.instance.NormalHit();
                     Instantiate(normalEffect, transform.position, normalEffect.transform.rotation);
-                }else if(transform.position.y < 1.7f)
+                }else if(transform.position.y <= 2.65f)
                 {
                     Debug.Log("Good Hit");
                     ScoreHandler.instance.GoodHit();
                     Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
                 }
-                else if(transform.position.y < 1.65f)
+               if (transform.position.y == 2.55f)
                 {
                     ScoreHandler.instance.PerfectHit();
                     Debug.Log("Perfect");

@@ -13,19 +13,17 @@ public class ScoreHandler : MonoBehaviour
 
     int currentScore;
     int scorePerNote = 100;
-    int ScorePerGoodNote = 125;
+    int ScorePerGoodNote = 55;
     int ScorePerPerfectNote = 150;
 
-    public static int currentMultiplier = 1;
-    public static int multiplierTracker;
-    public int[] multiplierThresholds;
-
+    public  int currentMultiplier;
+    public int combo;
+   
     public static bool missedNote = false;
 
     private void Awake()
     {
         instance = this;
-        currentMultiplier = 1;
         ScoreText.text = "Score: 0";
     }
 
@@ -35,12 +33,15 @@ public class ScoreHandler : MonoBehaviour
         if (GameManager.isPressed)
         {
             NormalHit();
+            GoodHit();
+            PerfectHit();
                        
         }
 
         if (missedNote)
         {
             NoteMissed();
+            combo = 0;
         }
 
        
@@ -48,44 +49,43 @@ public class ScoreHandler : MonoBehaviour
 
     public void NoteHit()
     {
-        if (currentMultiplier - 1 < multiplierThresholds.Length)
+        if (combo == 0)
         {
-            multiplierTracker++;
-            if (multiplierThresholds[currentMultiplier - 1] <= multiplierTracker)
-            {
-                multiplierTracker = 0;
-                currentMultiplier++;
-            }
+            combo = 1;
+        }
+        else
+        {
+            combo += 1;
         }
         
-        MultiText.SetText("Multiplier: x" + currentMultiplier);
+              
+        MultiText.SetText("Multiplier: x" + combo);
         ScoreText.SetText("Score: " + currentScore);
     }
 
     public void NormalHit()
     {
-        currentScore += scorePerNote * currentMultiplier;
+        currentScore += scorePerNote * combo;
         NoteHit();
     }
 
     public void GoodHit()
     {
-        currentScore += ScorePerGoodNote * currentMultiplier;
+        currentScore += ScorePerGoodNote * combo;
         NoteHit();
     }
 
     public void PerfectHit()
     {
-        currentScore += ScorePerPerfectNote * currentMultiplier;
+        currentScore += ScorePerPerfectNote * combo;
         NoteHit();
     }
 
     public void NoteMissed()
     {
         currentMultiplier = 1;
-        multiplierTracker = 0;
-
-        MultiText.SetText("Multiplier: x" + currentMultiplier);
+        
+       MultiText.SetText("Multiplier: x" + currentMultiplier);
 
         missedNote = false;
     }

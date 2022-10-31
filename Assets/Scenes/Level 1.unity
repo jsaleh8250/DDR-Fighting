@@ -14224,7 +14224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 49.5, y: -127.2}
+  m_AnchoredPosition: {x: 49.5, y: -127.200195}
   m_SizeDelta: {x: 410, y: 66}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1715169151
@@ -14409,7 +14409,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 220735883}
   MultiText: {fileID: 2104186347}
-  multiplierThresholds: 040000000800000010000000
+  currentMultiplier: 0
+  combo: 0
 --- !u!1001 &1835525202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16024,7 +16025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   CURRENT_STATE: 0
-  playerRef: {fileID: 0}
+  playerRef: {fileID: 1467240007}
   damageRange: 0
 --- !u!58 &5118506914665666899
 CircleCollider2D:
