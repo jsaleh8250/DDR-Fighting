@@ -77,9 +77,5 @@ public class EnemyTesting : EnemyStateBehaviour
             Debug.Log("There are Enemies!");
 
         }
-
-
-
-
     }
 }
