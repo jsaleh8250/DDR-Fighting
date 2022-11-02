@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b3d27806df94eec44bde288e694fc984
+guid: bbbdab03ece9ce44791e0642a89917f9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,12 +129,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DiscoNBWalk_0
+      name: DiscoGirlWalk_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 13
-        width: 43
+        x: 4
+        y: 12
+        width: 51
         height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -143,19 +143,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f69053055a2e2504dad923f9347319eb
-      internalID: -1967423548
+      spriteID: b9f13e1e445909441a2d9272878b6201
+      internalID: 1392569374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DiscoNBWalk_1
+      name: DiscoGirlWalk_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 12
-        width: 35
+        x: 64
+        y: 13
+        width: 29
         height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -164,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65d3d0f7e616e174592980625cda6fac
-      internalID: 587820004
+      spriteID: 2d14c54e58154b74e829efc839c663d5
+      internalID: -652497254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DiscoNBWalk_2
+      name: DiscoGirlWalk_2
       rect:
         serializedVersion: 2
-        x: 103
-        y: 12
-        width: 35
-        height: 71
+        x: 94
+        y: 13
+        width: 45
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,19 +185,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6955315f207abd4f8c04142f528f64f
-      internalID: 1188448220
+      spriteID: 53b2238c97738b340bd6fede12509c2a
+      internalID: -447979495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DiscoNBWalk_3
+      name: DiscoGirlWalk_3
       rect:
         serializedVersion: 2
-        x: 143
-        y: 12
-        width: 40
+        x: 148
+        y: 13
+        width: 29
         height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -206,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8b77faf37f87cd498b5ff9819719dcd
-      internalID: -1351290828
+      spriteID: b8c7b0cc90e8b494a86bab16f965f1ff
+      internalID: 1609787883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DiscoNBWalk_4
+      name: DiscoGirlWalk_4
       rect:
         serializedVersion: 2
-        x: 190
-        y: 12
-        width: 39
-        height: 71
+        x: 178
+        y: 13
+        width: 45
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,8 +227,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8368bfbacd2f03c4e9c12b1380de76a0
-      internalID: -1086688598
+      spriteID: 3d30fe46153ab5940afc29c66b573fdd
+      internalID: -100437632
       vertices: []
       indices: 
       edges: []
@@ -244,11 +244,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DiscoNBWalk_0: -1967423548
-      DiscoNBWalk_2: 1188448220
-      DiscoNBWalk_4: -1086688598
-      DiscoNBWalk_3: -1351290828
-      DiscoNBWalk_1: 587820004
+      DiscoGirlWalk_1: -652497254
+      DiscoGirlWalk_4: -100437632
+      DiscoGirlWalk_0: 1392569374
+      DiscoGirlWalk_3: 1609787883
+      DiscoGirlWalk_2: -447979495
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

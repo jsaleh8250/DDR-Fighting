@@ -224,12 +224,10 @@ public class EnemyStateBehaviour : MonoBehaviour
 
     }
 
-
     IEnumerator DeathTimer(float time)
     {
         ChangingAnim("Death");
         yield return new WaitForSeconds(time);
-        Destroy(gameObject);
     }
 
 }
