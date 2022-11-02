@@ -9,6 +9,7 @@ public class EnemyTesting : EnemyStateBehaviour
 
     public bool damageRange;
     public bool facingRight = false;
+    public HealthBar healthBar;
 
     void OnDisable()
     {
@@ -78,6 +79,7 @@ public class EnemyTesting : EnemyStateBehaviour
         if (col.gameObject == playerRef)
         {
             CURRENT_STATE = EnemyState.attacking;
+            healthBar.Damage(0.02f);
         }
         else
         {
