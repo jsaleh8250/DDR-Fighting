@@ -16155,6 +16155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb6757a2916fd247833c7312587ff3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFacingPlayer: 0
+  inRange: 0
+  isAttacking: 0
+  isWalking: 0
+  isInjured: 0
   enemyAnim: {fileID: 5118506914665666900}
   speed: 2
   Hitpoints: 0
@@ -16163,6 +16168,7 @@ MonoBehaviour:
   playerRef: {fileID: 1467240007}
   damageRange: 0
   facingRight: 0
+  healthBar: {fileID: 1554861945}
 --- !u!58 &5118506914665666899
 CircleCollider2D:
   m_ObjectHideFlags: 0
