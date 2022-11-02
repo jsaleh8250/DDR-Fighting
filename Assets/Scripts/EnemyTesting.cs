@@ -47,7 +47,6 @@ public class EnemyTesting : EnemyStateBehaviour
             Dead();
             CURRENT_STATE = EnemyState.dead;
         }
-
     }
 
 
