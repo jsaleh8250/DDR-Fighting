@@ -20,17 +20,6 @@ public class EnemyStateBehaviour : MonoBehaviour
     public float Hitpoints;
     public float MaxHitpoints = 5f;
 
-    void OnDisable()
-    {
-        Note.Attacking -= Injured;
-    }
-
-    void OnEnable()
-    {
-        Note.Attacking += Injured;
-    }
-
-
     public enum EnemyState
     { 
         initialize,
@@ -38,6 +27,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         seePlayer,
         chase,
         attacking,
+        injured,
         retreat,
         dead
     }
@@ -73,6 +63,9 @@ public class EnemyStateBehaviour : MonoBehaviour
                 break;
             case EnemyState.attacking:
                 Attacking();
+                break;
+            case EnemyState.injured:
+                Injured(5f);
                 break;
             case EnemyState.retreat:
                 Retreating();
@@ -126,12 +119,12 @@ public class EnemyStateBehaviour : MonoBehaviour
         ChangingAnim("Injured");
         Hitpoints -= damage;
         //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
-
         if (Hitpoints <= 0)
         {
             Dead();
         }
     }
+
 
     public virtual void Retreating()
     {
@@ -146,7 +139,7 @@ public class EnemyStateBehaviour : MonoBehaviour
     public virtual void Dead()
     {
         ResetBools();
-        ChangingAnim("Dead");
+        StartCoroutine(DeathTimer(5));
     }
 
     //Enemy Actions\\
@@ -221,6 +214,14 @@ public class EnemyStateBehaviour : MonoBehaviour
             Flip();
         }
 
+    }
+
+
+    IEnumerator DeathTimer(float time)
+    {
+        ChangingAnim("Death");
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
     }
 
 }

@@ -10,10 +10,23 @@ public class EnemyTesting : EnemyStateBehaviour
     public bool damageRange;
     public bool facingRight = false;
 
+    void OnDisable()
+    {
+        Note.Attacking -= Injured;
+    }
+
+    void OnEnable()
+    {
+        Note.Attacking += Injured;
+    }
 
     private void Start()
     {
+        Hitpoints = MaxHitpoints;
+
         circleCollider = GetComponent<CircleCollider2D>();
+
+        enemyAnim = GetComponent<Animator>();
 
     }
 
@@ -28,11 +41,15 @@ public class EnemyTesting : EnemyStateBehaviour
         if (playerRef.transform.position.x > gameObject.transform.position.x && !facingRight)
             Flip();
 
-        if (damageRange && GameManager.isPressed)
+
+        if (Hitpoints <= 0)
         {
-            Destroy(gameObject);
+            Dead();
+            CURRENT_STATE = EnemyState.dead;
         }
+
     }
+
 
     void Flip()
     {
@@ -48,7 +65,12 @@ public class EnemyTesting : EnemyStateBehaviour
         {
             CURRENT_STATE = EnemyState.chase;
             circleCollider.enabled = false;
+        }
+
+        if (col.tag == "HitBox")
+        {
             damageRange = true;
+
         }
     }
 

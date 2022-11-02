@@ -16033,6 +16033,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAnim: {fileID: 5118506914665666900}
   speed: 2
+  Hitpoints: 0
+  MaxHitpoints: 15
   CURRENT_STATE: 0
   playerRef: {fileID: 1467240007}
   damageRange: 0
