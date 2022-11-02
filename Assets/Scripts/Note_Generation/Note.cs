@@ -12,9 +12,13 @@ public class Note : MonoBehaviour
 
     string controllerString;
 
+
+    float dmg = 5;
+
     public GameObject missEffect, goodEffect, normalEffect, perfectEffect;
 
     public static event Action<string> AttackButton = delegate { };
+    public static event Action<float> Attacking = delegate { };
 
     private void Awake()
     {
@@ -37,6 +41,7 @@ public class Note : MonoBehaviour
                 Destroy(gameObject);
 
                 AttackButton.Invoke(buttonToPress);
+                Attacking.Invoke(dmg);
                 Debug.Log("NOTE SCRIPT: " + GameManager.isPressed);
 
               

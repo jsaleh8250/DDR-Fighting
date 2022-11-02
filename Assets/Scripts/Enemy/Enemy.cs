@@ -17,11 +17,19 @@ public class Enemy : MonoBehaviour
     private float distance;
     public float stoppingDis;
 
+    //Anim
+    Animator enemyAnim;
+    private string currentState;
+
     void Start()
     {
         Hitpoints = MaxHitpoints;
         //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        enemyAnim = GetComponent<Animator>();
+
+
     }
 
     public void Update()
@@ -32,6 +40,7 @@ public class Enemy : MonoBehaviour
             direction.Normalize();
 
         //Debug.Log("Moving");
+        ChangingAnim("Walking");
 
         //If at a distance from player it will stop moving towards player
         if (Vector2.Distance(transform.position, player.position) > stoppingDis)
@@ -43,7 +52,8 @@ public class Enemy : MonoBehaviour
         //If in the damage range and arrow is pressed enemy will take damage
         if (damageRange && GameManager.isPressed)
         {
-                TakeDamage(5);
+            ChangingAnim("Injured");
+            TakeDamage(5);
                 Debug.Log("Enemy Damaged" + Hitpoints);
         }
 
@@ -54,7 +64,15 @@ public class Enemy : MonoBehaviour
             GameObject.Find("Health Bar Bar").GetComponent<HealthBar>().Damage(.05f);
 
             Debug.Log("Damaging Player");
+            ChangingAnim("Attack");
         }
+    }
+
+    void ChangingAnim(string newState)
+    {
+        if (currentState == newState) return;
+        enemyAnim.Play(newState);
+        currentState = newState;
     }
 
     //If all the enemy health is gone it will be deleted
@@ -62,11 +80,19 @@ public class Enemy : MonoBehaviour
     {
         Hitpoints -= damage;
         Healthbar.SetHealth(Hitpoints, MaxHitpoints);
+        
         if (Hitpoints <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
+
+    public void Die()
+    {
+        StartCoroutine(DeathTimer(5f));
+    }
+
+
     /*
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -100,6 +126,13 @@ public class Enemy : MonoBehaviour
         canAttack = false;
         yield return new WaitForSeconds(coolDown);
         canAttack = true;
+    }
+
+    IEnumerator DeathTimer(float time)
+    {
+        ChangingAnim("Death");
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
     }
 
 }

@@ -7,7 +7,7 @@ public class EnemyStateBehaviour : MonoBehaviour
     //Variables
     bool isFacingPlayer,inRange, isAttacking, isWalking;
 
-    Animator enemyAnim;
+    public Animator enemyAnim;
     SpriteRenderer enemySprite;
 
     float sightRange = 5;
@@ -17,6 +17,8 @@ public class EnemyStateBehaviour : MonoBehaviour
 
     private string currentState;
 
+    public float Hitpoints;
+    public float MaxHitpoints = 5f;
 
     public enum EnemyState
     { 
@@ -25,6 +27,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         seePlayer,
         chase,
         attacking,
+        injured,
         retreat,
         dead
     }
@@ -33,7 +36,7 @@ public class EnemyStateBehaviour : MonoBehaviour
 
     public GameObject playerRef;
 
-    private void Start()
+    public void Start()
     {
         CURRENT_STATE = EnemyState.initialize;
 
@@ -61,6 +64,9 @@ public class EnemyStateBehaviour : MonoBehaviour
             case EnemyState.attacking:
                 Attacking();
                 break;
+            case EnemyState.injured:
+                Injured(5f);
+                break;
             case EnemyState.retreat:
                 Retreating();
                 break;
@@ -76,7 +82,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         inRange = true;
         isWalking = false;
         isAttacking = false;
-        //ChangingAnim("Idle");
+        ChangingAnim("Idle");
     }
 
     public virtual void SeenPlayer()
@@ -84,7 +90,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         inRange = true;
         isWalking = false;
         isAttacking = false;
-        //ChangingAnim("Walking");
+        ChangingAnim("Walking");
 
     }
     public virtual void Chasing()
@@ -95,7 +101,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         isAttacking = false;
         inRange = true;
         isWalking = true;
-        //ChangingAnim("Running");
+        ChangingAnim("Walking");
 
     }
 
@@ -105,8 +111,20 @@ public class EnemyStateBehaviour : MonoBehaviour
         isAttacking = true;
         inRange = true;
         isWalking = false;
-        //ChangingAnim("Fight_1");
+        ChangingAnim("Attack");
     }
+
+    public virtual void Injured(float damage)
+    {
+        ChangingAnim("Injured");
+        Hitpoints -= damage;
+        //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
+        if (Hitpoints <= 0)
+        {
+            Dead();
+        }
+    }
+
 
     public virtual void Retreating()
     {
@@ -115,13 +133,13 @@ public class EnemyStateBehaviour : MonoBehaviour
         isAttacking = false;
         inRange = false;
         isWalking = true;
-        //ChangingAnim("Walking");
+        ChangingAnim("Walking");
     }
 
     public virtual void Dead()
     {
         ResetBools();
-        //ChangingAnim("Dead");
+        StartCoroutine(DeathTimer(5));
     }
 
     //Enemy Actions\\
@@ -141,7 +159,7 @@ public class EnemyStateBehaviour : MonoBehaviour
     }
 
     //Enemy Anim\\
-    void ChangingAnim(string newState)
+    public void ChangingAnim(string newState)
     {
         if (currentState == newState) return;
         enemyAnim.Play(newState);
@@ -196,6 +214,14 @@ public class EnemyStateBehaviour : MonoBehaviour
             Flip();
         }
 
+    }
+
+
+    IEnumerator DeathTimer(float time)
+    {
+        ChangingAnim("Death");
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
     }
 
 }

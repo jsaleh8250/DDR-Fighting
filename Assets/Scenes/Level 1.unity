@@ -13259,6 +13259,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8590230256335895946, guid: fe200c8f23e917d4e9c62949c2e3a613, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 770db332b1ef27b488a1d63c1fcdd486, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe200c8f23e917d4e9c62949c2e3a613, type: 3}
 --- !u!4 &1386877513 stripped
@@ -15221,6 +15225,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4214903543476556219, guid: 817d0072c31f8ee45878e69b1867c011, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214903543476556219, guid: 817d0072c31f8ee45878e69b1867c011, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 950982521, guid: 94af1c45d71406d4389eb22aa57450d6, type: 3}
@@ -16127,6 +16135,7 @@ GameObject:
   - component: {fileID: 5118506914665666896}
   - component: {fileID: 5118506914665666898}
   - component: {fileID: 5118506914665666899}
+  - component: {fileID: 5118506914665666900}
   m_Layer: 6
   m_Name: Enemy (3)
   m_TagString: Enemy
@@ -16146,7 +16155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb6757a2916fd247833c7312587ff3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAnim: {fileID: 5118506914665666900}
   speed: 2
+  Hitpoints: 0
+  MaxHitpoints: 15
   CURRENT_STATE: 0
   playerRef: {fileID: 1467240007}
   damageRange: 0
@@ -16167,3 +16179,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.84
+--- !u!95 &5118506914665666900
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5118506914665666897}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 770db332b1ef27b488a1d63c1fcdd486, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
