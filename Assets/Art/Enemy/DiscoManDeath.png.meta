@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 19db1d65cbd80cf4ba99aff527a9c59b
+guid: f997d842ed736074aa5fac0cbd53a33e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,12 +63,12 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -102,30 +102,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -142,7 +118,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -153,85 +129,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerWalkV1t_0
+      name: DiscoManDeath_0
       rect:
         serializedVersion: 2
         x: 9
-        y: 27
-        width: 24
+        y: 2
+        width: 25
         height: 81
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48bac29bd55f69f4d96d375fd2a6cdbf
-      internalID: -1559396091
+      spriteID: e5bf64bd447d43f429af5a712be2005f
+      internalID: -1227293478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWalkV1t_1
+      name: DiscoManDeath_1
       rect:
         serializedVersion: 2
-        x: 70
-        y: 26
-        width: 33
-        height: 79
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 325c38afba6cba9458b2f5f9837e9fe5
-      internalID: 809054109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerWalkV1t_2
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 27
-        width: 24
+        x: 49
+        y: 2
+        width: 28
         height: 81
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58bb44f260395564b846c591cd0e33e7
-      internalID: -1435627636
+      spriteID: b731c980b1418394f9d3a79df1957585
+      internalID: 1900020176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWalkV1t_3
+      name: DiscoManDeath_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 30
-        width: 33
-        height: 78
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+        x: 90
+        y: 2
+        width: 37
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fe6e1d9666026542bc1b54b6dae4694
-      internalID: 1707895186
+      spriteID: a67cd742e4a405947b9019c07f92b28a
+      internalID: -1741862280
       vertices: []
       indices: 
       edges: []
@@ -247,10 +202,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerWalkV1t_3: 1707895186
-      PlayerWalkV1t_0: -1559396091
-      PlayerWalkV1t_2: -1435627636
-      PlayerWalkV1t_1: 809054109
+      DiscoManDeath_1: 1900020176
+      DiscoManDeath_0: -1227293478
+      DiscoManDeath_2: -1741862280
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

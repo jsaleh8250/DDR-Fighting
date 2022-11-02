@@ -57,6 +57,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void Die()
+    { 
+        
+    }
+
+
     //If all the enemy health is gone it will be deleted
     public void TakeDamage(float damage)
     {

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 19db1d65cbd80cf4ba99aff527a9c59b
+guid: 70c2739668f497640b9ee6675649b7cc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -102,30 +102,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -142,7 +118,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -153,85 +129,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerWalkV1t_0
+      name: discoManWalk_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 27
-        width: 24
-        height: 81
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+        x: 31
+        y: 8
+        width: 51
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48bac29bd55f69f4d96d375fd2a6cdbf
-      internalID: -1559396091
+      spriteID: fe0d2787244780d42b08c33ced0e7946
+      internalID: -1378663027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWalkV1t_1
+      name: discoManWalk_1
       rect:
         serializedVersion: 2
-        x: 70
-        y: 26
-        width: 33
+        x: 98
+        y: 9
+        width: 32
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588c7b9cf4c121e44acd20e33fae7558
+      internalID: -2128732135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: discoManWalk_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 12
+        width: 35
         height: 79
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 325c38afba6cba9458b2f5f9837e9fe5
-      internalID: 809054109
+      spriteID: e0f28c51231d16e46ba4a0a67f8559cc
+      internalID: -939988243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWalkV1t_2
+      name: discoManWalk_3
       rect:
         serializedVersion: 2
-        x: 137
-        y: 27
-        width: 24
-        height: 81
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+        x: 191
+        y: 12
+        width: 32
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58bb44f260395564b846c591cd0e33e7
-      internalID: -1435627636
+      spriteID: a272bd9762ec3b2488191485ea18d307
+      internalID: 511144226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWalkV1t_3
+      name: discoManWalk_4
       rect:
         serializedVersion: 2
-        x: 200
-        y: 30
-        width: 33
-        height: 78
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+        x: 234
+        y: 12
+        width: 37
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fe6e1d9666026542bc1b54b6dae4694
-      internalID: 1707895186
+      spriteID: 2b679231660daef479ea824b2cfe9a2d
+      internalID: -622616403
       vertices: []
       indices: 
       edges: []
@@ -247,10 +244,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerWalkV1t_3: 1707895186
-      PlayerWalkV1t_0: -1559396091
-      PlayerWalkV1t_2: -1435627636
-      PlayerWalkV1t_1: 809054109
+      discoManWalk_4: -622616403
+      discoManWalk_2: -939988243
+      discoManWalk_1: -2128732135
+      discoManWalk_3: 511144226
+      discoManWalk_0: -1378663027
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
