@@ -11,12 +11,12 @@ public class ScoreHandler : MonoBehaviour
 
     public static ScoreHandler instance;
 
-    int currentScore;
+    public static int currentScore;
     int scorePerNote = 100;
     int ScorePerGoodNote = 55;
     int ScorePerPerfectNote = 150;
 
-    public int combo;
+    public static int combo;
    
     public static bool missedNote = false;
 
@@ -43,7 +43,7 @@ public class ScoreHandler : MonoBehaviour
             combo = 0;
         }
 
-       
+        
     }
 
     public void NoteHit()
@@ -60,7 +60,7 @@ public class ScoreHandler : MonoBehaviour
               
         MultiText.SetText("Multiplier: x" + combo);
         ScoreText.SetText("Score: " + currentScore);
-    }
+     }
 
     public void NormalHit()
     {
@@ -84,4 +84,5 @@ public class ScoreHandler : MonoBehaviour
     {
        missedNote = false;
     }
+
 }

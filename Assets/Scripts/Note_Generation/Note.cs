@@ -33,7 +33,7 @@ public class Note : MonoBehaviour
             if (canBePressed)
             {
                 GameManager.isPressed = true;
-                StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
+                //StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
                 Destroy(gameObject);
 
                 AttackButton.Invoke(buttonToPress);

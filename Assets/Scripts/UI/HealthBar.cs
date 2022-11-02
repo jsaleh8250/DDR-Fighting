@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
     private RectTransform bar;
+    private int nextScene;
+    public float maxHealth = 1f;
 
     //Health bar for the player 
     void Start()
     {
+        Health.totalHealth = maxHealth;
         bar = GetComponent<RectTransform>();
         SetSize(Health.totalHealth);
 
@@ -24,6 +28,8 @@ public class HealthBar : MonoBehaviour
         else
         {
             Health.totalHealth = 0f;
+            SceneManager.LoadScene(3);
+
         }
         SetSize(Health.totalHealth);
     }
