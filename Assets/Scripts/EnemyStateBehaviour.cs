@@ -7,7 +7,7 @@ public class EnemyStateBehaviour : MonoBehaviour
     //Variables
     bool isFacingPlayer,inRange, isAttacking, isWalking;
 
-    Animator enemyAnim;
+    public Animator enemyAnim;
     SpriteRenderer enemySprite;
 
     float sightRange = 5;
@@ -16,6 +16,19 @@ public class EnemyStateBehaviour : MonoBehaviour
     public float speed;
 
     private string currentState;
+
+    public float Hitpoints;
+    public float MaxHitpoints = 5f;
+
+    void OnDisable()
+    {
+        Note.Attacking -= Injured;
+    }
+
+    void OnEnable()
+    {
+        Note.Attacking += Injured;
+    }
 
 
     public enum EnemyState
@@ -33,7 +46,7 @@ public class EnemyStateBehaviour : MonoBehaviour
 
     public GameObject playerRef;
 
-    private void Start()
+    public void Start()
     {
         CURRENT_STATE = EnemyState.initialize;
 
@@ -76,7 +89,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         inRange = true;
         isWalking = false;
         isAttacking = false;
-        //ChangingAnim("Idle");
+        ChangingAnim("Idle");
     }
 
     public virtual void SeenPlayer()
@@ -84,7 +97,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         inRange = true;
         isWalking = false;
         isAttacking = false;
-        //ChangingAnim("Walking");
+        ChangingAnim("Walking");
 
     }
     public virtual void Chasing()
@@ -95,7 +108,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         isAttacking = false;
         inRange = true;
         isWalking = true;
-        //ChangingAnim("Running");
+        ChangingAnim("Walking");
 
     }
 
@@ -105,7 +118,19 @@ public class EnemyStateBehaviour : MonoBehaviour
         isAttacking = true;
         inRange = true;
         isWalking = false;
-        //ChangingAnim("Fight_1");
+        ChangingAnim("Attack");
+    }
+
+    public virtual void Injured(float damage)
+    {
+        ChangingAnim("Injured");
+        Hitpoints -= damage;
+        //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
+
+        if (Hitpoints <= 0)
+        {
+            Dead();
+        }
     }
 
     public virtual void Retreating()
@@ -115,13 +140,13 @@ public class EnemyStateBehaviour : MonoBehaviour
         isAttacking = false;
         inRange = false;
         isWalking = true;
-        //ChangingAnim("Walking");
+        ChangingAnim("Walking");
     }
 
     public virtual void Dead()
     {
         ResetBools();
-        //ChangingAnim("Dead");
+        ChangingAnim("Dead");
     }
 
     //Enemy Actions\\
@@ -141,7 +166,7 @@ public class EnemyStateBehaviour : MonoBehaviour
     }
 
     //Enemy Anim\\
-    void ChangingAnim(string newState)
+    public void ChangingAnim(string newState)
     {
         if (currentState == newState) return;
         enemyAnim.Play(newState);

@@ -10,6 +10,7 @@ public class EnemyTesting : EnemyStateBehaviour
     public bool damageRange;
     public bool facingRight = false;
 
+
     private void Start()
     {
         circleCollider = GetComponent<CircleCollider2D>();
