@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyStateBehaviour : MonoBehaviour
 {
     //Variables
-    bool isFacingPlayer,inRange, isAttacking, isWalking;
+    public bool isFacingPlayer,inRange, isAttacking, isWalking, isInjured;
 
     public Animator enemyAnim;
     SpriteRenderer enemySprite;
@@ -82,6 +82,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         inRange = true;
         isWalking = false;
         isAttacking = false;
+        isInjured = false;
         ChangingAnim("Idle");
     }
 
@@ -90,6 +91,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         inRange = true;
         isWalking = false;
         isAttacking = false;
+        isInjured = false;
         ChangingAnim("Walking");
 
     }
@@ -101,6 +103,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         isAttacking = false;
         inRange = true;
         isWalking = true;
+        isInjured = false;
         ChangingAnim("Walking");
 
     }
@@ -111,18 +114,21 @@ public class EnemyStateBehaviour : MonoBehaviour
         isAttacking = true;
         inRange = true;
         isWalking = false;
+        isInjured = false;
         ChangingAnim("Attack");
     }
 
     public virtual void Injured(float damage)
     {
         ChangingAnim("Injured");
+
+        isAttacking = false;
+        inRange = true;
+        isWalking = false;
+        isInjured = true;
+
         Hitpoints -= damage;
         //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
-        if (Hitpoints <= 0)
-        {
-            Dead();
-        }
     }
 
 
@@ -133,13 +139,14 @@ public class EnemyStateBehaviour : MonoBehaviour
         isAttacking = false;
         inRange = false;
         isWalking = true;
+        isInjured = false;
         ChangingAnim("Walking");
     }
 
     public virtual void Dead()
     {
         ResetBools();
-        StartCoroutine(DeathTimer(5));
+        StartCoroutine(DeathTimer(1));
     }
 
     //Enemy Actions\\
@@ -178,6 +185,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         isAttacking = false;
         inRange = false;
         isWalking = false;
+        isInjured = false;
     }
 
     //Enemy Sprite\\
