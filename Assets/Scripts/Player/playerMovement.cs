@@ -19,6 +19,9 @@ public class playerMovement : MonoBehaviour
     public float knockbackTime;
     public GameObject hitFeedback;
 
+    public AudioSource audioSource;
+    public AudioClip[] audioClipArray;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -69,6 +72,9 @@ public class playerMovement : MonoBehaviour
         animator.SetTrigger("atk" + randNum);
 
         Debug.Log("ATTACK IS PRESSED: ");
+
+        audioSource.clip = audioClipArray[0];
+        audioSource.Play();
 
         StartCoroutine(attackCooldown(.35f));
 
