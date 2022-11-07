@@ -51,9 +51,7 @@ public class EnemyTesting : EnemyStateBehaviour
 
         if (Hitpoints <= 0)
         {
-            Dead();
             CURRENT_STATE = EnemyState.dead;
-            Destroy(this.gameObject);
         }
     }
 
@@ -69,13 +67,16 @@ public class EnemyTesting : EnemyStateBehaviour
     public virtual void Injured(float damage)
     {
         ChangingAnim("Injured");
-        Pushback(gameObject);
+
         isAttacking = false;
         inRange = true;
         isWalking = false;
         isInjured = true;
 
         Hitpoints -= damage;
+
+        rb.AddForce(transform.right * 20f, ForceMode2D.Impulse);
+
         //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
     }
 
@@ -93,6 +94,11 @@ public class EnemyTesting : EnemyStateBehaviour
             damageRange = true;
 
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        damageRange = false;
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -122,17 +128,6 @@ public class EnemyTesting : EnemyStateBehaviour
             Debug.Log("There are Enemies!");
         }
     }
-    public void Pushback(GameObject sender)
-    {
-        Debug.Log("Knocked Back");
-        Vector2 direction = (transform.position - sender.transform.position).normalized;
-        rb.AddForce(direction * strength, ForceMode2D.Impulse);
-    }
 
-    private IEnumerator Reset()
-    {
-        yield return new WaitForSeconds(delay);
-        rb.velocity = Vector3.zero;
-    }
 
 }

@@ -16,6 +16,9 @@ public class playerMovement : MonoBehaviour
     public HealthBar healthBar;
     private bool facingRight;
 
+    public float knockbackTime;
+    bool gotHit = false;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,6 +29,7 @@ public class playerMovement : MonoBehaviour
     void OnDisable()
     {
         Note.AttackButton -= Attack;
+        gotHit = false;
     }
 
     void OnEnable()
@@ -66,6 +70,8 @@ public class playerMovement : MonoBehaviour
 
        Debug.Log("ATTACK IS PRESSED: ");
 
+        gotHit = true;
+
 
     }
 
@@ -73,7 +79,7 @@ public class playerMovement : MonoBehaviour
     private void flip()
     {
         facingRight = !facingRight;
-    } 
+    }
 
     /*
     //If collides with Enemy player will take damage
