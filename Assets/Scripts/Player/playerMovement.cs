@@ -17,7 +17,7 @@ public class playerMovement : MonoBehaviour
     private bool facingRight;
 
     public float knockbackTime;
-    bool gotHit = false;
+    public GameObject hitFeedback;
 
     private void Awake()
     {
@@ -29,7 +29,6 @@ public class playerMovement : MonoBehaviour
     void OnDisable()
     {
         Note.AttackButton -= Attack;
-        gotHit = false;
     }
 
     void OnEnable()
@@ -61,16 +60,17 @@ public class playerMovement : MonoBehaviour
                 sp.flipX = false;
             }
         }
+
     }
 
     public void Attack(string buttonToPress)
     {
-       int randNum = Random.Range(1, 3);
-       animator.SetTrigger("atk" + randNum);
+        int randNum = Random.Range(1, 3);
+        animator.SetTrigger("atk" + randNum);
 
-       Debug.Log("ATTACK IS PRESSED: ");
+        Debug.Log("ATTACK IS PRESSED: ");
 
-        gotHit = true;
+        StartCoroutine(attackCooldown(.35f));
 
 
     }
@@ -79,6 +79,13 @@ public class playerMovement : MonoBehaviour
     private void flip()
     {
         facingRight = !facingRight;
+    }
+
+    IEnumerator attackCooldown(float delay)
+    {
+        hitFeedback.SetActive(true);
+        yield return new WaitForSeconds(delay);
+        hitFeedback.SetActive(false);
     }
 
     /*
