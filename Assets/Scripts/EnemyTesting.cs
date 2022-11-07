@@ -15,6 +15,9 @@ public class EnemyTesting : EnemyStateBehaviour
 
     private float strength = 120, delay = .15f;
 
+    public AudioSource audioSource;
+    public AudioClip[] audioClipArray;
+
     void OnDisable()
     {
         Note.Attacking -= Injured;
@@ -51,8 +54,14 @@ public class EnemyTesting : EnemyStateBehaviour
 
         if (Hitpoints <= 0)
         {
+            StartCoroutine(deathAudio());
             CURRENT_STATE = EnemyState.dead;
         }
+    }
+
+    AudioClip RandClip()
+    {
+        return audioClipArray[Random.Range(0, audioClipArray.Length)];
     }
 
 
@@ -129,5 +138,10 @@ public class EnemyTesting : EnemyStateBehaviour
         }
     }
 
+    IEnumerator deathAudio()
+    {
+        audioSource.PlayOneShot(RandClip());
+        yield return new WaitForSeconds(.15f);
+    }
 
 }
