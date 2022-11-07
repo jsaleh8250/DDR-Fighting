@@ -65,7 +65,7 @@ public class EnemyStateBehaviour : MonoBehaviour
                 Attacking();
                 break;
             case EnemyState.injured:
-                Injured(5f);
+                //Injured(5f);
                 break;
             case EnemyState.retreat:
                 Retreating();
@@ -117,20 +117,6 @@ public class EnemyStateBehaviour : MonoBehaviour
         isInjured = false;
         ChangingAnim("Attack");
     }
-
-    public virtual void Injured(float damage)
-    {
-        ChangingAnim("Injured");
-
-        isAttacking = false;
-        inRange = true;
-        isWalking = false;
-        isInjured = true;
-
-        Hitpoints -= damage;
-        //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
-    }
-
 
     public virtual void Retreating()
     {

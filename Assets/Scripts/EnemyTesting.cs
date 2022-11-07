@@ -11,6 +11,10 @@ public class EnemyTesting : EnemyStateBehaviour
     public bool facingRight = false;
     public HealthBar healthBar;
 
+    Rigidbody2D rb;
+
+    private float strength = 120, delay = .15f;
+
     void OnDisable()
     {
         Note.Attacking -= Injured;
@@ -21,13 +25,15 @@ public class EnemyTesting : EnemyStateBehaviour
         Note.Attacking += Injured;
     }
 
-    private void Start()
+    public void Start()
     {
         Hitpoints = MaxHitpoints;
 
         circleCollider = GetComponent<CircleCollider2D>();
 
         enemyAnim = GetComponent<Animator>();
+
+        rb = GetComponent<Rigidbody2D>();
 
     }
 
@@ -59,6 +65,20 @@ public class EnemyTesting : EnemyStateBehaviour
         tmpScale.x *= -1;
         gameObject.transform.localScale = tmpScale;
     }
+
+    public virtual void Injured(float damage)
+    {
+        ChangingAnim("Injured");
+        Pushback(gameObject);
+        isAttacking = false;
+        inRange = true;
+        isWalking = false;
+        isInjured = true;
+
+        Hitpoints -= damage;
+        //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
+    }
+
     void OnTriggerEnter2D(Collider2D col)
 
     {
@@ -100,8 +120,19 @@ public class EnemyTesting : EnemyStateBehaviour
         if (enemies.Length > 2)
         {
             Debug.Log("There are Enemies!");
-
         }
+    }
+    public void Pushback(GameObject sender)
+    {
+        Debug.Log("Knocked Back");
+        Vector2 direction = (transform.position - sender.transform.position).normalized;
+        rb.AddForce(direction * strength, ForceMode2D.Impulse);
+    }
+
+    private IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(delay);
+        rb.velocity = Vector3.zero;
     }
 
 }
