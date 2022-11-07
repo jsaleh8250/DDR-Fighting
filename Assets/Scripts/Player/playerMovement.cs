@@ -16,6 +16,9 @@ public class playerMovement : MonoBehaviour
     public HealthBar healthBar;
     private bool facingRight;
 
+    public float knockbackTime;
+    public GameObject hitFeedback;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -57,14 +60,17 @@ public class playerMovement : MonoBehaviour
                 sp.flipX = false;
             }
         }
+
     }
 
     public void Attack(string buttonToPress)
     {
-       int randNum = Random.Range(1, 3);
-       animator.SetTrigger("atk" + randNum);
+        int randNum = Random.Range(1, 3);
+        animator.SetTrigger("atk" + randNum);
 
-       Debug.Log("ATTACK IS PRESSED: ");
+        Debug.Log("ATTACK IS PRESSED: ");
+
+        StartCoroutine(attackCooldown(.35f));
 
 
     }
@@ -73,7 +79,14 @@ public class playerMovement : MonoBehaviour
     private void flip()
     {
         facingRight = !facingRight;
-    } 
+    }
+
+    IEnumerator attackCooldown(float delay)
+    {
+        hitFeedback.SetActive(true);
+        yield return new WaitForSeconds(delay);
+        hitFeedback.SetActive(false);
+    }
 
     /*
     //If collides with Enemy player will take damage

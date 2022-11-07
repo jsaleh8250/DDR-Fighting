@@ -11,6 +11,10 @@ public class EnemyTesting : EnemyStateBehaviour
     public bool facingRight = false;
     public HealthBar healthBar;
 
+    Rigidbody2D rb;
+
+    private float strength = 120, delay = .15f;
+
     void OnDisable()
     {
         Note.Attacking -= Injured;
@@ -21,13 +25,15 @@ public class EnemyTesting : EnemyStateBehaviour
         Note.Attacking += Injured;
     }
 
-    private void Start()
+    public void Start()
     {
         Hitpoints = MaxHitpoints;
 
         circleCollider = GetComponent<CircleCollider2D>();
 
         enemyAnim = GetComponent<Animator>();
+
+        rb = GetComponent<Rigidbody2D>();
 
     }
 
@@ -45,9 +51,7 @@ public class EnemyTesting : EnemyStateBehaviour
 
         if (Hitpoints <= 0)
         {
-            Dead();
             CURRENT_STATE = EnemyState.dead;
-            Destroy(this.gameObject);
         }
     }
 
@@ -59,6 +63,23 @@ public class EnemyTesting : EnemyStateBehaviour
         tmpScale.x *= -1;
         gameObject.transform.localScale = tmpScale;
     }
+
+    public virtual void Injured(float damage)
+    {
+        ChangingAnim("Injured");
+
+        isAttacking = false;
+        inRange = true;
+        isWalking = false;
+        isInjured = true;
+
+        Hitpoints -= damage;
+
+        rb.AddForce(transform.right * 20f, ForceMode2D.Impulse);
+
+        //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
+    }
+
     void OnTriggerEnter2D(Collider2D col)
 
     {
@@ -73,6 +94,11 @@ public class EnemyTesting : EnemyStateBehaviour
             damageRange = true;
 
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        damageRange = false;
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -100,8 +126,8 @@ public class EnemyTesting : EnemyStateBehaviour
         if (enemies.Length > 2)
         {
             Debug.Log("There are Enemies!");
-
         }
     }
+
 
 }

@@ -65,10 +65,13 @@ public class EnemyStateBehaviour : MonoBehaviour
                 Attacking();
                 break;
             case EnemyState.injured:
-                Injured(5f);
+                //Injured(5f);
                 break;
             case EnemyState.retreat:
                 Retreating();
+                break;
+            case EnemyState.dead:
+                Dead();
                 break;
             default:
                 break;
@@ -77,26 +80,27 @@ public class EnemyStateBehaviour : MonoBehaviour
 
     public virtual void Idle()
     {
+        ChangingAnim("Idle");
         EnemyCurrentPos();
         FaceThePlayer();
         inRange = true;
         isWalking = false;
         isAttacking = false;
         isInjured = false;
-        ChangingAnim("Idle");
     }
 
     public virtual void SeenPlayer()
     {
+        ChangingAnim("Walking");
         inRange = true;
         isWalking = false;
         isAttacking = false;
         isInjured = false;
-        ChangingAnim("Walking");
 
     }
     public virtual void Chasing()
     {
+        ChangingAnim("Walking");
         transform.position = Vector2.MoveTowards(transform.position, playerRef.transform.position, speed * Time.deltaTime);
 
         FaceThePlayer();
@@ -104,47 +108,33 @@ public class EnemyStateBehaviour : MonoBehaviour
         inRange = true;
         isWalking = true;
         isInjured = false;
-        ChangingAnim("Walking");
 
     }
 
     public virtual void Attacking()
     {
+        ChangingAnim("Attack");
         EnemyCurrentPos();
         isAttacking = true;
         inRange = true;
         isWalking = false;
         isInjured = false;
-        ChangingAnim("Attack");
     }
-
-    public virtual void Injured(float damage)
-    {
-        ChangingAnim("Injured");
-
-        isAttacking = false;
-        inRange = true;
-        isWalking = false;
-        isInjured = true;
-
-        Hitpoints -= damage;
-        //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
-    }
-
 
     public virtual void Retreating()
     {
+        ChangingAnim("Walking");
         transform.position = Vector2.MoveTowards(transform.position, playerRef.transform.position, -speed * Time.deltaTime);
         RunAwayFromPlayer();
         isAttacking = false;
         inRange = false;
         isWalking = true;
         isInjured = false;
-        ChangingAnim("Walking");
     }
 
     public virtual void Dead()
     {
+        ChangingAnim("Death");
         ResetBools();
         StartCoroutine(DeathTimer(1));
     }
@@ -228,6 +218,7 @@ public class EnemyStateBehaviour : MonoBehaviour
     {
         ChangingAnim("Death");
         yield return new WaitForSeconds(time);
+        Destroy(gameObject);
     }
 
 }
