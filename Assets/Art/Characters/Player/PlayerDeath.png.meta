@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9596498887224ba40a3bc1d874060300
+guid: 93ad282fed6383a4bbdc45d211ae7a85
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 250
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerWalk_0
+      name: PlayerDeath_0
       rect:
         serializedVersion: 2
-        x: 93
-        y: 289
-        width: 232
-        height: 800
+        x: 7
+        y: 14
+        width: 35
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64749705491c55643ba30e0c6cf297d7
-      internalID: -2108336341
+      spriteID: 8ca6125066cd46648920cd790f6df169
+      internalID: -1053878682
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWalk_1
+      name: PlayerDeath_1
       rect:
         serializedVersion: 2
-        x: 704
-        y: 279
-        width: 320
-        height: 780
+        x: 51
+        y: 16
+        width: 30
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3762dc34f622964ebad2cec11fa4657
-      internalID: 283920090
+      spriteID: 45aad5dd3f7592e468c8f5cdeb093888
+      internalID: 2086522327
       vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWalk_2
+      name: PlayerDeath_2
       rect:
         serializedVersion: 2
-        x: 1374
-        y: 289
-        width: 230
-        height: 800
+        x: 88
+        y: 8
+        width: 97
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,31 +185,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e9978fd3d40f8e42af752cbf81c6703
-      internalID: 1381735667
+      spriteID: 75324e3f870cb334e912a76be6bbe15d
+      internalID: 1271976123
       vertices: []
-      indices:
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerWalk_3
-      rect:
-        serializedVersion: 2
-        x: 2003
-        y: 319
-        width: 321
-        height: 770
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ac2b8915b99fe045a2362749575ddb4
-      internalID: -648755788
-      vertices: []
-      indices:
+      indices: 
       edges: []
       weights: []
     outline: []
@@ -218,18 +197,17 @@ TextureImporter:
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
-    indices:
+    indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerWalk_1: 283920090
-      PlayerWalk_2: 1381735667
-      PlayerWalk_3: -648755788
-      PlayerWalk_0: -2108336341
-  spritePackingTag:
+      PlayerDeath_0: -1053878682
+      PlayerDeath_2: 1271976123
+      PlayerDeath_1: 2086522327
+  spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
