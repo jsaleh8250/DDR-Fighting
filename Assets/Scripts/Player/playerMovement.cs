@@ -18,6 +18,7 @@ public class playerMovement : MonoBehaviour
 
     public float knockbackTime;
     public GameObject hitFeedback;
+    public static bool isFighting;
 
     public AudioSource audioSource;
     public AudioClip[] audioClipArray;
@@ -71,6 +72,8 @@ public class playerMovement : MonoBehaviour
         int randNum = Random.Range(1, 3);
         animator.SetTrigger("atk" + randNum);
 
+        isFighting = true;
+
         Debug.Log("ATTACK IS PRESSED: ");
 
         audioSource.clip = audioClipArray[0];
@@ -91,6 +94,7 @@ public class playerMovement : MonoBehaviour
     {
         hitFeedback.SetActive(true);
         yield return new WaitForSeconds(delay);
+        isFighting = false;
         hitFeedback.SetActive(false);
     }
 

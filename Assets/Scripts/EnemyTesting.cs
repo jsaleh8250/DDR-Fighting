@@ -18,6 +18,7 @@ public class EnemyTesting : EnemyStateBehaviour
     public AudioSource audioSource;
     public AudioClip[] audioClipArray;
 
+    /*
     void OnDisable()
     {
         Note.Attacking -= Injured;
@@ -27,6 +28,7 @@ public class EnemyTesting : EnemyStateBehaviour
     {
         Note.Attacking += Injured;
     }
+    */
 
     public void Start()
     {
@@ -56,6 +58,14 @@ public class EnemyTesting : EnemyStateBehaviour
         {
             StartCoroutine(deathAudio());
             CURRENT_STATE = EnemyState.dead;
+        }
+
+        if(playerMovement.isFighting)
+        {
+            if(damageRange)
+            {
+                Injured(5f);
+            }
         }
     }
 
@@ -96,16 +106,20 @@ public class EnemyTesting : EnemyStateBehaviour
         {
             CURRENT_STATE = EnemyState.chase;
             circleCollider.enabled = false;
-        }
+        } 
+    }
 
-        if (col.tag == "HitBox")
+    public void OnTriggerStay2D(UnityEngine.Collider2D collision)
+    {
+        if (collision.tag == "HitBox")
         {
             damageRange = true;
 
         }
     }
+    
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         damageRange = false;
     }
@@ -115,7 +129,7 @@ public class EnemyTesting : EnemyStateBehaviour
         if (col.gameObject == playerRef)
         {
             CURRENT_STATE = EnemyState.attacking;
-            healthBar.Damage(0.02f);
+            //healthBar.Damage(0.02f);
         }
         else
         {

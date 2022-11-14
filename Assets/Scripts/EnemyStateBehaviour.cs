@@ -20,6 +20,8 @@ public class EnemyStateBehaviour : MonoBehaviour
     public float Hitpoints;
     public float MaxHitpoints = 5f;
 
+
+
     public enum EnemyState
     { 
         initialize,
