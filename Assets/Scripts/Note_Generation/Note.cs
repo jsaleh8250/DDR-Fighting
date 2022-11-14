@@ -43,7 +43,6 @@ public class Note : MonoBehaviour
                 AttackButton.Invoke(buttonToPress);
                 Attacking.Invoke(dmg);
                 Debug.Log("NOTE SCRIPT: " + GameManager.isPressed);
-
               
                 if(transform.position.y <= 1.4f)
                 {
