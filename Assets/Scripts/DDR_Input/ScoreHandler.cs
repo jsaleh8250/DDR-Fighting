@@ -43,6 +43,7 @@ public class ScoreHandler : MonoBehaviour
         {
             NoteMissed();
             combo = 0;
+            Debug.Log("Notemissed");
         }
         
         if(currentScore > 10000)
