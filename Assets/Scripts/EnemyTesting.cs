@@ -94,7 +94,7 @@ public class EnemyTesting : EnemyStateBehaviour
 
         Hitpoints -= damage;
 
-        rb.AddForce(transform.right * 20f, ForceMode2D.Impulse);
+        rb.AddForce(transform.right * 1f, ForceMode2D.Impulse);
 
         //Healthbar.SetHealth(Hitpoints, MaxHitpoints);
     }

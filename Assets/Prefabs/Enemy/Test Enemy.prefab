@@ -465,7 +465,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 2111936501285981988}
   speed: 2
   Hitpoints: 0
-  MaxHitpoints: 15
+  MaxHitpoints: 30
   CURRENT_STATE: 0
   playerRef: {fileID: 0}
   damageRange: 0

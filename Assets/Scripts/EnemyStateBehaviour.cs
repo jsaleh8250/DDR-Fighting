@@ -29,7 +29,6 @@ public class EnemyStateBehaviour : MonoBehaviour
         seePlayer,
         chase,
         attacking,
-        injured,
         retreat,
         dead
     }
@@ -65,9 +64,6 @@ public class EnemyStateBehaviour : MonoBehaviour
                 break;
             case EnemyState.attacking:
                 Attacking();
-                break;
-            case EnemyState.injured:
-                //Injured(5f);
                 break;
             case EnemyState.retreat:
                 Retreating();

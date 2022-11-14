@@ -471,8 +471,10 @@ MonoBehaviour:
   damageRange: 0
   facingRight: 0
   healthBar: {fileID: 0}
-  audioSource: {fileID: 0}
-  audioClipArray: []
+  audioSource: {fileID: 8782396779949490278}
+  audioClipArray:
+  - {fileID: 8300000, guid: a24991ef6593c1546b9a5926f636b4e6, type: 3}
+  - {fileID: 8300000, guid: 91e7db8c60cf95e42ad09618607e5b2b, type: 3}
 --- !u!58 &2111936501285981987
 CircleCollider2D:
   m_ObjectHideFlags: 0
