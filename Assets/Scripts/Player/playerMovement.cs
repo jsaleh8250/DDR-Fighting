@@ -56,12 +56,14 @@ public class playerMovement : MonoBehaviour
             if(horizMove < 0 && !facingRight)
             {
                 flip();
-                sp.flipX = true;
+                //sp.flipX = true;
+                transform.localScale = new Vector3(-1, 1, 1);
             }
             else if(horizMove > 0 && facingRight)
             {
                 flip();
-                sp.flipX = false;
+                //sp.flipX = false;
+                transform.localScale = new Vector3(1, 1, 1);
             }
         }
 
