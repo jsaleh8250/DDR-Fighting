@@ -389,7 +389,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0.5849056, b: 0.5445672, a: 0}
+  m_BackGroundColor: {r: 0.098039195, g: 0.13975005, b: 0.69803923, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 2057285685}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1556830067
@@ -941,6 +941,30 @@ PrefabInstance:
     - target: {fileID: 4280214241026292333, guid: f6638efcfc418e4458ee82b26cf394db, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280214241756653398, guid: f6638efcfc418e4458ee82b26cf394db, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280214241756653398, guid: f6638efcfc418e4458ee82b26cf394db, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 227
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280214241756653399, guid: f6638efcfc418e4458ee82b26cf394db, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280214241756653399, guid: f6638efcfc418e4458ee82b26cf394db, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280214241756653399, guid: f6638efcfc418e4458ee82b26cf394db, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280214241756653399, guid: f6638efcfc418e4458ee82b26cf394db, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6638efcfc418e4458ee82b26cf394db, type: 3}
