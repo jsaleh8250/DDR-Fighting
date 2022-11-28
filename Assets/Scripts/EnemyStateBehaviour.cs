@@ -217,6 +217,7 @@ public class EnemyStateBehaviour : MonoBehaviour
         ChangingAnim("Death");
         yield return new WaitForSeconds(time);
         Destroy(gameObject);
+        
     }
 
 }
