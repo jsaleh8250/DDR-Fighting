@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     public static bool inBattleMode;
 
-    public GameObject mainCam, secondCam, battleSeq;
+    public GameObject mainCam, secondCam, battleSeq, coverSeq;
 
 
     public void Update()
@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
             mainCam.SetActive(true);
             secondCam.SetActive(false);
             battleSeq.SetActive(false);
+            coverSeq.SetActive(false);
         }
     }
 }
