@@ -734,8 +734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d93f81ae708eae46ac7417d7d2226a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: -1946326964, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
-  pressedImage: {fileID: 64341249, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
+  defaultImage: {fileID: 2065421828, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
+  pressedImage: {fileID: -293976822, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
   keyToPress: 350
   buttonToPress: Button0
 --- !u!212 &296079191
@@ -779,12 +779,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: -1946326964, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
+  m_Sprite: {fileID: 2065421828, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.3, y: 1.28}
+  m_Size: {x: 0.88, y: 0.7733333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -825,7 +825,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.32, y: 1.16}
-    newSize: {x: 1.3, y: 1.28}
+    newSize: {x: 0.88, y: 0.7733333}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1048,8 +1048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d93f81ae708eae46ac7417d7d2226a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: -1641938222, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
-  pressedImage: {fileID: -253934001, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
+  defaultImage: {fileID: -2004780837, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
+  pressedImage: {fileID: 1792005978, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
   keyToPress: 351
   buttonToPress: Button1
 --- !u!212 &396292310
@@ -1093,12 +1093,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: -1641938222, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
+  m_Sprite: {fileID: -2004780837, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.3, y: 1.28}
+  m_Size: {x: 1.16, y: 1.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1139,7 +1139,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.16, y: 1.32}
-    newSize: {x: 1.3, y: 1.28}
+    newSize: {x: 1.16, y: 1.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1480,8 +1480,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d93f81ae708eae46ac7417d7d2226a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: 1129151581, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
-  pressedImage: {fileID: -1333866892, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
+  defaultImage: {fileID: -497989389, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
+  pressedImage: {fileID: -1285748659, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
   keyToPress: 352
   buttonToPress: Button2
 --- !u!212 &477772707
@@ -1525,12 +1525,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 1129151581, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
+  m_Sprite: {fileID: -497989389, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.3, y: 1.28}
+  m_Size: {x: 1.16, y: 1.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1571,7 +1571,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.16, y: 1.32}
-    newSize: {x: 1.3, y: 1.28}
+    newSize: {x: 1.16, y: 1.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -15913,8 +15913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d93f81ae708eae46ac7417d7d2226a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: 1849376683, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
-  pressedImage: {fileID: -648521710, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
+  defaultImage: {fileID: 187473345, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
+  pressedImage: {fileID: 2022241082, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
   keyToPress: 353
   buttonToPress: Button3
 --- !u!212 &1654762242
@@ -15958,12 +15958,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 1849376683, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
+  m_Sprite: {fileID: 187473345, guid: 088546a430fa5ad49bb9a39c5be58488, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.3, y: 1.28}
+  m_Size: {x: 1.32, y: 1.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -16004,7 +16004,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.32, y: 1.16}
-    newSize: {x: 1.3, y: 1.28}
+    newSize: {x: 1.32, y: 1.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
