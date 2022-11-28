@@ -2099,6 +2099,11 @@ MonoBehaviour:
   - {fileID: 3606272470524801223}
   - {fileID: 2169558285812110400}
   - {fileID: 3736444496073372390}
+  NoteTransformObject:
+  - {fileID: 4294017964761245562}
+  - {fileID: 3606272470524801221}
+  - {fileID: 2169558285812110403}
+  - {fileID: 3736444496073372389}
   randNote: 0
   randTransform: 0
 --- !u!1 &661177375
