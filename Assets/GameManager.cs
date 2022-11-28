@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     public static int DDR_PAD_NUM;
 
+    public static int JOY_PAD_NUM;
+
     public static int CONTROLLER_NUM;
 
     public static bool inBattleMode;

@@ -3,14 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestWhichJoyStick : MonoBehaviour
+public class GetControllerInput : MonoBehaviour
 {
     string[] joysticks;
     int joysticksCount = 0;
 
     public GameObject DDRPadSelectScreen;
-    public GameObject JoyStickSelect;
-    public GameObject JoyStickUI;
+    public GameObject mainMenu;
 
     // Update is called once per frame
     void Update()
@@ -36,14 +35,13 @@ public class TestWhichJoyStick : MonoBehaviour
                 string[] splitNum = name.Split(char.Parse("B"));
                 number = splitNum[0];
 
-                int.TryParse(number, out GameManager.DDR_PAD_NUM);
+                int.TryParse(number, out GameManager.JOY_PAD_NUM);
 
-                Debug.Log(GameManager.DDR_PAD_NUM);
+                Debug.Log(GameManager.JOY_PAD_NUM);
 
 
                 Destroy(DDRPadSelectScreen);
-                JoyStickSelect.SetActive(true);
-                JoyStickUI.SetActive(true);
+                mainMenu.SetActive(true);
                 Destroy(gameObject);
 
             }
