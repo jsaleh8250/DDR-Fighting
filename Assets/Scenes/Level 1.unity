@@ -17771,6 +17771,7 @@ MonoBehaviour:
   TimerOn: 0
   healthBar: {fileID: 1554861945}
   Timertext: {fileID: 1890368840}
+  player: {fileID: 1467240007}
 --- !u!114 &2009139966
 MonoBehaviour:
   m_ObjectHideFlags: 0

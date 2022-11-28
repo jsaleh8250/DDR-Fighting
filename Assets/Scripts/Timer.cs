@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     public bool TimerOn = false;
     public HealthBar healthBar;
     public TextMeshProUGUI Timertext;
+    public GameObject player;
     void Start()
     {
         TimerOn = true;
@@ -29,6 +30,8 @@ public class Timer : MonoBehaviour
                 TimerOn = false;
                 healthBar.Damage(0.3f);
                 GameManager.inBattleMode = false;
+                player.GetComponent<playerMovement>().horizontalSpeed = 5f;
+                player.GetComponent<playerMovement>().VerticalSpeed = 5f;
             }
         }
     }
