@@ -46,7 +46,7 @@ public class ScoreHandler : MonoBehaviour
             Debug.Log("Notemissed");
         }
         
-        if(currentScore > 10000)
+        if(currentScore > 0)
         {
             next.SetActive(true);
         }

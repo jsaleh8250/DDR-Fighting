@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     public static bool inCoverMode;
 
-    public GameObject mainCam, secondCam, battleSeq, battleSeqOBJ, coverSeq, coverSeqOBJ;
+    public GameObject mainCam, secondCam, battleSeq, battleSeqOBJ, coverSeq, coverSeqOBJ, Timer;
 
 
     public void Update()
@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
             secondCam.SetActive(true);
             mainCam.SetActive(false);
             battleSeq.SetActive(true);
+            Timer.SetActive(true);
             if (inCoverMode)
             {
                 battleSeq.SetActive(false);
@@ -63,6 +64,7 @@ public class GameManager : MonoBehaviour
             secondCam.SetActive(false);
             battleSeq.SetActive(false);
             coverSeq.SetActive(false);
+            Timer.SetActive(false);
         }
     }
 }
