@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
 
     public static int CONTROLLER_NUM;
 
+    public static bool inBattleMode;
+
+    public GameObject mainCam, secondCam, battleSeq;
+
 
     public void Update()
     {
@@ -27,6 +31,19 @@ public class GameManager : MonoBehaviour
         if (isPressed == true)
         {
             Debug.Log(" FIXED UPDATE Game Manager: " + isPressed);
+        }
+
+        if (inBattleMode)
+        {
+            secondCam.SetActive(true);
+            mainCam.SetActive(false);
+            battleSeq.SetActive(true);
+        }
+        else
+        {
+            mainCam.SetActive(true);
+            secondCam.SetActive(false);
+            battleSeq.SetActive(false);
         }
     }
 }

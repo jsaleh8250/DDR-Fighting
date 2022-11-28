@@ -9,8 +9,6 @@ public class SimpleAI : MonoBehaviour
     private float distance;
     public float stoppingDist;
 
-    bool NotstopWalking;
-
     //Anim
     Animator enemyAnim;
     private string currentState;
