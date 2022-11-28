@@ -19,22 +19,25 @@ public class Timer : MonoBehaviour
     {
         if (TimerOn)
         {
-            if(TimeLeft > 0)
+            if (GameManager.inBattleMode = true)
             {
-                TimeLeft -= Time.deltaTime;
-                updateTime(TimeLeft);
+                if (TimeLeft > 0)
+                {
+                    TimeLeft -= Time.deltaTime;
+                    updateTime(TimeLeft);
+                }
+                else
+                {
+                    TimeLeft = 0;
+                    TimerOn = false;
+                    healthBar.Damage(0.3f);
+                    GameManager.inBattleMode = false;
+                    //BattleMode.InstantiateSequence();
+                    player.GetComponent<playerMovement>().horizontalSpeed = 5f;
+                    player.GetComponent<playerMovement>().VerticalSpeed = 5f;
+                }
+
             }
-            else
-            {
-                TimeLeft = 0;
-                TimerOn = false;
-                healthBar.Damage(0.3f);
-                GameManager.inBattleMode = false;
-                //BattleMode.InstantiateSequence();
-                player.GetComponent<playerMovement>().horizontalSpeed = 5f;
-                player.GetComponent<playerMovement>().VerticalSpeed = 5f;
-            }
-            
         }
     }
 
