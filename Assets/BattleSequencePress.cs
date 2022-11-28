@@ -15,7 +15,9 @@ public class BattleSequencePress : MonoBehaviour
     public Sprite newSprite;
     SpriteRenderer sp;
 
-    private void Awake()
+    public bool buttonPressed;
+
+    public void Awake()
     {
         controllerString = "Joystick" + GameManager.DDR_PAD_NUM + buttonToPress;
 
@@ -40,6 +42,7 @@ public class BattleSequencePress : MonoBehaviour
     void ChangeSprite()
     {
         sp.sprite = newSprite;
+        buttonPressed = true;
     }
 
 }
