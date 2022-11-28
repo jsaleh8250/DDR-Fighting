@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    [SerializeField] private float horizontalSpeed = 10f;
-    [SerializeField] private float VerticalSpeed = 0f;
+    public float horizontalSpeed = 10f;
+    public float VerticalSpeed = 0f;
     private Rigidbody2D rb;
     private SpriteRenderer sp;
     private Animator animator;
@@ -121,5 +121,13 @@ public class playerMovement : MonoBehaviour
         }
     }
     */
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "BattleSeq")
+        {
+            GameManager.inBattleMode = true;
+        }
+    }
 
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4dd60fe5500dd0a4687415d88ecc80e9
+guid: 457a58d334506e64aad5883d0dd61643
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 75
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,76 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DiscoLights_0
+      name: NewArrows_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 89
-        width: 47
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54baafc7158a1574a9f6f3bb09ea60ad
-      internalID: 987760018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DiscoLights_1
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 89
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebe0170f93de971499510d45bf0e4bea
-      internalID: 834559353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DiscoLights_2
-      rect:
-        serializedVersion: 2
-        x: 172
-        y: 94
-        width: 38
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 104d35c29d4e253448b805914bc0cf80
-      internalID: -1148653196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DiscoLights_3
-      rect:
-        serializedVersion: 2
-        x: 254
-        y: 89
+        x: 21
+        y: 109
         width: 58
-        height: 64
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebe8f400e51bcd74da611a4b8d30588f
-      internalID: -1168546071
+      spriteID: 473fce6199e9b5a4db0fb5097e489f3f
+      internalID: -497989389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DiscoLights_4
+      name: NewArrows_1
       rect:
         serializedVersion: 2
-        x: 314
-        y: 89
+        x: 85
+        y: 109
         width: 58
-        height: 64
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,8 +164,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e170174b1d3a524c98cebeaa21a7a84
-      internalID: -606637786
+      spriteID: 023e5e2adc4b0df45b47c4aa758d480d
+      internalID: -2004780837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewArrows_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 113
+        width: 66
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8403234e26334b84fbf8278ed5c21ad3
+      internalID: 2065421828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewArrows_3
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 113
+        width: 66
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d425768d840c942ad1da099cff7666
+      internalID: 187473345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewArrows_4
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 13
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c028b52cfb8447428c982f94f752040
+      internalID: -1285748659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewArrows_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 13
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6608dc88812ef49b61c7eec239224e
+      internalID: 1792005978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewArrows_6
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 17
+        width: 66
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08980c3f53de74443870a0e008f48335
+      internalID: -293976822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewArrows_7
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 17
+        width: 66
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3dd253ab5e61a642b3e41011cc8c016
+      internalID: 2022241082
       vertices: []
       indices: 
       edges: []
@@ -244,11 +307,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DiscoLights_4: -606637786
-      DiscoLights_3: -1168546071
-      DiscoLights_1: 834559353
-      DiscoLights_2: -1148653196
-      DiscoLights_0: 987760018
+      NewArrows_6: -293976822
+      NewArrows_5: 1792005978
+      NewArrows_1: -2004780837
+      NewArrows_0: -497989389
+      NewArrows_2: 2065421828
+      NewArrows_7: 2022241082
+      NewArrows_4: -1285748659
+      NewArrows_3: 187473345
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
