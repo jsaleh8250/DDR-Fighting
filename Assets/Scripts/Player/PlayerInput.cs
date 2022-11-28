@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private playerMovement playermove;
-    float horizontalMove;
-    float verticalMove;
+    public float horizontalMove;
+    public float verticalMove;
 
     private void Awake()
     {

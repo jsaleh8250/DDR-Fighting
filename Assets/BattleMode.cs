@@ -24,10 +24,7 @@ public class BattleMode : MonoBehaviour
     {
         //InstantiateSequence();
         InstantiateEnemy();
-        player.GetComponent<playerMovement>().Move(0,0);
-        player.GetComponent<playerMovement>().horizontalSpeed = 0f;
-        player.GetComponent<playerMovement>().VerticalSpeed = 0f;
-        player.GetComponent<Transform>().position = new Vector2(secondCam.transform.position.x - 3f, secondCam.transform.position.y - .35f);
+        PausePlayer();
         //player.GetComponent<PlayerInput>().enabled = false;
     }
     // Start is called before the first frame update
@@ -119,6 +116,8 @@ public class BattleMode : MonoBehaviour
     void InstantiateSequence()
     {
 
+        //PausePlayer();
+
         foreach (Transform t in NoteTransform)
         {
             GameObject note = Instantiate(NotePrefab[Random.Range(0, NotePrefab.Length)], t.transform.position, Quaternion.identity);
@@ -166,6 +165,22 @@ public class BattleMode : MonoBehaviour
         if (currentState == newState) return;
         enemyAnim.Play(newState);
         currentState = newState;
+    }
+
+    void PausePlayer()
+    {
+        player.GetComponent<playerMovement>().Move(0, 0);
+        player.GetComponent<playerMovement>().horizontalSpeed = 0f;
+        player.GetComponent<playerMovement>().VerticalSpeed = 0f;
+        player.GetComponent<PlayerInput>().horizontalMove = 0f;
+        player.GetComponent<PlayerInput>().verticalMove = 0f;
+        player.GetComponent<Transform>().position = new Vector2(secondCam.transform.position.x - 3f, secondCam.transform.position.y - .35f);
+    }
+
+    public void UnPausePlayer()
+    {
+        player.GetComponent<playerMovement>().horizontalSpeed = 5f;
+        player.GetComponent<playerMovement>().VerticalSpeed = 5f;
     }
 
     IEnumerator KillEnemy()
