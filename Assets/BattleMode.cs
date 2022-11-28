@@ -96,7 +96,7 @@ public class BattleMode : MonoBehaviour
 
         if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
         {
-            CoverSequenceStart();
+            FinishSequence();
             //FinishSequence();
         }
     }
@@ -115,7 +115,7 @@ public class BattleMode : MonoBehaviour
         }
     }
 
-    void CoverSequenceStart()
+    public void CoverSequenceStart()
     {
         for (int i = 0; i < NoteTransform.Length; i++)
         {
@@ -123,7 +123,7 @@ public class BattleMode : MonoBehaviour
         }
 
         InstantiateSequence();
-        GameManager.inCoverMode = true;
+        //GameManager.inCoverMode = true;
     }
 
     void FinishSequence()

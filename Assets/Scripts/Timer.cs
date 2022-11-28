@@ -31,8 +31,7 @@ public class Timer : MonoBehaviour
                     TimeLeft = 0;
                     TimerOn = false;
                     healthBar.Damage(0.3f);
-                    GameManager.inBattleMode = false;
-                    //BattleMode.InstantiateSequence();
+                    GameManager.inCoverMode = true;
                     player.GetComponent<playerMovement>().horizontalSpeed = 5f;
                     player.GetComponent<playerMovement>().VerticalSpeed = 5f;
                 }

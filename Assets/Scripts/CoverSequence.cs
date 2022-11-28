@@ -119,6 +119,7 @@ public class CoverSequence : MonoBehaviour
         }
 
         InstantiateSequence();
+        battleSequence.GetComponent<BattleMode>().CoverSequenceStart();
         GameManager.inCoverMode = false;
     }
 
