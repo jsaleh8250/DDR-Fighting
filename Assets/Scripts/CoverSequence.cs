@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleMode : MonoBehaviour
+public class CoverSequence : MonoBehaviour
 {
     //Script Control
     public GameObject player;
@@ -13,12 +13,12 @@ public class BattleMode : MonoBehaviour
     public Transform[] NoteTransform;
     public GameObject[] NoteTransformObject;
 
-    //GameObjects
-    public GameObject CoverSequenceObject;
+    public GameObject battleSequence;
 
     void Awake()
     {
-        player.GetComponent<playerMovement>().Move(0,0);
+        battleSequence.SetActive(false);
+        player.GetComponent<playerMovement>().Move(0, 0);
         player.GetComponent<playerMovement>().horizontalSpeed = 0f;
         player.GetComponent<playerMovement>().VerticalSpeed = 0f;
         player.GetComponent<Transform>().position = new Vector2(secondCam.transform.position.x - 3f, secondCam.transform.position.y - .35f);
@@ -51,9 +51,9 @@ public class BattleMode : MonoBehaviour
     {
         GameObject FirstButton = NoteTransformObject[0];
 
-        FirstButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+        FirstButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
 
-        if (FirstButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        if (FirstButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
         {
             SecondButtonPrompt();
         }
@@ -63,9 +63,9 @@ public class BattleMode : MonoBehaviour
     {
         GameObject SecondButton = NoteTransformObject[1];
 
-        SecondButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+        SecondButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
 
-        if (SecondButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        if (SecondButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
         {
             ThirdButtonPrompt();
         }
@@ -75,9 +75,9 @@ public class BattleMode : MonoBehaviour
     {
         GameObject ThirdButton = NoteTransformObject[2];
 
-        ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+        ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
 
-        if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
         {
             FourthButtonPrompt();
         }
@@ -87,12 +87,11 @@ public class BattleMode : MonoBehaviour
     {
         GameObject ThirdButton = NoteTransformObject[3];
 
-        ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+        ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
 
-        if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
         {
-            CoverSequence();
-            //FinishSequence();
+            FinishSequence();
         }
     }
 
@@ -108,11 +107,6 @@ public class BattleMode : MonoBehaviour
             //note.transform.parent = t.parent.transform;
             note.transform.SetParent(t);
         }
-    }
-
-    void CoverSequence()
-    {
-        CoverSequenceObject.SetActive(true);
     }
 
     void FinishSequence()
