@@ -126,6 +126,7 @@ public class playerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "BattleSeq")
         {
+            Destroy(collision.gameObject);
             GameManager.inBattleMode = true;
         }
     }

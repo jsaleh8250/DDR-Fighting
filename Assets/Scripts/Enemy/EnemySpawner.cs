@@ -15,7 +15,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        enemyCount = FindObjectsOfType<Enemy>().Length;
+        enemyCount = FindObjectsOfType<SimpleAI>().Length;
 
         if (enemyCount == 0 && !spawningWave)
         {
