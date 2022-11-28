@@ -821,7 +821,7 @@ SpriteRenderer:
   m_Size: {x: 0.88, y: 0.7733333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &296079192
@@ -1135,7 +1135,7 @@ SpriteRenderer:
   m_Size: {x: 1.16, y: 1.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &396292311
@@ -1567,7 +1567,7 @@ SpriteRenderer:
   m_Size: {x: 1.16, y: 1.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &477772708
@@ -2266,7 +2266,8 @@ MonoBehaviour:
   - {fileID: 3606272470524801221}
   - {fileID: 2169558285812110403}
   - {fileID: 3736444496073372389}
-  CoverSequenceObject: {fileID: 1036227671}
+  CoverSequence: {fileID: 1036227671}
+  CoverSequenceObject: {fileID: 1875415347}
 --- !u!1 &661177375
 GameObject:
   m_ObjectHideFlags: 0
@@ -13776,7 +13777,9 @@ MonoBehaviour:
   mainCam: {fileID: 519420028}
   secondCam: {fileID: 60704727}
   battleSeq: {fileID: 606207428}
+  battleSeqOBJ: {fileID: 595358802}
   coverSeq: {fileID: 1036227671}
+  coverSeqOBJ: {fileID: 1875415347}
 --- !u!4 &1008226721
 Transform:
   m_ObjectHideFlags: 0
@@ -14168,7 +14171,8 @@ MonoBehaviour:
   - {fileID: 139667597}
   - {fileID: 1809265100}
   - {fileID: 1235693223}
-  battleSequence: {fileID: 595358802}
+  battleSequence: {fileID: 606207428}
+  battleSequenceObject: {fileID: 595358802}
 --- !u!1 &1068297554
 GameObject:
   m_ObjectHideFlags: 0
@@ -16361,7 +16365,7 @@ SpriteRenderer:
   m_Size: {x: 1.32, y: 1.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1654762243
@@ -17733,7 +17737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2009139964
 RectTransform:
   m_ObjectHideFlags: 0

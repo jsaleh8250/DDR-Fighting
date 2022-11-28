@@ -14,10 +14,10 @@ public class CoverSequence : MonoBehaviour
     public GameObject[] NoteTransformObject;
 
     public GameObject battleSequence;
+    public GameObject battleSequenceObject;
 
     void Awake()
     {
-        battleSequence.SetActive(false);
         player.GetComponent<playerMovement>().Move(0, 0);
         player.GetComponent<playerMovement>().horizontalSpeed = 0f;
         player.GetComponent<playerMovement>().VerticalSpeed = 0f;
@@ -91,7 +91,8 @@ public class CoverSequence : MonoBehaviour
 
         if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
         {
-            FinishSequence();
+            RestartSequence();
+            //FinishSequence();
         }
     }
 
@@ -107,6 +108,18 @@ public class CoverSequence : MonoBehaviour
             //note.transform.parent = t.parent.transform;
             note.transform.SetParent(t);
         }
+    }
+
+    void RestartSequence()
+    {
+
+        for (int i = 0; i < NoteTransform.Length; i++)
+        {
+            GameObject.Destroy(NoteTransform[i].transform.GetChild(0).gameObject);
+        }
+
+        InstantiateSequence();
+        GameManager.inCoverMode = false;
     }
 
     void FinishSequence()

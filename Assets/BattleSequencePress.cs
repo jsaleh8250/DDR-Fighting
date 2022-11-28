@@ -16,6 +16,7 @@ public class BattleSequencePress : MonoBehaviour
     SpriteRenderer sp;
 
     public bool buttonPressed;
+    public bool otherButtonPressed;
 
     public void Awake()
     {

@@ -14,10 +14,12 @@ public class BattleMode : MonoBehaviour
     public GameObject[] NoteTransformObject;
 
     //GameObjects
+    public GameObject CoverSequence;
     public GameObject CoverSequenceObject;
 
     void Awake()
     {
+        //InstantiateSequence();
         player.GetComponent<playerMovement>().Move(0,0);
         player.GetComponent<playerMovement>().horizontalSpeed = 0f;
         player.GetComponent<playerMovement>().VerticalSpeed = 0f;
@@ -34,6 +36,7 @@ public class BattleMode : MonoBehaviour
     void Update()
     {
 
+
         FirstButtonPrompt();
         /*
         foreach (GameObject o in NoteTransformObject)
@@ -45,6 +48,8 @@ public class BattleMode : MonoBehaviour
             }
         }
         */
+
+
     }
 
     void FirstButtonPrompt()
@@ -91,7 +96,7 @@ public class BattleMode : MonoBehaviour
 
         if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
         {
-            CoverSequence();
+            CoverSequenceStart();
             //FinishSequence();
         }
     }
@@ -110,9 +115,15 @@ public class BattleMode : MonoBehaviour
         }
     }
 
-    void CoverSequence()
+    void CoverSequenceStart()
     {
-        CoverSequenceObject.SetActive(true);
+        for (int i = 0; i < NoteTransform.Length; i++)
+        {
+            GameObject.Destroy(NoteTransform[i].transform.GetChild(0).gameObject);
+        }
+
+        InstantiateSequence();
+        GameManager.inCoverMode = true;
     }
 
     void FinishSequence()
