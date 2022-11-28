@@ -128,6 +128,13 @@ public class BattleMode : MonoBehaviour
 
     void FinishSequence()
     {
+        for (int i = 0; i < NoteTransform.Length; i++)
+        {
+            GameObject.Destroy(NoteTransform[i].transform.GetChild(0).gameObject);
+        }
+
+        InstantiateSequence();
+
         GameManager.inBattleMode = false;
         player.GetComponent<playerMovement>().horizontalSpeed = 5f;
         player.GetComponent<playerMovement>().VerticalSpeed = 5f;
