@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -10,9 +11,14 @@ public class Timer : MonoBehaviour
     public HealthBar healthBar;
     public TextMeshProUGUI Timertext;
     public GameObject player;
+    Image TimerBar;
+    public float maxTime = 10f;
+    
     void Start()
     {
         TimerOn = true;
+        TimerBar = GetComponent<Image>();
+        TimeLeft = maxTime;
     }
 
     void Update()
@@ -24,7 +30,8 @@ public class Timer : MonoBehaviour
                 if (TimeLeft > 0)
                 {
                     TimeLeft -= Time.deltaTime;
-                    updateTime(TimeLeft);
+                    TimerBar.fillAmount = TimeLeft / maxTime;
+                    //updateTime(TimeLeft);
                 }
                 else
                 {
