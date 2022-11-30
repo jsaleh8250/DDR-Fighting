@@ -35,16 +35,25 @@ public class Timer : MonoBehaviour
                 }
                 else
                 {
+                    
                     TimeLeft = 0;
                     TimerOn = false;
                     healthBar.Damage(0.3f);
                     GameManager.inCoverMode = true;
                     player.GetComponent<playerMovement>().horizontalSpeed = 5f;
                     player.GetComponent<playerMovement>().VerticalSpeed = 5f;
+                    ResetTimer();
                 }
 
             }
         }
+    }
+
+  public void ResetTimer()
+    {
+        TimerOn = true;
+        TimerBar = GetComponent<Image>();
+        TimeLeft = maxTime;
     }
 
     void updateTime(float currentTime)
