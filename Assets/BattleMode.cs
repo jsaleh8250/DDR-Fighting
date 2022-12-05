@@ -40,6 +40,8 @@ public class BattleMode : MonoBehaviour
 
     void FirstButtonPrompt()
     {
+        PausePlayer();
+
         GameObject FirstButton = NoteTransformObject[0];
 
         FirstButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;

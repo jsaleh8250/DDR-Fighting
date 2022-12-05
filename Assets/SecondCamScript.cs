@@ -13,7 +13,7 @@ public class SecondCamScript : MonoBehaviour
 
     private void Update()
     {
-        this.gameObject.transform.position = new Vector3(player.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+        this.gameObject.transform.position = new Vector3(player.gameObject.transform.position.x + 3f, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
 
     }
 

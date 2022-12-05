@@ -29,6 +29,7 @@ public class Timer : MonoBehaviour
             {
                 if (TimeLeft > 0)
                 {
+                    TimerOn = true;
                     TimeLeft -= Time.deltaTime;
                     TimerBar.fillAmount = TimeLeft / maxTime;
                     //updateTime(TimeLeft);
@@ -46,7 +47,7 @@ public class Timer : MonoBehaviour
             }
             else
             {
-                TimeLeft = 0;
+               // TimeLeft = 0;
                 TimerOn = false;
             }
         }
