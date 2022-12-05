@@ -33,18 +33,7 @@ public class CoverSequence : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         FirstButtonPrompt();
-        /*
-        foreach (GameObject o in NoteTransformObject)
-        {
-            o.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
-            if (o.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
-            {
-                Debug.Log("Button are being pressed");
-            }
-        }
-        */
     }
 
     void FirstButtonPrompt()
@@ -92,7 +81,7 @@ public class CoverSequence : MonoBehaviour
         if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
         {
             RestartSequence();
-            //FinishSequence();
+            //BackToBattleMode();
         }
     }
 
@@ -123,10 +112,9 @@ public class CoverSequence : MonoBehaviour
         GameManager.inCoverMode = false;
     }
 
-    void FinishSequence()
+    void BackToBattleMode()
     {
-        GameManager.inBattleMode = false;
-        player.GetComponent<playerMovement>().horizontalSpeed = 5f;
-        player.GetComponent<playerMovement>().VerticalSpeed = 5f;
+        GameManager.inCoverMode = false;
     }
+
 }

@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
     {
         if (TimerOn)
         {
-            if (GameManager.inBattleMode = true)
+            if (GameManager.inBattleMode == true)
             {
                 if (TimeLeft > 0)
                 {
@@ -35,16 +35,19 @@ public class Timer : MonoBehaviour
                 }
                 else
                 {
-                    
+
                     TimeLeft = 0;
                     TimerOn = false;
                     healthBar.Damage(0.3f);
                     GameManager.inCoverMode = true;
-                    player.GetComponent<playerMovement>().horizontalSpeed = 5f;
-                    player.GetComponent<playerMovement>().VerticalSpeed = 5f;
                     ResetTimer();
                 }
 
+            }
+            else
+            {
+                TimeLeft = 0;
+                TimerOn = false;
             }
         }
     }

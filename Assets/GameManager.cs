@@ -19,23 +19,8 @@ public class GameManager : MonoBehaviour
     public GameObject mainCam, secondCam, battleSeq, battleSeqOBJ, coverSeq, coverSeqOBJ, Timer;
 
 
-    public void Update()
+    private void Update()
     {
-        isPressed = false;
-
-        if (isPressed == true)
-        {
-            Debug.Log(" PUBLIC Game Manager: " + isPressed);
-        }
-
-    }
-
-    private void FixedUpdate()
-    {
-        if (isPressed == true)
-        {
-            Debug.Log(" FIXED UPDATE Game Manager: " + isPressed);
-        }
 
         if (inBattleMode)
         {

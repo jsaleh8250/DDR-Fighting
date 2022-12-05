@@ -22,10 +22,8 @@ public class BattleMode : MonoBehaviour
 
     void Awake()
     {
-        //InstantiateSequence();
         InstantiateEnemy();
         PausePlayer();
-        //player.GetComponent<PlayerInput>().enabled = false;
     }
     // Start is called before the first frame update
     void Start()
@@ -37,21 +35,7 @@ public class BattleMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         FirstButtonPrompt();
-        /*
-        foreach (GameObject o in NoteTransformObject)
-        {
-            o.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
-            if (o.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
-            {
-                Debug.Log("Button are being pressed");
-            }
-        }
-        */
-
-
     }
 
     void FirstButtonPrompt()
@@ -99,7 +83,6 @@ public class BattleMode : MonoBehaviour
         if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
         {
             FinishSequence();
-            //FinishSequence();
         }
     }
 
@@ -113,16 +96,12 @@ public class BattleMode : MonoBehaviour
 
 
 
-    void InstantiateSequence()
+    public void InstantiateSequence()
     {
-
-        //PausePlayer();
-
         foreach (Transform t in NoteTransform)
         {
             GameObject note = Instantiate(NotePrefab[Random.Range(0, NotePrefab.Length)], t.transform.position, Quaternion.identity);
 
-            //note.transform.parent = t.parent.transform;
             note.transform.SetParent(t);
         }
     }
@@ -142,22 +121,16 @@ public class BattleMode : MonoBehaviour
         }
 
         InstantiateSequence();
-        //GameManager.inCoverMode = true;
     }
 
     void FinishSequence()
     {
-        StartCoroutine(KillEnemy());
-
+        // StartCoroutine(KillEnemy());
+        GameManager.inBattleMode = false;
+        UnPausePlayer();
         ClearNotes();
         InstantiateEnemy();
-
-        GameManager.inBattleMode = false;
-        player.GetComponent<playerMovement>().horizontalSpeed = 5f;
-        player.GetComponent<playerMovement>().VerticalSpeed = 5f;
-
         InstantiateSequence();
-
     }
 
     void ChangingAnim(string newState)
