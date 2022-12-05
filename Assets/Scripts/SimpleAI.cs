@@ -51,4 +51,5 @@ public class SimpleAI : MonoBehaviour
         enemyAnim.Play(newState);
         currentState = newState;
     }
+
 }

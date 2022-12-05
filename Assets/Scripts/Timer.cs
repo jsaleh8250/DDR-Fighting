@@ -25,31 +25,40 @@ public class Timer : MonoBehaviour
     {
         if (TimerOn)
         {
-            if (GameManager.inBattleMode == true)
+            TimerTicking();
+        }
+        else 
+        {
+            ResetTimer();
+        }
+    }
+
+    void TimerTicking()
+    {
+        if (GameManager.inBattleMode == true)
+        {
+            if (TimeLeft > 0)
             {
-                if (TimeLeft > 0)
-                {
-                    TimerOn = true;
-                    TimeLeft -= Time.deltaTime;
-                    TimerBar.fillAmount = TimeLeft / maxTime;
-                    //updateTime(TimeLeft);
-                }
-                else
-                {
-
-                    TimeLeft = 0;
-                    TimerOn = false;
-                    healthBar.Damage(0.3f);
-                    GameManager.inCoverMode = true;
-                    ResetTimer();
-                }
-
+                TimerOn = true;
+                TimeLeft -= Time.deltaTime;
+                TimerBar.fillAmount = TimeLeft / maxTime;
+                //updateTime(TimeLeft);
             }
             else
             {
-               // TimeLeft = 0;
+
+                TimeLeft = 0;
                 TimerOn = false;
+                healthBar.Damage(0.3f);
+                GameManager.inCoverMode = true;
+                ResetTimer();
             }
+
+        }
+        else
+        {
+            TimeLeft = 0;
+            TimerOn = false;
         }
     }
 
