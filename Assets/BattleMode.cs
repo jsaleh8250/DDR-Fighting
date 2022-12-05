@@ -113,6 +113,8 @@ public class BattleMode : MonoBehaviour
         GameObject enemy = Instantiate(enemyPrefab, new Vector2(secondCam.transform.position.x + 3f, secondCam.transform.position.y - .35f), Quaternion.identity);
 
         enemy.transform.parent = secondCam.transform;
+
+        enemyAnim = enemy.GetComponent<Animator>();
     }
 
     public void CoverSequenceStart()
@@ -127,7 +129,7 @@ public class BattleMode : MonoBehaviour
 
     void FinishSequence()
     {
-        // StartCoroutine(KillEnemy());
+        StartCoroutine(KillEnemy());
         GameManager.inBattleMode = false;
         UnPausePlayer();
         ClearNotes();
