@@ -84,7 +84,7 @@ public class Note : MonoBehaviour
         if (collision.tag == "Active")
         {
             canBePressed = false;
-            ScoreHandler.instance.NoteMissed();
+            //ScoreHandler.instance.NoteMissed();
             //Instantiate(missEffect, transform.position, missEffect.transform.rotation);
         }
     }

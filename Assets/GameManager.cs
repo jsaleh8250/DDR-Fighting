@@ -18,38 +18,42 @@ public class GameManager : MonoBehaviour
 
     public GameObject mainCam, secondCam, battleSeq, battleSeqOBJ, coverSeq, coverSeqOBJ, Timer;
 
+    public bool DanceMode;
+
 
     private void Update()
     {
-
-        if (inBattleMode)
+        if (!DanceMode)
         {
-            secondCam.SetActive(true);
-            mainCam.SetActive(false);
-            battleSeq.SetActive(true);
-            Timer.SetActive(true);
-            if (inCoverMode)
+            if (inBattleMode)
             {
-                battleSeq.SetActive(false);
-                battleSeqOBJ.SetActive(false);
-                coverSeq.SetActive(true);
-                coverSeqOBJ.SetActive(true);
+                secondCam.SetActive(true);
+                mainCam.SetActive(false);
+                battleSeq.SetActive(true);
+                Timer.SetActive(true);
+                if (inCoverMode)
+                {
+                    battleSeq.SetActive(false);
+                    battleSeqOBJ.SetActive(false);
+                    coverSeq.SetActive(true);
+                    coverSeqOBJ.SetActive(true);
+                }
+                else
+                {
+                    battleSeq.SetActive(true);
+                    battleSeqOBJ.SetActive(true);
+                    coverSeq.SetActive(false);
+                    coverSeqOBJ.SetActive(false);
+                }
             }
             else
             {
-                battleSeq.SetActive(true);
-                battleSeqOBJ.SetActive(true);
+                mainCam.SetActive(true);
+                secondCam.SetActive(false);
+                battleSeq.SetActive(false);
                 coverSeq.SetActive(false);
-                coverSeqOBJ.SetActive(false);
+                Timer.SetActive(false);
             }
-        }
-        else
-        {
-            mainCam.SetActive(true);
-            secondCam.SetActive(false);
-            battleSeq.SetActive(false);
-            coverSeq.SetActive(false);
-            Timer.SetActive(false);
         }
     }
 }
