@@ -484,8 +484,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54, y: -34.544}
-  m_SizeDelta: {x: 800, y: 300}
+  m_AnchoredPosition: {x: -51.4428, y: 5.7537}
+  m_SizeDelta: {x: 794.8855, y: 186.2065}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &193982912
 MonoBehaviour:
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6f3194bef3acde0418d12b161723ce18, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a3e2ba4df933944ea1e4e3cb1fda35f, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1803,6 +1803,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Simple AI (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5376535602228014105, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
+      propertyPath: other
+      value: 
+      objectReference: {fileID: 671078037}
+    - target: {fileID: 5376535602228014105, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
+      propertyPath: enemystoppingDist
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
 --- !u!4 &485600692 stripped
@@ -2744,6 +2752,14 @@ PrefabInstance:
     - target: {fileID: 5376535602228014086, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
       propertyPath: m_Name
       value: Simple AI (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376535602228014105, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
+      propertyPath: other
+      value: 
+      objectReference: {fileID: 1023402127}
+    - target: {fileID: 5376535602228014105, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
+      propertyPath: enemystoppingDist
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
@@ -5392,6 +5408,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Simple AI (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5376535602228014105, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
+      propertyPath: other
+      value: 
+      objectReference: {fileID: 1825272557}
+    - target: {fileID: 5376535602228014105, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
+      propertyPath: enemystoppingDist
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
 --- !u!4 &1590078046 stripped
@@ -6447,6 +6471,14 @@ PrefabInstance:
     - target: {fileID: 5376535602228014086, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
       propertyPath: m_Name
       value: Simple AI (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376535602228014105, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
+      propertyPath: other
+      value: 
+      objectReference: {fileID: 485600692}
+    - target: {fileID: 5376535602228014105, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
+      propertyPath: enemystoppingDist
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
@@ -8161,6 +8193,14 @@ PrefabInstance:
     - target: {fileID: 5376535602228014086, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
       propertyPath: m_Name
       value: Simple AI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376535602228014105, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
+      propertyPath: other
+      value: 
+      objectReference: {fileID: 1023402127}
+    - target: {fileID: 5376535602228014105, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
+      propertyPath: enemystoppingDist
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b7a487e2a71dfa4096b0f59c1706447, type: 3}
