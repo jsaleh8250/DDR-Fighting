@@ -28,7 +28,6 @@ public class BattleMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyAnim = enemyPrefab.GetComponent<Animator>();
         InstantiateSequence();
     }
 
@@ -108,13 +107,13 @@ public class BattleMode : MonoBehaviour
         }
     }
 
-    void InstantiateEnemy()
+    public void InstantiateEnemy()
     {
         GameObject enemy = Instantiate(enemyPrefab, new Vector2(secondCam.transform.position.x + 3f, secondCam.transform.position.y - .35f), Quaternion.identity);
 
         enemy.transform.parent = secondCam.transform;
-
         enemyAnim = enemy.GetComponent<Animator>();
+
     }
 
     public void CoverSequenceStart()
@@ -130,11 +129,6 @@ public class BattleMode : MonoBehaviour
     void FinishSequence()
     {
         StartCoroutine(KillEnemy());
-        GameManager.inBattleMode = false;
-        UnPausePlayer();
-        ClearNotes();
-        InstantiateEnemy();
-        InstantiateSequence();
     }
 
     void ChangingAnim(string newState)
@@ -146,6 +140,7 @@ public class BattleMode : MonoBehaviour
 
     void PausePlayer()
     {
+        ChangingAnim("Idle");
         player.GetComponent<playerMovement>().Move(0, 0);
         player.GetComponent<playerMovement>().horizontalSpeed = 0f;
         player.GetComponent<playerMovement>().VerticalSpeed = 0f;
@@ -163,6 +158,11 @@ public class BattleMode : MonoBehaviour
     IEnumerator KillEnemy()
     {
         ChangingAnim("Death");
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.5f);
+        GameManager.inBattleMode = false;
+        UnPausePlayer();
+        ClearNotes();
+        InstantiateSequence();
+
     }
 }

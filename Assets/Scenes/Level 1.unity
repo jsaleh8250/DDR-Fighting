@@ -3547,6 +3547,7 @@ MonoBehaviour:
   coverSeq: {fileID: 1036227671}
   coverSeqOBJ: {fileID: 1875415347}
   Timer: {fileID: 2009139963}
+  DanceMode: 0
 --- !u!4 &1008226721
 Transform:
   m_ObjectHideFlags: 0
