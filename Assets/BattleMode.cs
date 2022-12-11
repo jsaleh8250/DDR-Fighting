@@ -17,6 +17,8 @@ public class BattleMode : MonoBehaviour
     public GameObject CoverSequence;
     public GameObject CoverSequenceObject;
     public GameObject enemyPrefab;
+    public GameObject enemyPrefab2;
+    public GameObject enemyPrefab3;
     Animator enemyAnim;
     private string currentState;
 
@@ -140,7 +142,6 @@ public class BattleMode : MonoBehaviour
 
     void PausePlayer()
     {
-        ChangingAnim("Idle");
         player.GetComponent<playerMovement>().Move(0, 0);
         player.GetComponent<playerMovement>().horizontalSpeed = 0f;
         player.GetComponent<playerMovement>().VerticalSpeed = 0f;
@@ -155,14 +156,25 @@ public class BattleMode : MonoBehaviour
         player.GetComponent<playerMovement>().VerticalSpeed = 5f;
     }
 
+    public void PlayDeathAnimation()
+    {
+        StartCoroutine(PlayDeathAnimationOperation());
+    }
+
     IEnumerator KillEnemy()
     {
-        ChangingAnim("Death");
+        PlayDeathAnimation();
         yield return new WaitForSeconds(.5f);
         GameManager.inBattleMode = false;
         UnPausePlayer();
         ClearNotes();
         InstantiateSequence();
 
+    }
+
+    IEnumerator PlayDeathAnimationOperation()
+    {
+        ChangingAnim("Death");
+        yield return new WaitForSeconds(.5f);
     }
 }

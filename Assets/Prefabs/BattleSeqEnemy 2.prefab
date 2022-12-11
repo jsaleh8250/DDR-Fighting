@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 873064253102384447}
   - component: {fileID: 5647551169319845743}
   m_Layer: 0
-  m_Name: EnemyLights_0
+  m_Name: EnemyLights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
