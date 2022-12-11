@@ -42,6 +42,10 @@ public class BattleMode : MonoBehaviour
             InstantiateEnemy();
         }
     }
+    public void OnDisable()
+    {
+        DeleteEnemy();
+    }
 
     // Start is called before the first frame update
     void Start()

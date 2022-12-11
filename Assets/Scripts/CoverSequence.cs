@@ -16,6 +16,15 @@ public class CoverSequence : MonoBehaviour
     public GameObject battleSequence;
     public GameObject battleSequenceObject;
 
+    public GameObject currentEnemy;
+    private string currentState;
+    private int currentEnemyType;
+    private int firstEnemyGone;
+    Animator enemyAnim;
+    public GameObject enemyPrefab;
+    public GameObject enemyPrefab2;
+    public GameObject enemyPrefab3;
+
     void Awake()
     {
         player.GetComponent<playerMovement>().Move(0, 0);
@@ -24,11 +33,20 @@ public class CoverSequence : MonoBehaviour
         player.GetComponent<Transform>().position = new Vector2(secondCam.transform.position.x - 3f, secondCam.transform.position.y - .35f);
         //player.GetComponent<PlayerInput>().enabled = false;
     }
-
     // Start is called before the first frame update
     void Start()
     {
         InstantiateSequence();
+    }
+
+    public void OnEnable()
+    {
+        currentEnemyType = player.GetComponent<playerMovement>().currentEnmyType;
+        InstantiateEnemy();
+    }
+    public void OnDisable()
+    {
+        DeleteEnemy();
     }
 
     // Update is called once per frame
@@ -39,8 +57,9 @@ public class CoverSequence : MonoBehaviour
 
     void FirstButtonPrompt()
     {
+        GameObject battleEnemies = GameObject.FindGameObjectWithTag("BattleSeqEnemies");
 
-        battleSequence.GetComponent<BattleMode>().currentEnemy.transform.GetChild(0).gameObject.SetActive(false);
+        battleEnemies.transform.GetChild(0).gameObject.SetActive(false);
 
         GameObject FirstButton = NoteTransformObject[0];
 
@@ -115,6 +134,54 @@ public class CoverSequence : MonoBehaviour
         battleSequence.GetComponent<BattleMode>().CoverSequenceStart();
         GameManager.inCoverMode = false;
     }
+
+
+    public void InstantiateEnemy()
+    {
+        if (currentEnemyType == 1)
+        {
+            GameObject enemy = Instantiate(enemyPrefab, new Vector2(secondCam.transform.position.x + 3f, secondCam.transform.position.y - .35f), Quaternion.identity);
+
+            enemy.transform.parent = secondCam.transform;
+
+            enemyAnim = enemy.GetComponent<Animator>();
+            currentEnemy = enemy;
+        }
+        else if (currentEnemyType == 2)
+        {
+            GameObject enemy = Instantiate(enemyPrefab3, new Vector2(secondCam.transform.position.x + 3f, secondCam.transform.position.y - .35f), Quaternion.identity);
+
+            enemy.transform.parent = secondCam.transform;
+
+            enemyAnim = enemy.GetComponent<Animator>();
+            currentEnemy = enemy;
+        }
+        else if (currentEnemyType == 3)
+        {
+            GameObject enemy = Instantiate(enemyPrefab2, new Vector2(secondCam.transform.position.x + 3f, secondCam.transform.position.y - .35f), Quaternion.identity);
+
+            enemy.transform.parent = secondCam.transform;
+
+            enemyAnim = enemy.GetComponent<Animator>();
+            currentEnemy = enemy;
+        }
+        else
+        {
+            GameObject enemy = Instantiate(enemyPrefab, new Vector2(secondCam.transform.position.x + 3f, secondCam.transform.position.y - .35f), Quaternion.identity);
+
+            enemy.transform.parent = secondCam.transform;
+
+            enemyAnim = enemy.GetComponent<Animator>();
+            currentEnemy = enemy;
+        }
+
+    }
+
+    public void DeleteEnemy()
+    {
+        Destroy(currentEnemy);
+    }
+
 
     void BackToBattleMode()
     {

@@ -31,20 +31,6 @@ public class GameManager : MonoBehaviour
                 mainCam.SetActive(false);
                 battleSeq.SetActive(true);
                 Timer.SetActive(true);
-                if (inCoverMode)
-                {
-                    battleSeq.SetActive(false);
-                    battleSeqOBJ.SetActive(false);
-                    coverSeq.SetActive(true);
-                    coverSeqOBJ.SetActive(true);
-                }
-                else
-                {
-                    battleSeq.SetActive(true);
-                    battleSeqOBJ.SetActive(true);
-                    coverSeq.SetActive(false);
-                    coverSeqOBJ.SetActive(false);
-                }
             }
             else
             {
@@ -53,6 +39,20 @@ public class GameManager : MonoBehaviour
                 battleSeq.SetActive(false);
                 coverSeq.SetActive(false);
                 Timer.SetActive(false);
+            }
+            if (inCoverMode)
+            {
+                battleSeq.SetActive(false);
+                battleSeqOBJ.SetActive(false);
+                coverSeq.SetActive(true);
+                coverSeqOBJ.SetActive(true);
+            }
+            else
+            {
+                battleSeq.SetActive(true);
+                battleSeqOBJ.SetActive(true);
+                coverSeq.SetActive(false);
+                coverSeqOBJ.SetActive(false);
             }
         }
     }

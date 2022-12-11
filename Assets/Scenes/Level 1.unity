@@ -4019,6 +4019,10 @@ MonoBehaviour:
   - {fileID: 1235693223}
   battleSequence: {fileID: 606207428}
   battleSequenceObject: {fileID: 595358802}
+  currentEnemy: {fileID: 0}
+  enemyPrefab: {fileID: 7393395903032510395, guid: cf02fef259b817449ad4506831a8ed61, type: 3}
+  enemyPrefab2: {fileID: 7393395903032510395, guid: 3e7c5a4ba8cc7de478bf2f4559957636, type: 3}
+  enemyPrefab3: {fileID: 7393395903032510395, guid: 3d473b0a079afe6458fd86e0bc8f43b6, type: 3}
 --- !u!1 &1121432299
 GameObject:
   m_ObjectHideFlags: 0

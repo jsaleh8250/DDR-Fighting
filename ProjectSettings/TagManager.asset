@@ -10,6 +10,7 @@ TagManager:
   - Delete
   - HitBox
   - BattleSeq
+  - BattleSeqEnemies
   layers:
   - Default
   - TransparentFX
