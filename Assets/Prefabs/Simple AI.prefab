@@ -148,8 +148,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  other: {fileID: 0}
   speed: 2
   stoppingDist: 6
+  thisEnemyType: 1
 --- !u!95 &5376535602228014104
 Animator:
   serializedVersion: 4

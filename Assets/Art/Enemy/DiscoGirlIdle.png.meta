@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 530d25b8929a791429c2a7f2d3b2abe6
+guid: 45915941de26fad4f9c83ea3d7426506
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,33 +129,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DiscoNBDeath_0
+      name: DiscoGirlIdle_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 17
         y: 10
-        width: 29
-        height: 74
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 375a3c80404912540b0d22901983f452
-      internalID: 278503754
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DiscoNBDeath_1
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 9
-        width: 31
+        width: 39
         height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -164,19 +143,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f093579781273fd4e8fc3555fab2c809
-      internalID: 225761138
+      spriteID: d85ac2ed13623ad448099107663dfcf2
+      internalID: 1213141610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DiscoNBDeath_2
+      name: DiscoGirlIdle_1
       rect:
         serializedVersion: 2
-        x: 91
-        y: 9
-        width: 34
+        x: 64
+        y: 11
+        width: 39
         height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -185,8 +164,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d07e2c4663309e44bc04fbf2d9e6d08
-      internalID: -2122404208
+      spriteID: fad4dd2fedf22af44b70c88932ac612d
+      internalID: -1595048598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiscoGirlIdle_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 10
+        width: 39
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef8ba9db22bc1e4da9670c0547174b5
+      internalID: -1741699004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiscoGirlIdle_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 10
+        width: 39
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08fde6bb2486c84a987e0a1da2e0d7f
+      internalID: 1592196909
       vertices: []
       indices: 
       edges: []
@@ -202,9 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DiscoNBDeath_2: -2122404208
-      DiscoNBDeath_0: 278503754
-      DiscoNBDeath_1: 225761138
+      DiscoGirlIdle_1: -1595048598
+      DiscoGirlIdle_0: 1213141610
+      DiscoGirlIdle_2: -1741699004
+      DiscoGirlIdle_3: 1592196909
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

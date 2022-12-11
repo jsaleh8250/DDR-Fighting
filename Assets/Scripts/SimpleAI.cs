@@ -9,6 +9,7 @@ public class SimpleAI : MonoBehaviour
     public float speed;
     private float distance;
     public float stoppingDist;
+    public int thisEnemyType;
     //public float enemystoppingDist;
 
     //Anim
@@ -19,6 +20,7 @@ public class SimpleAI : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         enemyAnim = GetComponent<Animator>();
+        thisEnemyType = thisEnemyType;
         //other = GameObject.FindGameObjectWithTag("BattleSeq").transform;
         //other = GameObject.Find("Simple AI(1)").transform;
     }
@@ -52,7 +54,7 @@ public class SimpleAI : MonoBehaviour
 
        // }
        //else {
-            ChangingAnim("Idle");
+            //ChangingAnim("Idle");
        // }
     }
 

@@ -23,6 +23,8 @@ public class playerMovement : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip[] audioClipArray;
 
+    public int currentEnmyType;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -126,9 +128,9 @@ public class playerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "BattleSeq")
         {
+            currentEnmyType = collision.gameObject.GetComponent<SimpleAI>().thisEnemyType;
             Destroy(collision.gameObject);
             GameManager.inBattleMode = true;
         }
     }
-
 }

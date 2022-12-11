@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 7393395903032510393}
   - component: {fileID: 7393395903032510392}
   - component: {fileID: 7393395903032510375}
-  - component: {fileID: 7393395903032510373}
+  - component: {fileID: 2832368104076272467}
   m_Layer: 0
   m_Name: BattleSeqEnemy 2
   m_TagString: Untagged
@@ -192,7 +192,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &7393395903032510373
+--- !u!95 &2832368104076272467
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ Animator:
   m_GameObject: {fileID: 7393395903032510395}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 48ae170a32ea44d47a248de345c5e024, type: 2}
+  m_Controller: {fileID: 9100000, guid: 93b1dccfd5ee95046976127731664bf9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

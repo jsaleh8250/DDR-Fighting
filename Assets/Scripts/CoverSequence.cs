@@ -24,6 +24,7 @@ public class CoverSequence : MonoBehaviour
         player.GetComponent<Transform>().position = new Vector2(secondCam.transform.position.x - 3f, secondCam.transform.position.y - .35f);
         //player.GetComponent<PlayerInput>().enabled = false;
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,9 @@ public class CoverSequence : MonoBehaviour
 
     void FirstButtonPrompt()
     {
+
+        battleSequence.GetComponent<BattleMode>().currentEnemy.transform.GetChild(0).gameObject.SetActive(false);
+
         GameObject FirstButton = NoteTransformObject[0];
 
         FirstButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;

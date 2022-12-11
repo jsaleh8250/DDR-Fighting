@@ -20,13 +20,29 @@ public class BattleMode : MonoBehaviour
     public GameObject enemyPrefab2;
     public GameObject enemyPrefab3;
     Animator enemyAnim;
+    public GameObject currentEnemy;
     private string currentState;
+    private int currentEnemyType;
+    private int firstEnemyGone;
 
     void Awake()
     {
         InstantiateEnemy();
+        firstEnemyGone++;
+
         PausePlayer();
     }
+
+    public void OnEnable()
+    {
+        currentEnemyType = player.GetComponent<playerMovement>().currentEnmyType;
+        firstEnemyGone++;
+        if (firstEnemyGone > 2)
+        {
+            InstantiateEnemy();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -111,11 +127,48 @@ public class BattleMode : MonoBehaviour
 
     public void InstantiateEnemy()
     {
-        GameObject enemy = Instantiate(enemyPrefab, new Vector2(secondCam.transform.position.x + 3f, secondCam.transform.position.y - .35f), Quaternion.identity);
+        if (currentEnemyType == 1)
+        {
+            GameObject enemy = Instantiate(enemyPrefab, new Vector2(secondCam.transform.position.x + 3f, secondCam.transform.position.y - .35f), Quaternion.identity);
 
-        enemy.transform.parent = secondCam.transform;
-        enemyAnim = enemy.GetComponent<Animator>();
+            enemy.transform.parent = secondCam.transform;
 
+            enemyAnim = enemy.GetComponent<Animator>();
+            currentEnemy = enemy;
+        }
+        else if (currentEnemyType == 2)
+        {
+            GameObject enemy = Instantiate(enemyPrefab3, new Vector2(secondCam.transform.position.x + 3f, secondCam.transform.position.y - .35f), Quaternion.identity);
+
+            enemy.transform.parent = secondCam.transform;
+
+            enemyAnim = enemy.GetComponent<Animator>();
+            currentEnemy = enemy;
+        }
+        else if (currentEnemyType == 3)
+        {
+            GameObject enemy = Instantiate(enemyPrefab2, new Vector2(secondCam.transform.position.x + 3f, secondCam.transform.position.y - .35f), Quaternion.identity);
+
+            enemy.transform.parent = secondCam.transform;
+
+            enemyAnim = enemy.GetComponent<Animator>();
+            currentEnemy = enemy;
+        }
+        else
+        {
+            GameObject enemy = Instantiate(enemyPrefab, new Vector2(secondCam.transform.position.x + 3f, secondCam.transform.position.y - .35f), Quaternion.identity);
+
+            enemy.transform.parent = secondCam.transform;
+
+            enemyAnim = enemy.GetComponent<Animator>();
+            currentEnemy = enemy;
+        }
+
+    }
+
+    public void DeleteEnemy()
+    {
+        Destroy(currentEnemy);
     }
 
     public void CoverSequenceStart()
@@ -130,18 +183,20 @@ public class BattleMode : MonoBehaviour
 
     void FinishSequence()
     {
+        currentEnemy.transform.GetChild(0).gameObject.SetActive(false);
         StartCoroutine(KillEnemy());
     }
 
     void ChangingAnim(string newState)
     {
         if (currentState == newState) return;
-        enemyAnim.Play(newState);
+        currentEnemy.GetComponent<Animator>().Play(newState);
         currentState = newState;
     }
 
     void PausePlayer()
     {
+        currentEnemy.transform.GetChild(0).gameObject.SetActive(true);
         player.GetComponent<playerMovement>().Move(0, 0);
         player.GetComponent<playerMovement>().horizontalSpeed = 0f;
         player.GetComponent<playerMovement>().VerticalSpeed = 0f;
@@ -163,6 +218,7 @@ public class BattleMode : MonoBehaviour
 
     IEnumerator KillEnemy()
     {
+        ChangingAnim("Death");
         PlayDeathAnimation();
         yield return new WaitForSeconds(.5f);
         GameManager.inBattleMode = false;
@@ -176,5 +232,6 @@ public class BattleMode : MonoBehaviour
     {
         ChangingAnim("Death");
         yield return new WaitForSeconds(.5f);
+        DeleteEnemy();
     }
 }
