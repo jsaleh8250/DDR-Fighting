@@ -20,6 +20,9 @@ public class BattleSequencePress : MonoBehaviour
 
     private GameObject player;
 
+    //Audio
+    public AudioSource audioSource;
+
     public void Awake()
     {
         controllerString = "Joystick" + GameManager.DDR_PAD_NUM + buttonToPress;
@@ -32,6 +35,7 @@ public class BattleSequencePress : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = gameObject.GetComponent<AudioSource>();
         sp = gameObject.GetComponent<SpriteRenderer>();
     }
 
@@ -41,6 +45,7 @@ public class BattleSequencePress : MonoBehaviour
         if (Input.GetKeyDown(keyToPress))
         {
             ChangeSprite();
+            PlayAudio();
         }
     }
 
@@ -49,6 +54,9 @@ public class BattleSequencePress : MonoBehaviour
         sp.sprite = newSprite;
         buttonPressed = true;
     }
-
+    void PlayAudio()
+    {
+        audioSource.Play();
+    }
 }
 

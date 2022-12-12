@@ -17,6 +17,9 @@ public class CoverSequencePress : MonoBehaviour
 
     public bool buttonPressed;
 
+    //Audio
+    public AudioSource audioSource;
+
     public void Awake()
     {
         controllerString = "Joystick" + GameManager.JOY_PAD_NUM + buttonToPress;
@@ -27,6 +30,7 @@ public class CoverSequencePress : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = gameObject.GetComponent<AudioSource>();
         sp = gameObject.GetComponent<SpriteRenderer>();
     }
 
@@ -36,6 +40,7 @@ public class CoverSequencePress : MonoBehaviour
         if (Input.GetKeyDown(keyToPress))
         {
             ChangeSprite();
+            PlayAudio();
         }
     }
 
@@ -43,6 +48,11 @@ public class CoverSequencePress : MonoBehaviour
     {
         sp.sprite = newSprite;
         buttonPressed = true;
+    }
+
+    void PlayAudio()
+    {
+        audioSource.Play();
     }
 
 }
