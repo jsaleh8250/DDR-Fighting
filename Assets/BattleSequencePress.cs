@@ -18,11 +18,15 @@ public class BattleSequencePress : MonoBehaviour
     public bool buttonPressed;
     public bool otherButtonPressed;
 
+    private GameObject player;
+
     public void Awake()
     {
         controllerString = "Joystick" + GameManager.DDR_PAD_NUM + buttonToPress;
 
         keyToPress = (KeyCode)System.Enum.Parse(typeof(KeyCode), controllerString);
+
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Start is called before the first frame update
