@@ -25,6 +25,10 @@ public class BattleMode : MonoBehaviour
     private int currentEnemyType;
     private int firstEnemyGone;
 
+    //Audio
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     void Awake()
     {
         InstantiateEnemy();
@@ -181,7 +185,7 @@ public class BattleMode : MonoBehaviour
         {
             GameObject.Destroy(NoteTransform[i].transform.GetChild(0).gameObject);
         }
-
+        ClearNotes();
         InstantiateSequence();
     }
 
@@ -200,13 +204,13 @@ public class BattleMode : MonoBehaviour
 
     void PausePlayer()
     {
-        currentEnemy.transform.GetChild(0).gameObject.SetActive(true);
         player.GetComponent<playerMovement>().Move(0, 0);
         player.GetComponent<playerMovement>().horizontalSpeed = 0f;
         player.GetComponent<playerMovement>().VerticalSpeed = 0f;
         player.GetComponent<PlayerInput>().horizontalMove = 0f;
         player.GetComponent<PlayerInput>().verticalMove = 0f;
-        player.GetComponent<Transform>().position = new Vector2(secondCam.transform.position.x - 3f, secondCam.transform.position.y - .35f);
+        player.GetComponent<Transform>().position = new Vector2(player.transform.position.x, secondCam.transform.position.y - .35f);
+        currentEnemy.transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public void UnPausePlayer()
