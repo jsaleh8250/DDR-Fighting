@@ -246,6 +246,7 @@ public class BattleMode : MonoBehaviour
             GameObject.Destroy(NoteTransform[i].transform.GetChild(0).gameObject);
         }
 
+        ClearNotes();
         InstantiateSequence();
     }
 
