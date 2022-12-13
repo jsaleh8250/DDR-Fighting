@@ -16103,6 +16103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  levelName: Dance Failure
 --- !u!1 &1562291915
 GameObject:
   m_ObjectHideFlags: 0

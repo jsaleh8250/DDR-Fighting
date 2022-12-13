@@ -8,6 +8,7 @@ public class HealthBar : MonoBehaviour
     private RectTransform bar;
     private int nextScene;
     public float maxHealth = 1f;
+    public string levelName;
 
     //Health bar for the player 
     void Start()
@@ -28,7 +29,7 @@ public class HealthBar : MonoBehaviour
         else
         {
             Health.totalHealth = 0f;
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(levelName);
 
         }
         SetSize(Health.totalHealth);

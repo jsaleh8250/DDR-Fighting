@@ -28,6 +28,8 @@ public class BattleMode : MonoBehaviour
     //EFFECTS
     public GameObject boomFX, krackFX, whamFX;
 
+    public bool secondLevel;
+
     void Awake()
     {
         InstantiateEnemy();
@@ -110,6 +112,62 @@ public class BattleMode : MonoBehaviour
         ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
 
         if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        {
+            if (secondLevel)
+            {
+                FifthButtonPrompt();
+            }
+            else
+            {
+                FinishSequence();
+            }
+        }
+    }
+
+    void FifthButtonPrompt()
+    {
+        GameObject FifthButton = NoteTransformObject[4];
+
+        FifthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+
+        if (FifthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        {
+            SixthButtonPrompt();
+        }
+    }
+
+
+    void SixthButtonPrompt()
+    {
+        GameObject SixthButton = NoteTransformObject[5];
+
+        SixthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+
+        if (SixthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        {
+            SeventhButtonPrompt();
+        }
+    }
+
+    void SeventhButtonPrompt()
+    {
+        GameObject SeventhButton = NoteTransformObject[6];
+
+        SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+
+        if (SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        {
+            EighthButtonPrompt();
+        }
+    }
+
+    void EighthButtonPrompt()
+    {
+        GameObject SeventhButton = NoteTransformObject[7];
+
+        SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+
+        if (SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
         {
             FinishSequence();
         }
