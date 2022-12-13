@@ -20,8 +20,9 @@ public class Results : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score = ScoreHandler.currentScore;
+        //score = ScoreHandler.currentScore;
         //Multi = ScoreHandler.combo;
+        score = BattleMode.count;
         ScoreText.text = "Score: " + score;
         //MultiText.text = "Multiplier: x" + Multi;
     }

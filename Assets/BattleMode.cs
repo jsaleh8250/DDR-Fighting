@@ -24,6 +24,7 @@ public class BattleMode : MonoBehaviour
     private string currentState;
     private int currentEnemyType;
     private int firstEnemyGone;
+    public static int count;
 
     //EFFECTS
     public GameObject boomFX, krackFX, whamFX;
@@ -237,8 +238,7 @@ public class BattleMode : MonoBehaviour
     public void DeleteEnemy()
     {
         Destroy(currentEnemy);
-        ScoreHandler.instance.EnemyKilled();
-        Debug.Log("Points given");
+       
     }
 
     public void CoverSequenceStart()
@@ -298,6 +298,7 @@ public class BattleMode : MonoBehaviour
         UnPausePlayer();
         ClearNotes();
         InstantiateSequence();
+        count++;
 
     }
 
