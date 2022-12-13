@@ -20,12 +20,12 @@ public class Note : MonoBehaviour
     public static event Action<string> AttackButton = delegate { };
     public static event Action<float> Attacking = delegate { };
 
-    private void Awake()
+    public void Awake()
     {
         controllerString = "Joystick" + GameManager.DDR_PAD_NUM + buttonToPress;
-
         keyToPress = (KeyCode)System.Enum.Parse(typeof(KeyCode), controllerString);
     }
+
 
     //If pressed will give points to the starbar and gives access to enable attack
     void Update()
@@ -90,4 +90,5 @@ public class Note : MonoBehaviour
             //Instantiate(missEffect, transform.position, missEffect.transform.rotation);
         }
     }
+
 }
