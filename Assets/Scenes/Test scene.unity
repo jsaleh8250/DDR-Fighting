@@ -15234,7 +15234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc03a41ac2274d498baf318d937dc95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songTime: 150
+  songTime: 145
   nextLevel: Dance God
 --- !u!4 &1459112585
 Transform:
