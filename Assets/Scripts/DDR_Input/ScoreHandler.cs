@@ -16,6 +16,7 @@ public class ScoreHandler : MonoBehaviour
     int scorePerNote = 100;
     int ScorePerGoodNote = 55;
     int ScorePerPerfectNote = 150;
+    int Enemydead = 200;
 
     public static int combo;
    
@@ -85,6 +86,11 @@ public class ScoreHandler : MonoBehaviour
     {
         currentScore += ScorePerPerfectNote * combo;
         NoteHit();
+    }
+     public void EnemyKilled()
+    {
+        currentScore += Enemydead;
+        Debug.Log("Points");
     }
 
     public void NoteMissed()

@@ -237,6 +237,8 @@ public class BattleMode : MonoBehaviour
     public void DeleteEnemy()
     {
         Destroy(currentEnemy);
+        ScoreHandler.instance.EnemyKilled();
+        Debug.Log("Points given");
     }
 
     public void CoverSequenceStart()

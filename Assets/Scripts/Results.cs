@@ -9,7 +9,7 @@ public class Results : MonoBehaviour
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI MultiText;
     private static int score;
-    private static int Multi;
+    //private static int Multi;
    
     // Start is called before the first frame update
     void Start()
@@ -21,8 +21,8 @@ public class Results : MonoBehaviour
     void Update()
     {
         score = ScoreHandler.currentScore;
-        Multi = ScoreHandler.combo;
+        //Multi = ScoreHandler.combo;
         ScoreText.text = "Score: " + score;
-        MultiText.text = "Multiplier: x" + Multi;
+        //MultiText.text = "Multiplier: x" + Multi;
     }
 }
