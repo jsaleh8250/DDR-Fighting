@@ -15235,7 +15235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songTime: 150
-  nextLevel: Level 1
+  nextLevel: Dance God
 --- !u!4 &1459112585
 Transform:
   m_ObjectHideFlags: 0
