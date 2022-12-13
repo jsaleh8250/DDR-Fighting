@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Continue : MonoBehaviour
 {
- 
-   
-    public void LoadNextScene()
+
+    public void LoadNextScene(string LevelName)
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(LevelName);
     }
 }
