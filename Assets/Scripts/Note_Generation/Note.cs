@@ -15,7 +15,7 @@ public class Note : MonoBehaviour
 
     float dmg = 5;
 
-    public GameObject missEffect, goodEffect, normalEffect, perfectEffect;
+    //public GameObject missEffect, goodEffect, normalEffect, perfectEffect;
 
     public static event Action<string> AttackButton = delegate { };
     public static event Action<float> Attacking = delegate { };
@@ -44,23 +44,25 @@ public class Note : MonoBehaviour
                 Attacking.Invoke(dmg);
                 Debug.Log("NOTE SCRIPT: " + GameManager.isPressed);
               
+                /*
                 if(transform.position.y <= 1.4f)
                 {
-                    Debug.Log("Normal Hit");
-                    ScoreHandler.instance.NormalHit();
+                    //Debug.Log("Normal Hit");
+                    //ScoreHandler.instance.NormalHit();
                     Instantiate(normalEffect, transform.position, normalEffect.transform.rotation);
                 }else if(transform.position.y <= 2.65f)
                 {
-                    Debug.Log("Good Hit");
-                    ScoreHandler.instance.GoodHit();
+                    //Debug.Log("Good Hit");
+                    //ScoreHandler.instance.GoodHit();
                     Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
                 }
                if (transform.position.y == 1.5f)
                 {
-                    ScoreHandler.instance.PerfectHit();
-                    Debug.Log("Perfect");
+                    //ScoreHandler.instance.PerfectHit();
+                    //Debug.Log("Perfect");
                     Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
                 }
+                */
 
             }
 
