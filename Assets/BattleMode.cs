@@ -25,9 +25,8 @@ public class BattleMode : MonoBehaviour
     private int currentEnemyType;
     private int firstEnemyGone;
 
-    //Audio
-    public AudioSource audioSource;
-    public AudioClip audioClip;
+    //EFFECTS
+    public GameObject boomFX, krackFX, whamFX;
 
     void Awake()
     {
@@ -73,6 +72,7 @@ public class BattleMode : MonoBehaviour
 
         if (FirstButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
         {
+            boomFX.SetActive(true);
             SecondButtonPrompt();
         }
     }
@@ -85,6 +85,7 @@ public class BattleMode : MonoBehaviour
 
         if (SecondButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
         {
+            krackFX.SetActive(true);
             ThirdButtonPrompt();
         }
     }
@@ -97,6 +98,7 @@ public class BattleMode : MonoBehaviour
 
         if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
         {
+            whamFX.SetActive(true);
             FourthButtonPrompt();
         }
     }
@@ -191,6 +193,9 @@ public class BattleMode : MonoBehaviour
 
     void FinishSequence()
     {
+        boomFX.SetActive(false);
+        krackFX.SetActive(false);
+        whamFX.SetActive(false);
         currentEnemy.transform.GetChild(0).gameObject.SetActive(false);
         StartCoroutine(KillEnemy());
     }

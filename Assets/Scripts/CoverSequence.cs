@@ -25,6 +25,8 @@ public class CoverSequence : MonoBehaviour
     public GameObject enemyPrefab2;
     public GameObject enemyPrefab3;
 
+    public GameObject boomFX, krackFX, whamFX;
+
     void Awake()
     {
         player.GetComponent<playerMovement>().Move(0, 0);
@@ -60,6 +62,10 @@ public class CoverSequence : MonoBehaviour
         GameObject battleEnemies = GameObject.FindGameObjectWithTag("BattleSeqEnemies");
 
         battleEnemies.transform.GetChild(0).gameObject.SetActive(false);
+
+        boomFX.SetActive(false);
+        krackFX.SetActive(false);
+        whamFX.SetActive(false);
 
         GameObject FirstButton = NoteTransformObject[0];
 
