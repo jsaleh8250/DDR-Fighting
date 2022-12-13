@@ -9,6 +9,6 @@ public class Continue : MonoBehaviour
    
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(4);
     }
 }
