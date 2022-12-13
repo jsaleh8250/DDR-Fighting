@@ -17145,7 +17145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 15716479}
-  bpm: 60
+  bpm: 62
   spb: 5
   songPos: 0
   songPosInBeat: 0

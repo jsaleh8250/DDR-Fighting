@@ -173,7 +173,7 @@ public class BattleMode : MonoBehaviour
         }
     }
 
-    void ClearNotes()
+    public void ClearNotes()
     {
         for (int i = 0; i < NoteTransform.Length; i++)
         {
@@ -248,7 +248,6 @@ public class BattleMode : MonoBehaviour
             GameObject.Destroy(NoteTransform[i].transform.GetChild(0).gameObject);
         }
 
-        ClearNotes();
         InstantiateSequence();
     }
 
