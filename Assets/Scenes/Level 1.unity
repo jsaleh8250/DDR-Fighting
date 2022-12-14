@@ -22927,7 +22927,7 @@ MonoBehaviour:
   battleSeqOBJ: {fileID: 595358802}
   coverSeq: {fileID: 1036227671}
   coverSeqOBJ: {fileID: 1875415347}
-  Timer: {fileID: 2009139963}
+  Timerbar: {fileID: 193982910}
   DanceMode: 0
 --- !u!4 &1008226721
 Transform:

@@ -16,6 +16,7 @@ public class Timer : MonoBehaviour
     
     void Start()
     {
+        
         TimerOn = true;
         TimerBar = GetComponent<Image>();
         TimeLeft = maxTime;
@@ -28,10 +29,29 @@ public class Timer : MonoBehaviour
             TimerTicking();
         }
         else 
-        {
+        { 
             ResetTimer();
         }
+        if (this.enabled)
+        {
+            this.enabled = true;
+        }
+        else
+        {
+            this.enabled = false;
+        }
+        
     }
+    void OnDisable()
+    {
+        TimerOn = false;
+    }
+
+    void OnEnable()
+    {
+
+    }
+
 
     void TimerTicking()
     {
@@ -66,7 +86,7 @@ public class Timer : MonoBehaviour
     {
         TimerOn = true;
         TimerBar = GetComponent<Image>();
-        TimeLeft = maxTime;
+        TimeLeft = 10f;
     }
 
     void updateTime(float currentTime)
@@ -76,4 +96,6 @@ public class Timer : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
         Timertext.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+     
+   
 }

@@ -51,6 +51,7 @@ public class BattleMode : MonoBehaviour
     public void OnDisable()
     {
         DeleteEnemy();
+       //Timer.ResetTimer();
     }
 
     // Start is called before the first frame update
