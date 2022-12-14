@@ -22943,7 +22943,7 @@ MonoBehaviour:
   battleSeqOBJ: {fileID: 595358802}
   coverSeq: {fileID: 1036227671}
   coverSeqOBJ: {fileID: 1875415347}
-  Timer: {fileID: 2009139963}
+  Timerbar: {fileID: 193982910}
   DanceMode: 0
 --- !u!4 &1008226721
 Transform:
@@ -30707,7 +30707,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778368763}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6d4c2386623b984b8702dd70b5e3f9b, type: 3}
   m_Name: 
