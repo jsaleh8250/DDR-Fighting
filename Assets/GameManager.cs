@@ -25,14 +25,14 @@ public class GameManager : MonoBehaviour
     {
         if (!DanceMode)
         {
-            if (inBattleMode)
+            if (inBattleMode && !inCoverMode)
             {
                 secondCam.SetActive(true);
                 mainCam.SetActive(false);
                 battleSeq.SetActive(true);
                 Timerbar.SetActive(true);
             }
-            else
+            else if(!inBattleMode && !inCoverMode)
             {
                 mainCam.SetActive(true);
                 secondCam.SetActive(false);

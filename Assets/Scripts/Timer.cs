@@ -57,7 +57,7 @@ public class Timer : MonoBehaviour
     {
         if (GameManager.inBattleMode == true)
         {
-            if (TimeLeft > 0)
+            if (TimeLeft >= 0)
             {
                 TimerOn = true;
                 TimeLeft -= Time.deltaTime;
@@ -86,7 +86,7 @@ public class Timer : MonoBehaviour
     {
         TimerOn = true;
         TimerBar = GetComponent<Image>();
-        TimeLeft = 10f;
+        TimeLeft = maxTime;
     }
 
     void updateTime(float currentTime)

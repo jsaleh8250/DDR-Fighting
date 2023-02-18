@@ -14108,7 +14108,7 @@ MonoBehaviour:
   battleSeqOBJ: {fileID: 0}
   coverSeq: {fileID: 0}
   coverSeqOBJ: {fileID: 0}
-  Timer: {fileID: 0}
+  Timerbar: {fileID: 0}
   DanceMode: 1
 --- !u!4 &1008226721
 Transform:
@@ -17145,8 +17145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 15716479}
-  bpm: 62
-  spb: 5
+  bpm: 120
+  spb: 4
   songPos: 0
   songPosInBeat: 0
   dspSongTime: 0

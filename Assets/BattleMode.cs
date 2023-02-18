@@ -41,6 +41,7 @@ public class BattleMode : MonoBehaviour
 
     public void OnEnable()
     {
+        InstantiateSequence();
         currentEnemyType = player.GetComponent<playerMovement>().currentEnmyType;
         firstEnemyGone++;
         if (firstEnemyGone > 2)
@@ -57,7 +58,7 @@ public class BattleMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InstantiateSequence();
+        //InstantiateSequence();
     }
 
     // Update is called once per frame
@@ -128,12 +129,16 @@ public class BattleMode : MonoBehaviour
 
     void FifthButtonPrompt()
     {
+        boomFX.SetActive(false);
+        krackFX.SetActive(false);
+        whamFX.SetActive(false);
         GameObject FifthButton = NoteTransformObject[4];
 
         FifthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
 
         if (FifthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
         {
+            boomFX.SetActive(true);
             SixthButtonPrompt();
         }
     }
@@ -147,6 +152,7 @@ public class BattleMode : MonoBehaviour
 
         if (SixthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
         {
+            krackFX.SetActive(true);
             SeventhButtonPrompt();
         }
     }
@@ -159,6 +165,7 @@ public class BattleMode : MonoBehaviour
 
         if (SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
         {
+            whamFX.SetActive(true);
             EighthButtonPrompt();
         }
     }
@@ -249,7 +256,7 @@ public class BattleMode : MonoBehaviour
             GameObject.Destroy(NoteTransform[i].transform.GetChild(0).gameObject);
         }
 
-        InstantiateSequence();
+        //InstantiateSequence();
     }
 
     void FinishSequence()
@@ -298,7 +305,7 @@ public class BattleMode : MonoBehaviour
         GameManager.inBattleMode = false;
         UnPausePlayer();
         ClearNotes();
-        InstantiateSequence();
+        //InstantiateSequence();
         count++;
 
     }
