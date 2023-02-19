@@ -13,6 +13,7 @@ public class EnemySpawner : MonoBehaviour
 
     bool spawningWave;
 
+    //Will spawn enemies when there are zero enemies on the level
     private void Update()
     {
         enemyCount = FindObjectsOfType<SimpleAI>().Length;
@@ -23,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
             StartCoroutine(SpawnEnemy(waveNumber));
         }
     }
-
+    //Random types of enemies will spawn after a few seconds between eachother 
     IEnumerator SpawnEnemy(int enemiesToSpawn)
     {
         spawningWave = true;

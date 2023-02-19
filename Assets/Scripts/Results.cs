@@ -11,13 +11,8 @@ public class Results : MonoBehaviour
     private static int score;
     //private static int Multi;
    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    //Will get score from other scenes and transfer the desire scene
     void Update()
     {
         //score = ScoreHandler.currentScore;

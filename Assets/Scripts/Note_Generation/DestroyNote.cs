@@ -11,7 +11,6 @@ public class DestroyNote : MonoBehaviour
         {
             Destroy(collision.gameObject);
 
-            StarBar.CurrentHealth =  StarBar.CurrentHealth - 10;
             ScoreHandler.missedNote = true;
             healthBar.Damage(.02f);
 

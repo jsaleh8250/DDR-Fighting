@@ -10,9 +10,9 @@ public class SimpleAI : MonoBehaviour
     private float distance;
     public float stoppingDist;
     public int thisEnemyType;
-    //public float enemystoppingDist;
+    
 
-    //Anim
+    //Animation
     Animator enemyAnim;
     private string currentState;
 
@@ -33,16 +33,16 @@ public class SimpleAI : MonoBehaviour
 
     void EnemyMovement()
     {
-        //Jenna Saleh
+        //Enemy will keep certain distance from player and face direction of player
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
        
-        //if (Vector2.Distance(transform.position, other.position) > enemystoppingDist)
-       // { 
+         
             //If at a distance from player it will stop moving towards player
             if (Vector2.Distance(transform.position, player.position) > stoppingDist)
             {
+
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), speed * Time.deltaTime);
                 ChangingAnim("Walking");
 
@@ -51,11 +51,6 @@ public class SimpleAI : MonoBehaviour
             {
                 ChangingAnim("Idle");
             }
-
-       // }
-       //else {
-            //ChangingAnim("Idle");
-       // }
     }
 
 

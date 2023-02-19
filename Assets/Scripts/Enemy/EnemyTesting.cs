@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Enemy testing script to test different actions of the enemy 
 public class EnemyTesting : EnemyStateBehaviour
 {
     CircleCollider2D circleCollider;
