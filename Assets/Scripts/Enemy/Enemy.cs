@@ -34,12 +34,12 @@ public class Enemy : MonoBehaviour
 
     public void Update()
     {
+         //Enemy will keep certain distance from player and face direction of player
+         distance = Vector2.Distance(transform.position, player.transform.position);
+         Vector2 direction = player.transform.position - transform.position;
+         direction.Normalize();
 
-           distance = Vector2.Distance(transform.position, player.transform.position);
-            Vector2 direction = player.transform.position - transform.position;
-            direction.Normalize();
-
-        //Debug.Log("Moving");
+        
         ChangingAnim("Walking");
 
         //If at a distance from player it will stop moving towards player
@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), speed * Time.deltaTime);
 
-            //Debug.Log("Stopping");
+            
         }
         //If in the damage range and arrow is pressed enemy will take damage
         if (damageRange && GameManager.isPressed)
@@ -93,16 +93,7 @@ public class Enemy : MonoBehaviour
     }
 
 
-    /*
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "HitBox")
-        {
-            damageRange = false;
-        }
-    }
-    */
+    
     public void OnTriggerStay2D(UnityEngine.Collider2D collision)
     {
         if (collision.tag == "HitBox")

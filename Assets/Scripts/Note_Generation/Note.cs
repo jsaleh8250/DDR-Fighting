@@ -27,23 +27,23 @@ public class Note : MonoBehaviour
     }
 
 
-    //If pressed will give points to the starbar and gives access to enable attack
+    //If pressed will give points to the score and gives access to enable attack
     void Update()
     {
 
         if (Input.GetKeyDown(keyToPress))
         {
-            //Debug.Log("note: " + keyToPress);
+            
             if (canBePressed)
             {
                 GameManager.isPressed = true;
-                //StarBar.CurrentHealth = StarBar.CurrentHealth + 10;
                 Destroy(gameObject);
 
                 AttackButton.Invoke(buttonToPress);
                 Attacking.Invoke(dmg);
                 Debug.Log("NOTE SCRIPT: " + GameManager.isPressed);
               
+                //To get score when hitting the notes on certain parts of the arrows
                 /*
                 if(transform.position.y <= 1.4f)
                 {

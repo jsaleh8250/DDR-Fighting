@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//If note is missed will destroy note and  take player health
 public class DestroyNote : MonoBehaviour
 {
     public HealthBar healthBar;

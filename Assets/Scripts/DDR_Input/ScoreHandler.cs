@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+//This is where all the score it kept of hitting the note perfectly or missing. Keeps track of how many enmies where killed.
 public class ScoreHandler : MonoBehaviour
 {
     public TextMeshProUGUI ScoreText;
@@ -31,7 +32,7 @@ public class ScoreHandler : MonoBehaviour
 
     public void Update()
     {
-        //Debug.Log(Note.isPressed);
+        
         if (GameManager.isPressed)
         {
             NormalHit();

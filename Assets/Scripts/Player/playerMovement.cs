@@ -59,13 +59,13 @@ public class playerMovement : MonoBehaviour
             {
                 flip();
                 sp.flipX = true;
-                //transform.localScale = new Vector3(-1, 1, 1);
+                
             }
             else if(horizMove > 0 && facingRight)
             {
                 flip();
                 sp.flipX = false;
-                //transform.localScale = new Vector3(1, 1, 1);
+                
             }
         }
 
@@ -102,28 +102,7 @@ public class playerMovement : MonoBehaviour
         hitFeedback.SetActive(false);
     }
 
-    /*
-    //If collides with Enemy player will take damage
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Enemy")
-        {
-            healthBar.Damage(0.02f);
-            Debug.Log("damage");
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            healthBar.Damage(.02f);
-            StartCoroutine(waitForAttack());
-            //play enemy attack anim
-        }
-    }
-    */
-
+   
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "BattleSeq")
