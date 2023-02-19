@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+//Timer script for the amount of time for player to complete battle sequence 
 public class Timer : MonoBehaviour
 {
     public float TimeLeft;
@@ -21,7 +22,7 @@ public class Timer : MonoBehaviour
         TimerBar = GetComponent<Image>();
         TimeLeft = maxTime;
     }
-
+    //When the timer is enabled in battle sequence it will start and when not enabled the timer will stop and reset 
     void Update()
     {
         if (TimerOn)
