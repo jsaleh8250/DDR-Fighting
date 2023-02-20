@@ -8,8 +8,6 @@ public class BattleSequencePress : MonoBehaviour
 
     string controllerString;
 
-    int RandomController;
-
     //Light Sprite
     public Sprite newSprite;
     SpriteRenderer sp;
@@ -24,7 +22,7 @@ public class BattleSequencePress : MonoBehaviour
 
     public void Awake()
     {
-        controllerString = "Joystick" + RandomController + buttonToPress;
+        controllerString = "Joystick" + GameManager.DDR_PAD_NUM + buttonToPress;
 
         keyToPress = (KeyCode)System.Enum.Parse(typeof(KeyCode), controllerString);
 
@@ -43,7 +41,6 @@ public class BattleSequencePress : MonoBehaviour
     {
         if (Input.GetKeyDown(keyToPress))
         {
-            RandomizeController();
             ChangeSprite();
             PlayAudio();
         }
@@ -59,19 +56,5 @@ public class BattleSequencePress : MonoBehaviour
         audioSource.Play();
     }
 
-    void RandomizeController()
-    {
-        int ddrPad = GameManager.DDR_PAD_NUM;
-        int controller = GameManager.CONTROLLER_NUM;
-
-        if (Random.value > .5)
-        {
-            RandomController = ddrPad;
-        }
-        else
-        {
-            RandomController = controller;
-        }
-    }
 }
 
