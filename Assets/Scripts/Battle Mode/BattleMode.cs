@@ -52,13 +52,6 @@ public class BattleMode : MonoBehaviour
     public void OnDisable()
     {
         DeleteEnemy();
-       //Timer.ResetTimer();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //InstantiateSequence();
     }
 
     // Update is called once per frame
@@ -255,8 +248,6 @@ public class BattleMode : MonoBehaviour
         {
             GameObject.Destroy(NoteTransform[i].transform.GetChild(0).gameObject);
         }
-
-        //InstantiateSequence();
     }
 
     void FinishSequence()
@@ -305,7 +296,6 @@ public class BattleMode : MonoBehaviour
         GameManager.inBattleMode = false;
         UnPausePlayer();
         ClearNotes();
-        //InstantiateSequence();
         count++;
 
     }

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class CoverSequencePress : MonoBehaviour
 {
@@ -10,6 +7,7 @@ public class CoverSequencePress : MonoBehaviour
     public KeyCode keyToPress;
 
     string controllerString;
+    int RandomController;
 
     //Light Sprite
     public Sprite newSprite;
@@ -22,7 +20,7 @@ public class CoverSequencePress : MonoBehaviour
 
     public void Awake()
     {
-        controllerString = "Joystick" + GameManager.JOY_PAD_NUM + buttonToPress;
+        controllerString = "Joystick" + RandomController + buttonToPress;
 
         keyToPress = (KeyCode)System.Enum.Parse(typeof(KeyCode), controllerString);
     }
@@ -39,6 +37,7 @@ public class CoverSequencePress : MonoBehaviour
     {
         if (Input.GetKeyDown(keyToPress))
         {
+            RandomizeController();
             ChangeSprite();
             PlayAudio();
         }
@@ -53,6 +52,21 @@ public class CoverSequencePress : MonoBehaviour
     void PlayAudio()
     {
         audioSource.Play();
+    }
+
+    void RandomizeController()
+    {
+        int ddrPad = GameManager.DDR_PAD_NUM;
+        int controller = GameManager.CONTROLLER_NUM;
+
+        if (Random.value > .5)
+        {
+            RandomController = ddrPad;
+        }
+        else
+        {
+            RandomController = controller;
+        }
     }
 
 }
