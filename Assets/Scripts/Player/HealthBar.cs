@@ -9,30 +9,31 @@ public class HealthBar : MonoBehaviour
     private int nextScene;
     public float maxHealth = 1f;
     public string levelName;
-
+    public static float totalHealth = 1f;
+    
     //Health bar for the player 
     void Start()
     {
-        Health.totalHealth = maxHealth;
+        totalHealth = maxHealth;
         bar = GetComponent<RectTransform>();
-        SetSize(Health.totalHealth);
+        SetSize(totalHealth);
 
     }
 
     //If player takes damage the health will decrease from the amount damaged but will not go negative
     public void Damage(float damage)
     {
-        if ((Health.totalHealth -= damage)>= 0f)
+        if ((totalHealth -= damage)>= 0f)
         {
-            Health.totalHealth -= damage;
+            totalHealth -= damage;
         }
         else
         {
-            Health.totalHealth = 0f;
+            totalHealth = 0f;
             SceneManager.LoadScene(levelName);
 
         }
-        SetSize(Health.totalHealth);
+        SetSize(totalHealth);
     }
 
     public void SetSize(float size)
