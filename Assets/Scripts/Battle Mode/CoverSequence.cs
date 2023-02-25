@@ -33,10 +33,9 @@ public class CoverSequence : MonoBehaviour
         player.GetComponent<playerMovement>().horizontalSpeed = 0f;
         player.GetComponent<playerMovement>().VerticalSpeed = 0f;
         player.GetComponent<Transform>().position = new Vector2(secondCam.transform.position.x - 3f, secondCam.transform.position.y - .35f);
-        //player.GetComponent<PlayerInput>().enabled = false;
     }
-    // Start is called before the first frame update
-    void Start()
+
+    public void Start()
     {
         InstantiateSequence();
     }
@@ -69,11 +68,21 @@ public class CoverSequence : MonoBehaviour
 
         GameObject FirstButton = NoteTransformObject[0];
 
-        FirstButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
-
-        if (FirstButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+        if (FirstButton.transform.GetChild(0).GetComponent<CoverSequencePress>())
         {
-            SecondButtonPrompt();
+            FirstButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
+            if (FirstButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+            {
+                SecondButtonPrompt();
+            }
+        }
+        else if (FirstButton.transform.GetChild(0).GetComponent<BattleSequencePress>())
+        {
+            FirstButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+            if (FirstButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+            {
+                SecondButtonPrompt();
+            }
         }
     }
 
@@ -81,11 +90,21 @@ public class CoverSequence : MonoBehaviour
     {
         GameObject SecondButton = NoteTransformObject[1];
 
-        SecondButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
-
-        if (SecondButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+        if (SecondButton.transform.GetChild(0).GetComponent<CoverSequencePress>())
         {
-            ThirdButtonPrompt();
+            SecondButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
+            if (SecondButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+            {
+                ThirdButtonPrompt();
+            }
+        }
+        else if (SecondButton.transform.GetChild(0).GetComponent<BattleSequencePress>())
+        {
+            SecondButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+            if (SecondButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+            {
+                ThirdButtonPrompt();
+            }
         }
     }
 
@@ -93,11 +112,21 @@ public class CoverSequence : MonoBehaviour
     {
         GameObject ThirdButton = NoteTransformObject[2];
 
-        ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
-
-        if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+        if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>())
         {
-            FourthButtonPrompt();
+            ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
+            if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+            {
+                FourthButtonPrompt();
+            }
+        }
+        else if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>())
+        {
+            ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+            if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+            {
+                FourthButtonPrompt();
+            }
         }
     }
 
@@ -105,13 +134,24 @@ public class CoverSequence : MonoBehaviour
     {
         GameObject ThirdButton = NoteTransformObject[3];
 
-        ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
-
-        if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+        if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>())
         {
-            RestartSequence();
-            //BackToBattleMode();
+            ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
+
+            if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+            {
+                RestartSequence();
+            }
         }
+        else if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>())
+        {
+            ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+            if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+            {
+                RestartSequence();
+            }
+        }
+
     }
 
 

@@ -66,12 +66,24 @@ public class BattleMode : MonoBehaviour
 
         GameObject FirstButton = NoteTransformObject[0];
 
-        FirstButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
-
-        if (FirstButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        if (FirstButton.transform.GetChild(0).GetComponent<BattleSequencePress>())
         {
-            boomFX.SetActive(true);
-            SecondButtonPrompt();
+            FirstButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+            if (FirstButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+            {
+                boomFX.SetActive(true);
+                SecondButtonPrompt();
+            }
+        }
+        else if (FirstButton.transform.GetChild(0).GetComponent<CoverSequencePress>())
+        {
+            FirstButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
+
+            if (FirstButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+            {
+                boomFX.SetActive(true);
+                SecondButtonPrompt();
+            }
         }
     }
 
@@ -79,12 +91,24 @@ public class BattleMode : MonoBehaviour
     {
         GameObject SecondButton = NoteTransformObject[1];
 
-        SecondButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
-
-        if (SecondButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        if (SecondButton.transform.GetChild(0).GetComponent<BattleSequencePress>())
         {
-            krackFX.SetActive(true);
-            ThirdButtonPrompt();
+            SecondButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+            if (SecondButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+            {
+                boomFX.SetActive(true);
+                ThirdButtonPrompt();
+            }
+        }
+        else if (SecondButton.transform.GetChild(0).GetComponent<CoverSequencePress>())
+        {
+            SecondButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
+
+            if (SecondButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+            {
+                boomFX.SetActive(true);
+                ThirdButtonPrompt();
+            }
         }
     }
 
@@ -92,12 +116,24 @@ public class BattleMode : MonoBehaviour
     {
         GameObject ThirdButton = NoteTransformObject[2];
 
-        ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
-
-        if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>())
         {
-            whamFX.SetActive(true);
-            FourthButtonPrompt();
+            ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+            if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+            {
+                boomFX.SetActive(true);
+                FourthButtonPrompt();
+            }
+        }
+        else if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>())
+        {
+            ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
+
+            if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+            {
+                boomFX.SetActive(true);
+                FourthButtonPrompt();
+            }
         }
     }
 
@@ -105,19 +141,38 @@ public class BattleMode : MonoBehaviour
     {
         GameObject ThirdButton = NoteTransformObject[3];
 
-        ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
-
-        if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>())
         {
-            if (secondLevel)
+            ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+            if (ThirdButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
             {
-                FifthButtonPrompt();
-            }
-            else
-            {
-                FinishSequence();
+                if (secondLevel)
+                {
+                    FifthButtonPrompt();
+                }
+                else
+                {
+                    FinishSequence();
+                }
             }
         }
+        else if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>())
+        {
+            ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
+
+            if (ThirdButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+            {
+                if (secondLevel)
+                {
+                    FifthButtonPrompt();
+                }
+                else
+                {
+                    FinishSequence();
+                }
+            }
+        }
+
     }
 
     void FifthButtonPrompt()
@@ -127,12 +182,24 @@ public class BattleMode : MonoBehaviour
         whamFX.SetActive(false);
         GameObject FifthButton = NoteTransformObject[4];
 
-        FifthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
-
-        if (FifthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        if (FifthButton.transform.GetChild(0).GetComponent<BattleSequencePress>())
         {
-            boomFX.SetActive(true);
-            SixthButtonPrompt();
+            FifthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+            if (FifthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+            {
+                boomFX.SetActive(true);
+                SixthButtonPrompt();
+            }
+        }
+        else if (FifthButton.transform.GetChild(0).GetComponent<CoverSequencePress>())
+        {
+            FifthButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
+
+            if (FifthButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+            {
+                boomFX.SetActive(true);
+                SixthButtonPrompt();
+            }
         }
     }
 
@@ -141,12 +208,24 @@ public class BattleMode : MonoBehaviour
     {
         GameObject SixthButton = NoteTransformObject[5];
 
-        SixthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
-
-        if (SixthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        if (SixthButton.transform.GetChild(0).GetComponent<BattleSequencePress>())
         {
-            krackFX.SetActive(true);
-            SeventhButtonPrompt();
+            SixthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+            if (SixthButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+            {
+                boomFX.SetActive(true);
+                SeventhButtonPrompt();
+            }
+        }
+        else if (SixthButton.transform.GetChild(0).GetComponent<CoverSequencePress>())
+        {
+            SixthButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
+
+            if (SixthButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+            {
+                boomFX.SetActive(true);
+                SeventhButtonPrompt();
+            }
         }
     }
 
@@ -154,12 +233,24 @@ public class BattleMode : MonoBehaviour
     {
         GameObject SeventhButton = NoteTransformObject[6];
 
-        SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
-
-        if (SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        if (SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>())
         {
-            whamFX.SetActive(true);
-            EighthButtonPrompt();
+            SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+            if (SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+            {
+                boomFX.SetActive(true);
+                EighthButtonPrompt();
+            }
+        }
+        else if (SeventhButton.transform.GetChild(0).GetComponent<CoverSequencePress>())
+        {
+            SeventhButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
+
+            if (SeventhButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+            {
+                boomFX.SetActive(true);
+                EighthButtonPrompt();
+            }
         }
     }
 
@@ -167,11 +258,23 @@ public class BattleMode : MonoBehaviour
     {
         GameObject SeventhButton = NoteTransformObject[7];
 
-        SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
-
-        if (SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+        if (SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>())
         {
-            FinishSequence();
+            SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().enabled = true;
+
+            if (SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
+            {
+                FinishSequence();
+            }
+        }
+
+        else if (SeventhButton.transform.GetChild(0).GetComponent<CoverSequencePress>())
+        {
+            SeventhButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
+            if (SeventhButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
+            {
+                FinishSequence();
+            }
         }
     }
 

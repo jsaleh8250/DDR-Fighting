@@ -20,15 +20,11 @@ public class SimpleAI : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         enemyAnim = GetComponent<Animator>();
-        thisEnemyType = thisEnemyType;
-        //other = GameObject.FindGameObjectWithTag("BattleSeq").transform;
-        //other = GameObject.Find("Simple AI(1)").transform;
     }
 
     void Update()
     {
         EnemyMovement();
-       // other = GameObject.Find("Simple AI").transform;
     }
 
     void EnemyMovement()
