@@ -28436,7 +28436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
-  levelName: Level 1
+  levelName: Death Scene
 --- !u!1 &1579298478
 GameObject:
   m_ObjectHideFlags: 0
