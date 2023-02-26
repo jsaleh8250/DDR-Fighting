@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
                 mainCam.SetActive(false);
                 battleSeq.SetActive(true);
                 Timerbar.SetActive(true);
+                
             }
             else if(!inBattleMode && !inCoverMode)
             {
