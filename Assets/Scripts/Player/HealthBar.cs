@@ -10,14 +10,15 @@ public class HealthBar : MonoBehaviour
     public float maxHealth = 1f;
     public string levelName;
     public static float totalHealth = 1f;
-    
+    public GameObject Coverseq, Coverseqtrans;
+
     //Health bar for the player 
     void Start()
     {
         totalHealth = maxHealth;
         bar = GetComponent<RectTransform>();
         SetSize(totalHealth);
-
+        
     }
 
     //If player takes damage the health will decrease from the amount damaged but will not go negative
@@ -31,6 +32,8 @@ public class HealthBar : MonoBehaviour
         {
             totalHealth = 0f;
             SceneManager.LoadScene(levelName);
+            Coverseq.SetActive(false);
+            Coverseqtrans.SetActive(false);
 
         }
         SetSize(totalHealth);

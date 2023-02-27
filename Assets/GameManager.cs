@@ -20,6 +20,13 @@ public class GameManager : MonoBehaviour
 
     public bool DanceMode;
 
+    private void Awake(){
+         mainCam.SetActive(true);
+                battleSeq.SetActive(false);
+                battleSeqOBJ.SetActive(false);
+                coverSeq.SetActive(false);
+                coverSeqOBJ.SetActive(false);
+    }
 
     private void Update()
     {
@@ -48,7 +55,7 @@ public class GameManager : MonoBehaviour
                 coverSeq.SetActive(true);
                 coverSeqOBJ.SetActive(true);
             }
-            else
+            else if(inBattleMode)
             {
                 battleSeq.SetActive(true);
                 battleSeqOBJ.SetActive(true);
