@@ -23273,9 +23273,11 @@ MonoBehaviour:
   enemyPrefab: {fileID: 7393395903032510395, guid: cf02fef259b817449ad4506831a8ed61, type: 3}
   enemyPrefab2: {fileID: 7393395903032510395, guid: 3e7c5a4ba8cc7de478bf2f4559957636, type: 3}
   enemyPrefab3: {fileID: 7393395903032510395, guid: 3d473b0a079afe6458fd86e0bc8f43b6, type: 3}
+  coveron: 0
   boomFX: {fileID: 431222526}
   krackFX: {fileID: 300867857}
   whamFX: {fileID: 1331325109}
+  coverSeq: {fileID: 1036227671}
 --- !u!1 &1063822434
 GameObject:
   m_ObjectHideFlags: 0
@@ -28550,8 +28552,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   levelName: Level 2
-  Coverseq: {fileID: 1036227671}
-  Coverseqtrans: {fileID: 1875415347}
 --- !u!1 &1579298478
 GameObject:
   m_ObjectHideFlags: 0

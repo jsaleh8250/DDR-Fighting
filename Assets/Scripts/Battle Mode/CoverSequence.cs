@@ -24,8 +24,9 @@ public class CoverSequence : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject enemyPrefab2;
     public GameObject enemyPrefab3;
+    public bool coveron = false;
 
-    public GameObject boomFX, krackFX, whamFX;
+    public GameObject boomFX, krackFX, whamFX , coverSeq;
 
     void Awake()
     {
@@ -38,21 +39,35 @@ public class CoverSequence : MonoBehaviour
     public void Start()
     {
         InstantiateSequence();
+        
     }
 
     public void OnEnable()
-    {
+    {   coveron = false;
         currentEnemyType = player.GetComponent<playerMovement>().currentEnmyType;
         InstantiateEnemy();
     }
     public void OnDisable()
-    {
-        DeleteEnemy();
+    { 
+       coveron = true;
+       Debug.Log("Disabled");
+
+        //DeleteEnemy();
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        if (coveron = true)
+        {
+            coverSeq.SetActive(true);
+            this.enabled = true;
+        }
+        else
+        { 
+            this.enabled = false;
+            coverSeq.SetActive(false);
+        }
         FirstButtonPrompt();
     }
 

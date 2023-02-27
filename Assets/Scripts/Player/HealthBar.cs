@@ -10,7 +10,7 @@ public class HealthBar : MonoBehaviour
     public float maxHealth = 1f;
     public string levelName;
     public static float totalHealth = 1f;
-    public GameObject Coverseq, Coverseqtrans;
+    //public GameObject Coverseq, Coverseqtrans;
 
     //Health bar for the player 
     void Start()
@@ -32,8 +32,8 @@ public class HealthBar : MonoBehaviour
         {
             totalHealth = 0f;
             SceneManager.LoadScene(levelName);
-            Coverseq.SetActive(false);
-            Coverseqtrans.SetActive(false);
+            //Coverseq.SetActive(false);
+            //Coverseqtrans.SetActive(false);
 
         }
         SetSize(totalHealth);
