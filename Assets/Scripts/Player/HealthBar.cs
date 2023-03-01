@@ -30,6 +30,9 @@ public class HealthBar : MonoBehaviour
         else
         {
             totalHealth = 0f;
+            GameManager.inBattleMode = false;
+            GameManager.inCoverMode = false;
+
             SceneManager.LoadScene(levelName);
 
         }

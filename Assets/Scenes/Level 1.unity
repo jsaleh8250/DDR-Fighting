@@ -28437,6 +28437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   levelName: Death Scene
+  coverMode: {fileID: 1036227671}
 --- !u!1 &1579298478
 GameObject:
   m_ObjectHideFlags: 0

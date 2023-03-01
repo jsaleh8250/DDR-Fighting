@@ -11,6 +11,12 @@ public class CameraMovement : MonoBehaviour
         this.player = GameObject.FindWithTag("Player").transform;
     }
 
+    private void Start()
+    {
+        GameManager.inBattleMode = false;
+        GameManager.inCoverMode = false;
+    }
+
     private void Update()
     {
         this.gameObject.transform.position = new Vector3(player.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
