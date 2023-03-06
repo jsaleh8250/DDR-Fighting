@@ -16,10 +16,11 @@ public class GameManager : MonoBehaviour
 
     public static bool inCoverMode;
 
-    public GameObject mainCam, secondCam, battleSeq, battleSeqOBJ, coverSeq, coverSeqOBJ, Timerbar;
+    public GameObject mainCam, secondCam, battleSeq, battleSeqOBJ, coverSeq, coverSeqOBJ, Timerbar, healthCam, arrowsSpawn, arrows, countdown;
 
     public bool DanceMode;
 
+    public static bool inHealthMode;
 
     private void Update()
     {
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
                 mainCam.SetActive(false);
                 battleSeq.SetActive(true);
                 Timerbar.SetActive(true);
-                
+                healthCam.SetActive(false);
             }
             else if(!inBattleMode && !inCoverMode)
             {
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
                 battleSeq.SetActive(false);
                 coverSeq.SetActive(false);
                 Timerbar.SetActive(false);
+                healthCam.SetActive(false);
             }
             if (inCoverMode)
             {
@@ -54,6 +56,19 @@ public class GameManager : MonoBehaviour
                 battleSeqOBJ.SetActive(true);
                 coverSeq.SetActive(false);
                 coverSeqOBJ.SetActive(false);
+            }
+            if(inHealthMode)
+            {
+              healthCam.SetActive(true);
+              mainCam.SetActive(false);
+              secondCam.SetActive(false);
+              battleSeq.SetActive(false);
+              coverSeq.SetActive(false);
+              Timerbar.SetActive(false);
+              arrows.SetActive(true);
+              arrowsSpawn.SetActive(true);
+              countdown.SetActive(true);
+              DanceMode = true;
             }
         }
     }
