@@ -15,6 +15,7 @@ public class CameraMovement : MonoBehaviour
     {
         GameManager.inBattleMode = false;
         GameManager.inCoverMode = false;
+        GameManager.inHealthMode = false;
     }
 
     private void Update()

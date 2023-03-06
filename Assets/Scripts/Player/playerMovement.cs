@@ -122,7 +122,7 @@ public class playerMovement : MonoBehaviour
         }
         if(collision.gameObject.tag == "HealthSeq")
         {
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
             GameManager.inHealthMode = true;
         } 
     }
