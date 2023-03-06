@@ -11,6 +11,7 @@ TagManager:
   - HitBox
   - BattleSeq
   - BattleSeqEnemies
+  - HealthSeq
   layers:
   - Default
   - TransparentFX
