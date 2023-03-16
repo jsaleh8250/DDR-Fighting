@@ -12,6 +12,7 @@ TagManager:
   - BattleSeq
   - BattleSeqEnemies
   - HealthSeq
+  - Music
   layers:
   - Default
   - TransparentFX

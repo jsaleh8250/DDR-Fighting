@@ -32,15 +32,6 @@ public class playerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void Update()
-    {
-     /*if(Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Debug Previous"))
-     {
-     GameManager.inHealthMode = true;
-     } */
-    }
-
-
     void OnDisable()
     {
         Note.AttackButton -= Attack;
@@ -122,7 +113,7 @@ public class playerMovement : MonoBehaviour
         }
         if(collision.gameObject.tag == "HealthSeq")
         {
-            //Destroy(collision.gameObject);
+            Destroy(collision.gameObject);
             GameManager.inHealthMode = true;
         } 
     }
