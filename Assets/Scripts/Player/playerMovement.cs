@@ -111,10 +111,10 @@ public class playerMovement : MonoBehaviour
             Destroy(collision.gameObject);
             GameManager.inBattleMode = true;
         }
-        if(collision.gameObject.tag == "HealthSeq")
+        if(collision.gameObject.tag == "PerkSeq")
         {
             Destroy(collision.gameObject);
-            GameManager.inHealthMode = true;
+            GameManager.inCutscene = true;
         } 
     }
 }
