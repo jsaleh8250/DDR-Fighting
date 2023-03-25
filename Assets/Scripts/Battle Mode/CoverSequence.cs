@@ -19,7 +19,6 @@ public class CoverSequence : MonoBehaviour
     public GameObject currentEnemy;
     private string currentState;
     private int currentEnemyType;
-    private int firstEnemyGone;
     Animator enemyAnim;
     public GameObject enemyPrefab;
     public GameObject enemyPrefab2;

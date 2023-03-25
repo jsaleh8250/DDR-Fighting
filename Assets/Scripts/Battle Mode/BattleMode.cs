@@ -16,6 +16,8 @@ public class BattleMode : MonoBehaviour
     //GameObjects
     public GameObject CoverSequence;
     public GameObject CoverSequenceObject;
+    
+    //Enemy
     public GameObject enemyPrefab;
     public GameObject enemyPrefab2;
     public GameObject enemyPrefab3;
