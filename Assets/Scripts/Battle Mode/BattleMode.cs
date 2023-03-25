@@ -28,6 +28,9 @@ public class BattleMode : MonoBehaviour
     private int firstEnemyGone;
     public static int count;
 
+    // Amount of times
+    public int charges;
+
     //EFFECTS
     public GameObject boomFX, krackFX, whamFX;
 
@@ -154,7 +157,15 @@ public class BattleMode : MonoBehaviour
                 }
                 else
                 {
-                    FinishSequence();
+                    if (charges > 2)
+                    {
+                        FinishSequence();
+                    }
+                    else
+                    {
+                        charges++;
+                        GameManager.inCoverMode = true;
+                    }
                 }
             }
         }
@@ -170,7 +181,15 @@ public class BattleMode : MonoBehaviour
                 }
                 else
                 {
-                    FinishSequence();
+                    if (charges > 2)
+                    {
+                        FinishSequence();
+                    }
+                    else
+                    {
+                        charges++;
+                        GameManager.inCoverMode = true;
+                    }
                 }
             }
         }
@@ -266,7 +285,15 @@ public class BattleMode : MonoBehaviour
 
             if (SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
             {
-                FinishSequence();
+                if (charges > 2)
+                {
+                    FinishSequence();
+                }
+                else
+                {
+                    charges++;
+                    GameManager.inCoverMode = true;
+                }
             }
         }
 
@@ -275,7 +302,15 @@ public class BattleMode : MonoBehaviour
             SeventhButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
             if (SeventhButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
             {
-                FinishSequence();
+                if (charges > 2)
+                {
+                    FinishSequence();
+                }
+                else
+                {
+                    charges++;
+                    GameManager.inCoverMode = true;
+                }
             }
         }
     }
@@ -362,6 +397,7 @@ public class BattleMode : MonoBehaviour
         whamFX.SetActive(false);
         currentEnemy.transform.GetChild(0).gameObject.SetActive(false);
         StartCoroutine(KillEnemy());
+        charges = 0;
     }
 
     void ChangingAnim(string newState)

@@ -14110,6 +14110,11 @@ MonoBehaviour:
   coverSeq: {fileID: 0}
   coverSeqOBJ: {fileID: 0}
   Timerbar: {fileID: 0}
+  healthCam: {fileID: 0}
+  cutsceneCam: {fileID: 0}
+  arrowsSpawn: {fileID: 0}
+  arrows: {fileID: 0}
+  countdown: {fileID: 0}
   DanceMode: 1
 --- !u!4 &1008226721
 Transform:
@@ -17146,14 +17151,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 15716479}
-  bpm: 110
-  spb: 4
+  bpm: 120
+  spb: 2
   songPos: 0
   songPosInBeat: 0
   dspSongTime: 0
   musicSource: {fileID: 1700941370}
   firstBeatOffset: 0
-  bpl: 1
+  bpl: 2
   completedLoops: 0
   loopPosInBeats: 0
   loopPositionInAnalog: 0
@@ -17179,7 +17184,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 43f590783a2c65544a5a42815e7fa1e8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2a063c093459a17428d3d7aa12d5eca4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.75
   m_Pitch: 1
