@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
                 battleSeq.SetActive(true);
                 Timerbar.SetActive(true);
                 healthCam.SetActive(false);
+                cutsceneCam.SetActive(false);
             }
             else if(!inBattleMode && !inCoverMode)
             {
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
                 coverSeq.SetActive(false);
                 Timerbar.SetActive(false);
                 healthCam.SetActive(false);
+                
             }
             if (inCoverMode)
             {
@@ -49,6 +51,7 @@ public class GameManager : MonoBehaviour
                 battleSeqOBJ.SetActive(false);
                 coverSeq.SetActive(true);
                 coverSeqOBJ.SetActive(true);
+                cutsceneCam.SetActive(false);
             }
             else
             {
@@ -69,6 +72,7 @@ public class GameManager : MonoBehaviour
               arrowsSpawn.SetActive(true);
               countdown.SetActive(true);
               DanceMode = true;
+              cutsceneCam.SetActive(false);
             }
         }
     }
