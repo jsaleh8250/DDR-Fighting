@@ -8,6 +8,8 @@ public class BattleMode : MonoBehaviour
     public GameObject player;
     public GameObject secondCam;
 
+    public static int buttons = 3;
+
     //Sequence
     public GameObject[] NotePrefab;
     public Transform[] NoteTransform;
@@ -30,6 +32,7 @@ public class BattleMode : MonoBehaviour
 
     // Amount of times
     public int charges = 0;
+    public static int hits = 3;
 
     //EFFECTS
     public GameObject boomFX, krackFX, whamFX;
@@ -157,7 +160,7 @@ public class BattleMode : MonoBehaviour
                 }
                 else
                 {
-                    if (charges == 2)
+                    if (charges == hits)
                     {
                         FinishSequence();
                     }
@@ -181,7 +184,7 @@ public class BattleMode : MonoBehaviour
                 }
                 else
                 {
-                    if (charges == 2)
+                    if (charges == hits)
                     {
                         FinishSequence();
                     }
@@ -285,7 +288,7 @@ public class BattleMode : MonoBehaviour
 
             if (SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
             {
-                if (charges >= 2)
+                if (charges == hits)
                 {
                     FinishSequence();
                 }
@@ -302,7 +305,7 @@ public class BattleMode : MonoBehaviour
             SeventhButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
             if (SeventhButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
             {
-                if (charges == 2)
+                if (charges == hits)
                 {
                     FinishSequence();
                 }
@@ -329,7 +332,7 @@ public class BattleMode : MonoBehaviour
     {
         foreach (Transform t in NoteTransform)
         {
-            GameObject note = Instantiate(NotePrefab[Random.Range(0, NotePrefab.Length)], t.transform.position, Quaternion.identity);
+            GameObject note = Instantiate(NotePrefab[Random.Range(0, buttons)], t.transform.position, Quaternion.identity);
 
             note.transform.SetParent(t);
         }

@@ -15,5 +15,15 @@ public class Drinks : MonoBehaviour
     {
      GameManager.inBattleMode = true;
      GameManager.inCutscene = false;
+     BattleMode.buttons = BattleMode.buttons + 4;
+        if (BattleMode.hits >= 2)
+        {
+            BattleMode.hits--;
+        }
+        else
+        {
+            BattleMode.hits = 1;
+        }
+
     }
 }

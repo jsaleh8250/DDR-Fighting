@@ -160,7 +160,7 @@ public class CoverSequence : MonoBehaviour
 
         foreach (Transform t in NoteTransform)
         {
-            GameObject note = Instantiate(NotePrefab[Random.Range(0, NotePrefab.Length)], t.transform.position, Quaternion.identity);
+            GameObject note = Instantiate(NotePrefab[Random.Range(0, BattleMode.buttons)], t.transform.position, Quaternion.identity);
 
             //note.transform.parent = t.parent.transform;
             note.transform.SetParent(t);

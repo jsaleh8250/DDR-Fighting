@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
             if(inHealthMode)
             {
                 bgmusic = GameObject.FindGameObjectWithTag("Music");
-            //    bgmusic.SetActive(false);
+                bgmusic.SetActive(false);
               healthCam.SetActive(true);
               mainCam.SetActive(false);
               secondCam.SetActive(false);
@@ -89,11 +89,8 @@ public class GameManager : MonoBehaviour
                 battleSeq.SetActive(false);
                 coverSeq.SetActive(false);
             }
-            else
-            {
-                bgmusic = GameObject.FindGameObjectWithTag("Music");
-                bgmusic.SetActive(true);
-            }
+            bgmusic = GameObject.FindGameObjectWithTag("Music");
+            bgmusic.SetActive(true);
         }
     }
 }
