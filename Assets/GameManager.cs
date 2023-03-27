@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
                 battleSeq.SetActive(true);
                 Timerbar.SetActive(true);
                 healthCam.SetActive(false);
+                cutsceneCam.SetActive(false);
             }
             else if(!inBattleMode && !inCoverMode)
             {
@@ -64,7 +65,7 @@ public class GameManager : MonoBehaviour
             if(inHealthMode)
             {
                 bgmusic = GameObject.FindGameObjectWithTag("Music");
-                bgmusic.SetActive(false);
+            //    bgmusic.SetActive(false);
               healthCam.SetActive(true);
               mainCam.SetActive(false);
               secondCam.SetActive(false);
@@ -75,6 +76,7 @@ public class GameManager : MonoBehaviour
               arrowsSpawn.SetActive(true);
               countdown.SetActive(true);
               DanceMode = true;
+              cutsceneCam.SetActive(false);
             }
             if (inCutscene)
             {

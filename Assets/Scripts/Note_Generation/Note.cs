@@ -12,6 +12,7 @@ public class Note : MonoBehaviour
 
     string controllerString;
 
+    public HealthBar healthbar;
 
     float dmg = 5;
 
@@ -38,6 +39,7 @@ public class Note : MonoBehaviour
             {
                 GameManager.isPressed = true;
                 Destroy(gameObject);
+                healthbar.ADD(.05f);
 
                 AttackButton.Invoke(buttonToPress);
                 Attacking.Invoke(dmg);
