@@ -29,7 +29,7 @@ public class BattleMode : MonoBehaviour
     public static int count;
 
     // Amount of times
-    public int charges;
+    public int charges = 0;
 
     //EFFECTS
     public GameObject boomFX, krackFX, whamFX;
@@ -157,7 +157,7 @@ public class BattleMode : MonoBehaviour
                 }
                 else
                 {
-                    if (charges > 2)
+                    if (charges == 2)
                     {
                         FinishSequence();
                     }
@@ -181,7 +181,7 @@ public class BattleMode : MonoBehaviour
                 }
                 else
                 {
-                    if (charges > 2)
+                    if (charges == 2)
                     {
                         FinishSequence();
                     }
@@ -285,7 +285,7 @@ public class BattleMode : MonoBehaviour
 
             if (SeventhButton.transform.GetChild(0).GetComponent<BattleSequencePress>().buttonPressed)
             {
-                if (charges > 2)
+                if (charges >= 2)
                 {
                     FinishSequence();
                 }
@@ -302,7 +302,7 @@ public class BattleMode : MonoBehaviour
             SeventhButton.transform.GetChild(0).GetComponent<CoverSequencePress>().enabled = true;
             if (SeventhButton.transform.GetChild(0).GetComponent<CoverSequencePress>().buttonPressed)
             {
-                if (charges > 2)
+                if (charges == 2)
                 {
                     FinishSequence();
                 }
@@ -397,7 +397,6 @@ public class BattleMode : MonoBehaviour
         whamFX.SetActive(false);
         currentEnemy.transform.GetChild(0).gameObject.SetActive(false);
         StartCoroutine(KillEnemy());
-        charges = 0;
     }
 
     void ChangingAnim(string newState)
@@ -438,6 +437,7 @@ public class BattleMode : MonoBehaviour
         UnPausePlayer();
         ClearNotes();
         count++;
+        charges = 0;
 
     }
 
