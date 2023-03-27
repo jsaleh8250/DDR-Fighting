@@ -20,6 +20,11 @@ public class HealthBar : MonoBehaviour
 
     }
 
+    public void ADD(float add){
+      totalHealth += add;
+    }
+    
+
     //If player takes damage the health will decrease from the amount damaged but will not go negative
     public void Damage(float damage)
     {
