@@ -27,6 +27,10 @@ public class Note : MonoBehaviour
         keyToPress = (KeyCode)System.Enum.Parse(typeof(KeyCode), controllerString);
     }
 
+    private void Start()
+    {
+        healthbar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
+    }
 
     //If pressed will give points to the score and gives access to enable attack
     void Update()
@@ -44,28 +48,7 @@ public class Note : MonoBehaviour
                 AttackButton.Invoke(buttonToPress);
                 Attacking.Invoke(dmg);
                 Debug.Log("NOTE SCRIPT: " + GameManager.isPressed);
-              
-                //To get score when hitting the notes on certain parts of the arrows
-                /*
-                if(transform.position.y <= 1.4f)
-                {
-                    //Debug.Log("Normal Hit");
-                    //ScoreHandler.instance.NormalHit();
-                    Instantiate(normalEffect, transform.position, normalEffect.transform.rotation);
-                }else if(transform.position.y <= 2.65f)
-                {
-                    //Debug.Log("Good Hit");
-                    //ScoreHandler.instance.GoodHit();
-                    Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
-                }
-               if (transform.position.y == 1.5f)
-                {
-                    //ScoreHandler.instance.PerfectHit();
-                    //Debug.Log("Perfect");
-                    Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
-                }
-                */
-
+             
             }
 
         }
@@ -88,8 +71,7 @@ public class Note : MonoBehaviour
         if (collision.tag == "Active")
         {
             canBePressed = false;
-            //ScoreHandler.instance.NoteMissed();
-            //Instantiate(missEffect, transform.position, missEffect.transform.rotation);
+
         }
     }
 
