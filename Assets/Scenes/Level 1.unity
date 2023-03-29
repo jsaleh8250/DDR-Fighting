@@ -2435,7 +2435,7 @@ MonoBehaviour:
   healthBar: {fileID: 1554861945}
   Timertext: {fileID: 1890368840}
   player: {fileID: 1467240007}
-  maxTime: 10
+  maxTime: 25
 --- !u!1 &201924429
 GameObject:
   m_ObjectHideFlags: 0
