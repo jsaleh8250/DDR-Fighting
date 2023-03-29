@@ -12,7 +12,6 @@ public class HealthDance : MonoBehaviour
         StartCoroutine(LoadNextLevel(songTime));
     }
 
-
     IEnumerator LoadNextLevel(float songTIme)
     {
         yield return new WaitForSeconds(songTime);
