@@ -17158,7 +17158,7 @@ MonoBehaviour:
   dspSongTime: 0
   musicSource: {fileID: 1700941370}
   firstBeatOffset: 0
-  bpl: 2
+  bpl: 1
   completedLoops: 0
   loopPosInBeats: 0
   loopPositionInAnalog: 0
