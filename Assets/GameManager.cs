@@ -89,8 +89,6 @@ public class GameManager : MonoBehaviour
                 battleSeq.SetActive(false);
                 coverSeq.SetActive(false);
             }
-            bgmusic = GameObject.FindGameObjectWithTag("Music");
-            bgmusic.SetActive(true);
         }
     }
 }
