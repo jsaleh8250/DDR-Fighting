@@ -15,6 +15,7 @@ TagManager:
   - Music
   - PerkSeq
   - HealthBar
+  - Health Cam
   layers:
   - Default
   - TransparentFX
