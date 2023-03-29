@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
             if(inHealthMode)
             {
                 bgmusic = GameObject.FindGameObjectWithTag("Music");
-                bgmusic.SetActive(false);
+                //bgmusic.SetActive(false);
               healthCam.SetActive(true);
               mainCam.SetActive(false);
               secondCam.SetActive(false);
