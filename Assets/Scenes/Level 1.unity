@@ -1845,7 +1845,7 @@ GameObject:
   - component: {fileID: 131070914}
   - component: {fileID: 131070917}
   m_Layer: 0
-  m_Name: Health
+  m_Name: Upgrade
   m_TagString: PerkSeq
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10462,7 +10462,7 @@ GameObject:
   - component: {fileID: 925660290}
   m_Layer: 8
   m_Name: HealthCam
-  m_TagString: MainCamera
+  m_TagString: Health Cam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
