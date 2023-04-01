@@ -5171,7 +5171,6 @@ MonoBehaviour:
   enemyPrefab2: {fileID: 7393395903032510395, guid: 3e7c5a4ba8cc7de478bf2f4559957636, type: 3}
   enemyPrefab3: {fileID: 7393395903032510395, guid: 3d473b0a079afe6458fd86e0bc8f43b6, type: 3}
   currentEnemy: {fileID: 0}
-  charges: 0
   boomFX: {fileID: 431222526}
   krackFX: {fileID: 300867857}
   whamFX: {fileID: 1331325109}
@@ -22922,11 +22921,6 @@ MonoBehaviour:
   coverSeq: {fileID: 1036227671}
   coverSeqOBJ: {fileID: 1875415347}
   Timerbar: {fileID: 193982910}
-  healthCam: {fileID: 0}
-  cutsceneCam: {fileID: 0}
-  arrowsSpawn: {fileID: 0}
-  arrows: {fileID: 0}
-  countdown: {fileID: 0}
   DanceMode: 0
 --- !u!4 &1008226721
 Transform:
@@ -28554,8 +28548,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14dffa2944d4284ab019b0e0e4a4554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
+  maxHealth: 1
   levelName: Level 2
+  coverMode: {fileID: 1036227671}
 --- !u!1 &1579298478
 GameObject:
   m_ObjectHideFlags: 0
