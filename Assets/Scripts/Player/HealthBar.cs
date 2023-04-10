@@ -20,8 +20,10 @@ public class HealthBar : MonoBehaviour
 
     }
 
-    public void ADD(float add){
-      totalHealth += add;
+    public void ADD(float add)
+    {
+        totalHealth += add;
+     
     }
     
 
