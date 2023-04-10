@@ -29,8 +29,8 @@ public class Timer : MonoBehaviour
         {
             TimerTicking();
         }
-        else 
-        { 
+        else
+        {
             ResetTimer();
         }
         if (this.enabled)
