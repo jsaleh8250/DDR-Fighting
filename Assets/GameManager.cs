@@ -66,17 +66,17 @@ public class GameManager : MonoBehaviour
             {
                 bgmusic = GameObject.FindGameObjectWithTag("Music");
                 //bgmusic.SetActive(false);
-              healthCam.SetActive(true);
-              mainCam.SetActive(false);
-              secondCam.SetActive(false);
-              battleSeq.SetActive(false);
-              coverSeq.SetActive(false);
-              Timerbar.SetActive(false);
-              arrows.SetActive(true);
-              arrowsSpawn.SetActive(true);
-              countdown.SetActive(true);
-              DanceMode = true;
-              cutsceneCam.SetActive(false);
+                healthCam.SetActive(true);
+                mainCam.SetActive(false);
+                secondCam.SetActive(false);
+                battleSeq.SetActive(false);
+                coverSeq.SetActive(false);
+                Timerbar.SetActive(false);
+                arrows.SetActive(true);
+                arrowsSpawn.SetActive(true);
+                countdown.SetActive(true);
+                DanceMode = true;
+                cutsceneCam.SetActive(false);
             }
             if (inCutscene)
             {

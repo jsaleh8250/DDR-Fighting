@@ -34,6 +34,9 @@ public class BattleMode : MonoBehaviour
     public int charges = 0;
     public static int hits = 3;
 
+    //Timer
+    public Timer timerScript;
+
     //EFFECTS
     public GameObject boomFX, krackFX, whamFX;
 
@@ -166,7 +169,7 @@ public class BattleMode : MonoBehaviour
                     }
                     else
                     {
-                        charges++;
+                        ChargeAdded();
                         GameManager.inCoverMode = true;
                     }
                 }
@@ -190,7 +193,7 @@ public class BattleMode : MonoBehaviour
                     }
                     else
                     {
-                        charges++;
+                        ChargeAdded();
                         GameManager.inCoverMode = true;
                     }
                 }
@@ -294,7 +297,7 @@ public class BattleMode : MonoBehaviour
                 }
                 else
                 {
-                    charges++;
+                    ChargeAdded();
                     GameManager.inCoverMode = true;
                 }
             }
@@ -311,7 +314,7 @@ public class BattleMode : MonoBehaviour
                 }
                 else
                 {
-                    charges++;
+                    ChargeAdded();
                     GameManager.inCoverMode = true;
                 }
             }
@@ -429,6 +432,13 @@ public class BattleMode : MonoBehaviour
     public void PlayDeathAnimation()
     {
         StartCoroutine(PlayDeathAnimationOperation());
+    }
+
+    private void ChargeAdded()
+    {
+        timerScript.ResetTimer();
+        charges++;
+
     }
 
     IEnumerator KillEnemy()

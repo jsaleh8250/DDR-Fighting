@@ -5171,6 +5171,8 @@ MonoBehaviour:
   enemyPrefab2: {fileID: 7393395903032510395, guid: 3e7c5a4ba8cc7de478bf2f4559957636, type: 3}
   enemyPrefab3: {fileID: 7393395903032510395, guid: 3d473b0a079afe6458fd86e0bc8f43b6, type: 3}
   currentEnemy: {fileID: 0}
+  charges: 0
+  timerScript: {fileID: 193982914}
   boomFX: {fileID: 431222526}
   krackFX: {fileID: 300867857}
   whamFX: {fileID: 1331325109}
@@ -22921,6 +22923,11 @@ MonoBehaviour:
   coverSeq: {fileID: 1036227671}
   coverSeqOBJ: {fileID: 1875415347}
   Timerbar: {fileID: 193982910}
+  healthCam: {fileID: 0}
+  cutsceneCam: {fileID: 0}
+  arrowsSpawn: {fileID: 0}
+  arrows: {fileID: 0}
+  countdown: {fileID: 0}
   DanceMode: 0
 --- !u!4 &1008226721
 Transform:
@@ -23249,14 +23256,14 @@ MonoBehaviour:
   player: {fileID: 1467240007}
   secondCam: {fileID: 60704727}
   NotePrefab:
-  - {fileID: 3840309808114137268, guid: 50ec240dac7643e4e8d60824967ad8d6, type: 3}
-  - {fileID: 3251164035178435903, guid: e77bb8cb95a77d74a8ec3936093e63f7, type: 3}
-  - {fileID: 1125352569191930697, guid: 0101645ce4e005e45ac61ef5b9b62467, type: 3}
-  - {fileID: 8212313331684068629, guid: c65557e1484617a40862324fc4c352a9, type: 3}
   - {fileID: 3840309808114137268, guid: b628234524dbd25409bf8691322414d6, type: 3}
   - {fileID: 3251164035178435903, guid: 19137898ba2091d42aa14ffc1b1af628, type: 3}
   - {fileID: 1125352569191930697, guid: f0b9b119924027342b469eac3e3b3c91, type: 3}
   - {fileID: 8212313331684068629, guid: 7fa0b31cb80ecda4f8fb86de918764f0, type: 3}
+  - {fileID: 3840309808114137268, guid: 50ec240dac7643e4e8d60824967ad8d6, type: 3}
+  - {fileID: 3251164035178435903, guid: e77bb8cb95a77d74a8ec3936093e63f7, type: 3}
+  - {fileID: 1125352569191930697, guid: 0101645ce4e005e45ac61ef5b9b62467, type: 3}
+  - {fileID: 8212313331684068629, guid: c65557e1484617a40862324fc4c352a9, type: 3}
   NoteTransform:
   - {fileID: 535447168}
   - {fileID: 139667598}
@@ -28550,7 +28557,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   levelName: Level 2
-  coverMode: {fileID: 1036227671}
 --- !u!1 &1579298478
 GameObject:
   m_ObjectHideFlags: 0
