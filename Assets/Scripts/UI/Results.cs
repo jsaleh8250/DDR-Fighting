@@ -8,17 +8,20 @@ public class Results : MonoBehaviour
 {
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI MultiText;
+    public TextMeshProUGUI KilledText;
     private static int score;
-    //private static int Multi;
+    private static int Multi;
+    private static int killed;
    
 
     //Will get score from other scenes and transfer the desire scene
     void Update()
     {
-        //score = ScoreHandler.currentScore;
-        //Multi = ScoreHandler.combo;
-        score = BattleMode.count;
+        score = ScoreHandler.currentScore;
+        Multi = ScoreHandler.combo;
+        killed = BattleMode.count;
         ScoreText.text = "Score: " + score;
-        //MultiText.text = "Multiplier: x" + Multi;
+        KilledText.text = "Enemies Killed: " + killed;
+        MultiText.text = "Multiplier: x" + Multi;
     }
 }

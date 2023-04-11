@@ -9,11 +9,12 @@ public class ScoreHandler : MonoBehaviour
 {
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI MultiText;
-    public GameObject next;
+    //public GameObject next;
 
     public static ScoreHandler instance;
 
     public static int currentScore;
+    public static int killedScore;
     int scorePerNote = 100;
     int ScorePerGoodNote = 55;
     int ScorePerPerfectNote = 150;
@@ -27,7 +28,7 @@ public class ScoreHandler : MonoBehaviour
     {
         instance = this;
         ScoreText.text = "Score: 0";
-        next.SetActive(false);
+        //next.SetActive(false);
     }
 
     public void Update()
@@ -48,10 +49,10 @@ public class ScoreHandler : MonoBehaviour
             Debug.Log("Notemissed");
         }
         
-        if(currentScore > 0)
+        /*if(currentScore > 0)
         {
             next.SetActive(true);
-        }
+        } */
         
     }
 
@@ -67,30 +68,30 @@ public class ScoreHandler : MonoBehaviour
         }
         
               
-        MultiText.SetText("Multiplier: x" + combo);
+        //MultiText.SetText("Multiplier: x" + combo);
         ScoreText.SetText("Score: " + currentScore);
      }
 
     public void NormalHit()
     {
-        currentScore += scorePerNote * combo;
+        currentScore += scorePerNote;
         NoteHit();
     }
 
     public void GoodHit()
     {
-        currentScore += ScorePerGoodNote * combo;
+        currentScore += ScorePerGoodNote;
         NoteHit();
     }
 
     public void PerfectHit()
     {
-        currentScore += ScorePerPerfectNote * combo;
+        currentScore += ScorePerPerfectNote;
         NoteHit();
     }
      public void EnemyKilled()
     {
-        currentScore += Enemydead;
+        killedScore += Enemydead;
         Debug.Log("Points");
     }
 

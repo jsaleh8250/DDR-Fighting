@@ -16,7 +16,7 @@ public class Note : MonoBehaviour
 
     float dmg = 5;
 
-    //public GameObject missEffect, goodEffect, normalEffect, perfectEffect;
+    public GameObject missEffect, goodEffect, normalEffect, perfectEffect;
 
     public static event Action<string> AttackButton = delegate { };
     public static event Action<float> Attacking = delegate { };
@@ -25,6 +25,8 @@ public class Note : MonoBehaviour
     {
         controllerString = "Joystick" + GameManager.DDR_PAD_NUM + buttonToPress;
         keyToPress = (KeyCode)System.Enum.Parse(typeof(KeyCode), controllerString);
+
+                
     }
 
     private void Start()
@@ -48,6 +50,24 @@ public class Note : MonoBehaviour
                 AttackButton.Invoke(buttonToPress);
                 Attacking.Invoke(dmg);
                 Debug.Log("NOTE SCRIPT: " + GameManager.isPressed);
+                 
+                if(transform.position.y < 1.5f)
+                {
+                    Debug.Log("Normal Hit");
+                    ScoreHandler.instance.NormalHit();
+                    //Instantiate(normalEffect, transform.position, normalEffect.transform.rotation);
+                }else if(transform.position.y < 1.6f)
+                {
+                    Debug.Log("Good Hit");
+                    ScoreHandler.instance.GoodHit();
+                    //Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
+                }
+                else if(transform.position.y < 1.7f)
+                {
+                    ScoreHandler.instance.PerfectHit();
+                    Debug.Log("Perfect");
+                    //Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
+                }
              
             }
 
@@ -71,6 +91,9 @@ public class Note : MonoBehaviour
         if (collision.tag == "Active")
         {
             canBePressed = false;
+
+            ScoreHandler.instance.NoteMissed();
+            //Instantiate(missEffect, transform.position, missEffect.transform.rotation);
 
         }
     }
