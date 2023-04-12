@@ -18,11 +18,13 @@ public class GameManager : MonoBehaviour
 
     public static bool inCutscene;
 
-    public GameObject mainCam, secondCam, battleSeq, battleSeqOBJ, coverSeq, coverSeqOBJ, Timerbar, healthCam, cutsceneCam, arrowsSpawn, arrows, countdown;
+    public static bool inHealthMode;
+
+    public static bool inDanceSequence;
+
+    public GameObject mainCam, secondCam, battleSeq, battleSeqOBJ, coverSeq, coverSeqOBJ, healthCam, cutsceneCam, arrowsSpawn, arrows, countdown, Timerbar, danceCam;
 
     public bool DanceMode;
-
-    public static bool inHealthMode;
 
     private GameObject bgmusic;
 
@@ -88,6 +90,16 @@ public class GameManager : MonoBehaviour
                 secondCam.SetActive(false);
                 battleSeq.SetActive(false);
                 coverSeq.SetActive(false);
+            }
+            if (inDanceSequence)
+            {
+                secondCam.SetActive(false);
+                mainCam.SetActive(false);
+                battleSeq.SetActive(false);
+                Timerbar.SetActive(false);
+                healthCam.SetActive(false);
+                cutsceneCam.SetActive(false);
+                danceCam.SetActive(true);
             }
         }
     }

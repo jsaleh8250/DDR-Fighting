@@ -33,6 +33,7 @@ public class BattleMode : MonoBehaviour
     // Amount of times
     public int charges = 0;
     public static int hits = 3;
+    public static int health = 3;
 
     //Timer
     public Timer timerScript;
@@ -41,6 +42,8 @@ public class BattleMode : MonoBehaviour
     public GameObject boomFX, krackFX, whamFX;
 
     public bool secondLevel;
+
+    public static bool firstTry;
 
     void Awake()
     {
@@ -52,6 +55,15 @@ public class BattleMode : MonoBehaviour
 
     public void OnEnable()
     {
+        if (hits == health)
+        {
+            firstTry = true;
+        }
+        else
+        {
+            firstTry = false;
+        }
+            
         InstantiateSequence();
         currentEnemyType = player.GetComponent<playerMovement>().currentEnmyType;
         firstEnemyGone++;

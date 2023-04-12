@@ -73,6 +73,11 @@ public class Timer : MonoBehaviour
                 healthBar.Damage(0.3f);
                 GameManager.inCoverMode = true;
                 ResetTimer();
+
+                if (BattleMode.firstTry)
+                {
+                    GameManager.inDanceSequence = true;
+                }
             }
 
         }

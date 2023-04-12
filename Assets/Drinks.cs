@@ -19,10 +19,12 @@ public class Drinks : MonoBehaviour
         if (BattleMode.hits >= 2)
         {
             BattleMode.hits--;
+            BattleMode.health--;
         }
         else
         {
             BattleMode.hits = 1;
+            BattleMode.health = 1;
         }
 
     }
