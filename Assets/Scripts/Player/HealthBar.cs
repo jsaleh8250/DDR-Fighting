@@ -7,10 +7,10 @@ public class HealthBar : MonoBehaviour
 {
     private RectTransform bar;
     private int nextScene;
-    public float maxHealth = 1f;
+    public static float maxHealth = 1f;
     public string levelName;
     public static float totalHealth = 1f;
-    
+
     //Health bar for the player 
     void Start()
     {
@@ -23,14 +23,16 @@ public class HealthBar : MonoBehaviour
     public void ADD(float add)
     {
         totalHealth += add;
-     
+        maxHealth = totalHealth;
+        SetSize(totalHealth);
+
     }
-    
+
 
     //If player takes damage the health will decrease from the amount damaged but will not go negative
     public void Damage(float damage)
     {
-        if ((totalHealth -= damage)>= 0f)
+        if ((totalHealth -= damage) >= 0f)
         {
             totalHealth -= damage;
         }
