@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
                 battleSeq.SetActive(false);
                 coverSeq.SetActive(false);
             }
-            if (inDanceSequence)
+            /*if (inDanceSequence)
             {
 
                 secondCam.SetActive(false);
@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
                 battleSeqOBJ.SetActive(true);
                 coverSeq.SetActive(false);
                 coverSeqOBJ.SetActive(false);
-            }
+            } */
         }
     }
 }
