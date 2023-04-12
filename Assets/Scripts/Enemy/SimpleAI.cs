@@ -24,7 +24,6 @@ public class SimpleAI : MonoBehaviour
 
     void Update()
     {
-        EnemyMovement();
     }
 
     void EnemyMovement()
