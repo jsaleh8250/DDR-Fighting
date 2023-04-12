@@ -88,12 +88,12 @@ public class Note : MonoBehaviour
     //If the note isn't in the Arrow area it can not be pressed
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Active" && gameObject.activeSelf)
+        if (collision.tag == "Active")
         {
             canBePressed = false;
 
             ScoreHandler.instance.NoteMissed();
-            Instantiate(missEffect, transform.position, missEffect.transform.rotation);
+            //Instantiate(missEffect, transform.position, missEffect.transform.rotation);
 
         }
     }
