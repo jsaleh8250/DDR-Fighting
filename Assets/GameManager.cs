@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
             }
             if (inDanceSequence)
             {
-                
+
                 secondCam.SetActive(false);
                 mainCam.SetActive(false);
                 battleSeq.SetActive(false);
@@ -107,6 +107,14 @@ public class GameManager : MonoBehaviour
                 healthCam.SetActive(false);
                 cutsceneCam.SetActive(false);
                 danceCam.SetActive(true);
+            }
+            else
+            {
+                inGameMusic.UnPause();
+                battleSeq.SetActive(true);
+                battleSeqOBJ.SetActive(true);
+                coverSeq.SetActive(false);
+                coverSeqOBJ.SetActive(false);
             }
         }
     }
