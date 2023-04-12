@@ -14109,12 +14109,13 @@ MonoBehaviour:
   battleSeqOBJ: {fileID: 0}
   coverSeq: {fileID: 0}
   coverSeqOBJ: {fileID: 0}
-  Timerbar: {fileID: 0}
   healthCam: {fileID: 0}
   cutsceneCam: {fileID: 0}
   arrowsSpawn: {fileID: 0}
   arrows: {fileID: 0}
   countdown: {fileID: 0}
+  Timerbar: {fileID: 0}
+  danceCam: {fileID: 0}
   DanceMode: 1
 --- !u!4 &1008226721
 Transform:
@@ -16108,7 +16109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14dffa2944d4284ab019b0e0e4a4554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
   levelName: Dance Failure
 --- !u!1 &1562291915
 GameObject:
@@ -17158,7 +17158,7 @@ MonoBehaviour:
   dspSongTime: 0
   musicSource: {fileID: 1700941370}
   firstBeatOffset: 0
-  bpl: 2
+  bpl: 1
   completedLoops: 0
   loopPosInBeats: 0
   loopPositionInAnalog: 0
