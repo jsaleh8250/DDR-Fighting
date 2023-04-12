@@ -108,14 +108,7 @@ public class GameManager : MonoBehaviour
                 cutsceneCam.SetActive(false);
                 danceCam.SetActive(true);
             }
-            else
-            {
-                inGameMusic.UnPause();
-                battleSeq.SetActive(true);
-                battleSeqOBJ.SetActive(true);
-                coverSeq.SetActive(false);
-                coverSeqOBJ.SetActive(false);
-            }
+
         }
     }
 }
