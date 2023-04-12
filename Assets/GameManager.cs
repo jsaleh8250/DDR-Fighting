@@ -28,6 +28,13 @@ public class GameManager : MonoBehaviour
 
     private GameObject bgmusic;
 
+    private AudioSource inGameMusic;
+
+    private void Start()
+    {
+        inGameMusic = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         if (!DanceMode)
@@ -59,6 +66,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                inGameMusic.UnPause();
                 battleSeq.SetActive(true);
                 battleSeqOBJ.SetActive(true);
                 coverSeq.SetActive(false);
@@ -66,8 +74,7 @@ public class GameManager : MonoBehaviour
             }
             if(inHealthMode)
             {
-                bgmusic = GameObject.FindGameObjectWithTag("Music");
-                //bgmusic.SetActive(false);
+                inGameMusic.Pause();
                 healthCam.SetActive(true);
                 mainCam.SetActive(false);
                 secondCam.SetActive(false);
@@ -82,10 +89,9 @@ public class GameManager : MonoBehaviour
             }
             if (inCutscene)
             {
+                inGameMusic.Pause();
                 mainCam.SetActive(false);
                 cutsceneCam.SetActive(true);
-                bgmusic = GameObject.FindGameObjectWithTag("Music");
-                bgmusic.SetActive(false);
                 healthCam.SetActive(false);
                 secondCam.SetActive(false);
                 battleSeq.SetActive(false);
@@ -93,6 +99,7 @@ public class GameManager : MonoBehaviour
             }
             if (inDanceSequence)
             {
+                
                 secondCam.SetActive(false);
                 mainCam.SetActive(false);
                 battleSeq.SetActive(false);
