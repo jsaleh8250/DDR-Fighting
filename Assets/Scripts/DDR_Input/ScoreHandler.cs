@@ -9,16 +9,14 @@ public class ScoreHandler : MonoBehaviour
 {
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI MultiText;
-    //public GameObject next;
+    public GameObject next;
 
     public static ScoreHandler instance;
 
     public static int currentScore;
-    public static int killedScore;
     int scorePerNote = 100;
     int ScorePerGoodNote = 55;
     int ScorePerPerfectNote = 150;
-    int Enemydead = 200;
 
     public static int combo;
    
@@ -28,12 +26,12 @@ public class ScoreHandler : MonoBehaviour
     {
         instance = this;
         ScoreText.text = "Score: 0";
-        //next.SetActive(false);
+        next.SetActive(false);
     }
 
     public void Update()
     {
-        
+        //Debug.Log(Note.isPressed);
         if (GameManager.isPressed)
         {
             NormalHit();
@@ -46,13 +44,12 @@ public class ScoreHandler : MonoBehaviour
         {
             NoteMissed();
             combo = 0;
-            Debug.Log("Notemissed");
         }
         
-        /*if(currentScore > 0)
+        if(currentScore > 10000)
         {
             next.SetActive(true);
-        } */
+        }
         
     }
 
@@ -68,31 +65,26 @@ public class ScoreHandler : MonoBehaviour
         }
         
               
-        //MultiText.SetText("Multiplier: x" + combo);
+        MultiText.SetText("Multiplier: x" + combo);
         ScoreText.SetText("Score: " + currentScore);
      }
 
     public void NormalHit()
     {
-        currentScore += scorePerNote;
+        currentScore += scorePerNote * combo;
         NoteHit();
     }
 
     public void GoodHit()
     {
-        currentScore += ScorePerGoodNote;
+        currentScore += ScorePerGoodNote * combo;
         NoteHit();
     }
 
     public void PerfectHit()
     {
-        currentScore += ScorePerPerfectNote;
+        currentScore += ScorePerPerfectNote * combo;
         NoteHit();
-    }
-     public void EnemyKilled()
-    {
-        killedScore += Enemydead;
-        Debug.Log("Points");
     }
 
     public void NoteMissed()

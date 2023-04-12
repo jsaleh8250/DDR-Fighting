@@ -51,22 +51,22 @@ public class Note : MonoBehaviour
                 Attacking.Invoke(dmg);
                 Debug.Log("NOTE SCRIPT: " + GameManager.isPressed);
                  
-                if(transform.position.y < 1.5f)
+                if(transform.position.y < -1.3f)
                 {
                     Debug.Log("Normal Hit");
                     ScoreHandler.instance.NormalHit();
-                    //Instantiate(normalEffect, transform.position, normalEffect.transform.rotation);
-                }else if(transform.position.y < 1.6f)
+                    Instantiate(normalEffect, transform.position, normalEffect.transform.rotation);
+                }else if(transform.position.y < -.90f)
                 {
                     Debug.Log("Good Hit");
                     ScoreHandler.instance.GoodHit();
-                    //Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
+                    Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
                 }
-                else if(transform.position.y < 1.7f)
+               if (transform.position.y == -1.4f)
                 {
                     ScoreHandler.instance.PerfectHit();
                     Debug.Log("Perfect");
-                    //Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
+                    Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
                 }
              
             }
@@ -88,12 +88,12 @@ public class Note : MonoBehaviour
     //If the note isn't in the Arrow area it can not be pressed
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Active")
+        if (collision.tag == "Active" && gameObject.activeSelf)
         {
             canBePressed = false;
 
             ScoreHandler.instance.NoteMissed();
-            //Instantiate(missEffect, transform.position, missEffect.transform.rotation);
+            Instantiate(missEffect, transform.position, missEffect.transform.rotation);
 
         }
     }

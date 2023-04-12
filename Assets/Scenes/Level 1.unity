@@ -666,6 +666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1356760941}
   MultiText: {fileID: 0}
+  next: {fileID: 0}
 --- !u!114 &25352508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9961,7 +9962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &733695872
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35016,7 +35017,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14dffa2944d4284ab019b0e0e4a4554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
   levelName: Death Scene
 --- !u!1 &1579298478
 GameObject:
@@ -35644,6 +35644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 733695873}
   MultiText: {fileID: 0}
+  next: {fileID: 0}
 --- !u!1 &1703066297
 GameObject:
   m_ObjectHideFlags: 0

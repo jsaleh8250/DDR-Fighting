@@ -22,6 +22,6 @@ public class Results : MonoBehaviour
         killed = BattleMode.count;
         ScoreText.text = "Score: " + score;
         KilledText.text = "Enemies Killed: " + killed;
-        MultiText.text = "Multiplier: x" + Multi;
+        MultiText.text = "Notes Hit: " + Multi;
     }
 }
