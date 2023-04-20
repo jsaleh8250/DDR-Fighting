@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI Timertext;
     public GameObject player;
     Image TimerBar;
-    public float maxTime = 25f;
+    public float maxTime = 8f;
     
     void Start()
     {
