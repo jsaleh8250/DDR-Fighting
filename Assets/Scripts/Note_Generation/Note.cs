@@ -55,18 +55,20 @@ public class Note : MonoBehaviour
                 Attacking.Invoke(dmg);
                 Debug.Log("NOTE SCRIPT: " + GameManager.isPressed);
                  
-                if(transform.position.y < -1.3f)
+                if(Mathf.Abs(transform.position.y) > 1.5f)
                 {
                     Debug.Log("Normal Hit");
                     ScoreHandler.instance.NormalHit();
                     Instantiate(normalEffect, transform.position, normalEffect.transform.rotation);
-                }else if(transform.position.y < -.90f)
+
+                }else if(Mathf.Abs(transform.position.y) > .90f)
                 {
                     Debug.Log("Good Hit");
                     ScoreHandler.instance.GoodHit();
                     Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
+
                 }
-               if (transform.position.y == -1.4f)
+                else
                 {
                     ScoreHandler.instance.PerfectHit();
                     Debug.Log("Perfect");
@@ -92,7 +94,7 @@ public class Note : MonoBehaviour
     //If the note isn't in the Arrow area it can not be pressed
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Active")
+        if (collision.tag == "Active" )
         {
             canBePressed = false;
 

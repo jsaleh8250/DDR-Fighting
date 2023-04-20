@@ -65,7 +65,7 @@ public class ScoreHandler : MonoBehaviour
         }
         
               
-        MultiText.SetText("Multiplier: x" + combo);
+        //MultiText.SetText("Multiplier: x" + combo);
         ScoreText.SetText("Score: " + currentScore);
      }
 
