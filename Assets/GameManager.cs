@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
                 Timerbar.SetActive(true);
                 healthCam.SetActive(false);
                 cutsceneCam.SetActive(false);
+                Debug.Log("Battle Mode On");
             }
             else if(!inBattleMode && !inCoverMode)
             {
@@ -56,6 +57,7 @@ public class GameManager : MonoBehaviour
                 coverSeq.SetActive(false);
                 Timerbar.SetActive(false);
                 healthCam.SetActive(false);
+                Debug.Log("Normal Mode On");
             }
             if (inCoverMode)
             {
@@ -63,6 +65,7 @@ public class GameManager : MonoBehaviour
                 battleSeqOBJ.SetActive(false);
                 coverSeq.SetActive(true);
                 coverSeqOBJ.SetActive(true);
+                Debug.Log("Cover Mode On");
             }
             else
             {
@@ -86,6 +89,8 @@ public class GameManager : MonoBehaviour
                 countdown.SetActive(true);
                 DanceMode = true;
                 cutsceneCam.SetActive(false);
+
+                Debug.Log("Health Mode On");
             }
             if (inCutscene)
             {
@@ -96,6 +101,7 @@ public class GameManager : MonoBehaviour
                 secondCam.SetActive(false);
                 battleSeq.SetActive(false);
                 coverSeq.SetActive(false);
+                Debug.Log("Cutscene Mode On");
             }
             if (inDanceSequence)
             {
@@ -107,14 +113,7 @@ public class GameManager : MonoBehaviour
                 healthCam.SetActive(false);
                 cutsceneCam.SetActive(false);
                 danceCam.SetActive(true);
-            }
-            else
-            {
-                inGameMusic.UnPause();
-                battleSeq.SetActive(true);
-                battleSeqOBJ.SetActive(true);
-                coverSeq.SetActive(false);
-                coverSeqOBJ.SetActive(false);
+                Debug.Log("Dance Sequence Mode On");
             }
         }
     }
