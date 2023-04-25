@@ -67,16 +67,17 @@ public class Timer : MonoBehaviour
             }
             else
             {
-
-                TimeLeft = 0;
-                TimerOn = false;
-                healthBar.Damage(0.3f);
-                GameManager.inCoverMode = true;
-                ResetTimer();
-
                 if (BattleMode.firstTry)
                 {
                     GameManager.inDanceSequence = true;
+                }
+                else 
+                {
+                    TimeLeft = 0;
+                    TimerOn = false;
+                    healthBar.Damage(0.3f);
+                    GameManager.inCoverMode = true;
+                    ResetTimer();
                 }
             }
 

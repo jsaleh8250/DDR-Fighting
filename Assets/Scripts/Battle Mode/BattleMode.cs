@@ -35,6 +35,8 @@ public class BattleMode : MonoBehaviour
     public static int hits = 3;
     public static int health = 3;
 
+    public static int timesCalled;
+
     //Timer
     public Timer timerScript;
 
@@ -55,7 +57,7 @@ public class BattleMode : MonoBehaviour
 
     public void OnEnable()
     {
-        if (hits == health)
+        if (charges == 0)
         {
             firstTry = true;
         }
@@ -71,6 +73,11 @@ public class BattleMode : MonoBehaviour
         {
             InstantiateEnemy();
         }
+
+        Debug.Log(firstTry);
+
+        timesCalled++;
+        Debug.Log("Times Turned On: " + timesCalled);
     }
     public void OnDisable()
     {
@@ -183,6 +190,7 @@ public class BattleMode : MonoBehaviour
                     {
                         ChargeAdded();
                         GameManager.inCoverMode = true;
+                        Debug.Log("Completed Sequence");
                     }
                 }
             }

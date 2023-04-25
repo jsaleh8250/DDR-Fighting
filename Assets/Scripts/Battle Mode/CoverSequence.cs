@@ -43,6 +43,8 @@ public class CoverSequence : MonoBehaviour
     {
         currentEnemyType = player.GetComponent<playerMovement>().currentEnmyType;
         InstantiateEnemy();
+
+        Debug.Log("Cover Sequence is On");
     }
     public void OnDisable()
     {
