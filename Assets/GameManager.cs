@@ -109,6 +109,8 @@ public class GameManager : MonoBehaviour
                 secondCam.SetActive(false);
                 mainCam.SetActive(false);
                 battleSeq.SetActive(false);
+                battleSeqOBJ.SetActive(false);
+                coverSeq.SetActive(false);
                 Timerbar.SetActive(false);
                 healthCam.SetActive(false);
                 cutsceneCam.SetActive(false);

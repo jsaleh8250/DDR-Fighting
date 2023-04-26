@@ -47,12 +47,15 @@ public class BattleMode : MonoBehaviour
 
     public static bool firstTry;
 
+    public GameObject battleMode;
+
     void Awake()
     {
         InstantiateEnemy();
         firstEnemyGone++;
 
         PausePlayer();
+        battleMode.SetActive(true);
     }
 
     public void OnEnable()
@@ -83,6 +86,8 @@ public class BattleMode : MonoBehaviour
     public void OnDisable()
     {
         DeleteEnemy();
+        //GameManager.inBattleMode = false;
+        battleMode.SetActive(false);
     }
 
     // Update is called once per frame

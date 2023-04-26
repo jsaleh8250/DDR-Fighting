@@ -9759,6 +9759,7 @@ MonoBehaviour:
   whamFX: {fileID: 1331325109}
   danceFX: {fileID: 1393198276}
   secondLevel: 1
+  battleMode: {fileID: 606207428}
 --- !u!1 &625012064
 GameObject:
   m_ObjectHideFlags: 0
@@ -28534,13 +28535,13 @@ MonoBehaviour:
   battleSeqOBJ: {fileID: 595358802}
   coverSeq: {fileID: 1036227671}
   coverSeqOBJ: {fileID: 1875415347}
-  healthCam: {fileID: 0}
-  cutsceneCam: {fileID: 0}
-  arrowsSpawn: {fileID: 0}
-  arrows: {fileID: 0}
-  countdown: {fileID: 0}
+  healthCam: {fileID: 823747225}
+  cutsceneCam: {fileID: 1052473494}
+  arrowsSpawn: {fileID: 1859906473}
+  arrows: {fileID: 705461236}
+  countdown: {fileID: 804681475}
   Timerbar: {fileID: 193982910}
-  danceCam: {fileID: 0}
+  danceCam: {fileID: 1217387144}
   DanceMode: 0
 --- !u!4 &1008226721
 Transform:
@@ -30762,7 +30763,8 @@ MonoBehaviour:
   enemyPrefab2: {fileID: 7393395903032510395, guid: 3e7c5a4ba8cc7de478bf2f4559957636, type: 3}
   enemyPrefab3: {fileID: 7393395903032510395, guid: 3d473b0a079afe6458fd86e0bc8f43b6, type: 3}
   currentEnemy: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 1467240007}
+  danceCam: {fileID: 0}
 --- !u!81 &1217387146
 AudioListener:
   m_ObjectHideFlags: 0
@@ -38695,7 +38697,7 @@ MonoBehaviour:
   coverSeqOBJ: {fileID: 1875415347}
   healthCam: {fileID: 823747225}
   cutsceneCam: {fileID: 1052473494}
-  arrowsSpawn: {fileID: 1859906473}
+  arrowsSpawn: {fileID: 267345640}
   arrows: {fileID: 705461236}
   countdown: {fileID: 804681475}
   Timerbar: {fileID: 193982910}
