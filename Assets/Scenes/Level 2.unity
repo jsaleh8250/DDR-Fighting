@@ -9757,6 +9757,7 @@ MonoBehaviour:
   boomFX: {fileID: 431222526}
   krackFX: {fileID: 300867857}
   whamFX: {fileID: 1331325109}
+  danceFX: {fileID: 1393198276}
   secondLevel: 1
 --- !u!1 &625012064
 GameObject:
