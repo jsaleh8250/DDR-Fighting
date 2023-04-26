@@ -41,7 +41,7 @@ public class BattleMode : MonoBehaviour
     public Timer timerScript;
 
     //EFFECTS
-    public GameObject boomFX, krackFX, whamFX;
+    public GameObject boomFX, krackFX, whamFX, danceFX;
 
     public bool secondLevel;
 
@@ -63,6 +63,7 @@ public class BattleMode : MonoBehaviour
         }
         else
         {
+            danceFX.SetActive(true);
             firstTry = false;
         }
             
