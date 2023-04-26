@@ -86,7 +86,7 @@ public class BattleMode : MonoBehaviour
     public void OnDisable()
     {
         DeleteEnemy();
-        GameManager.inBattleMode = false;
+        //GameManager.inBattleMode = false;
         battleMode.SetActive(false);
     }
 
