@@ -14,6 +14,7 @@ public class DanceSequence : MonoBehaviour
     private int currentEnemyType;
 
     public GameObject player;
+    public GameObject danceCam;
 
     public void OnEnable()
     {
@@ -25,9 +26,10 @@ public class DanceSequence : MonoBehaviour
     public void OnDisable()
     {
         DeleteEnemy();
+        danceCam.SetActive(false);
     }
 
-    void Update()
+    void Start()
     {
         StartCoroutine(DanceOff(songTime));
     }
@@ -71,6 +73,12 @@ public class DanceSequence : MonoBehaviour
 
     }
 
+    public void UnPausePlayer()
+    {
+        player.GetComponent<playerMovement>().horizontalSpeed = 5f;
+        player.GetComponent<playerMovement>().VerticalSpeed = 5f;
+    }
+
     public void DeleteEnemy()
     {
         Destroy(currentEnemy);
@@ -81,5 +89,7 @@ public class DanceSequence : MonoBehaviour
     {
         yield return new WaitForSeconds(songTime);
         GameManager.inDanceSequence = false;
+        this.enabled = false;
+        UnPausePlayer();
     }
 }

@@ -2248,7 +2248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131070913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.36, y: -1.46, z: 0}
+  m_LocalPosition: {x: 10.33, y: -1.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4673,7 +4673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5376535602228014084, guid: e2390cc7acd3bdb40bf92eb76f7df156, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.157932
+      value: 16.57
       objectReference: {fileID: 0}
     - target: {fileID: 5376535602228014084, guid: e2390cc7acd3bdb40bf92eb76f7df156, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8599,6 +8599,7 @@ MonoBehaviour:
   whamFX: {fileID: 1331325109}
   danceFX: {fileID: 1393198276}
   secondLevel: 0
+  battleMode: {fileID: 606207428}
 --- !u!1 &606637127
 GameObject:
   m_ObjectHideFlags: 0
@@ -9486,6 +9487,7 @@ MonoBehaviour:
   enemyPrefab3: {fileID: 7393395903032510395, guid: 3d473b0a079afe6458fd86e0bc8f43b6, type: 3}
   currentEnemy: {fileID: 0}
   player: {fileID: 1467240007}
+  danceCam: {fileID: 687567116}
 --- !u!1 &690002628
 GameObject:
   m_ObjectHideFlags: 0
@@ -27531,11 +27533,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5376535602228014084, guid: a82cad61f2703c04996bdec41bba738f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.032692
+      value: 32.48
       objectReference: {fileID: 0}
     - target: {fileID: 5376535602228014084, guid: a82cad61f2703c04996bdec41bba738f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8844004
+      value: 3.01
       objectReference: {fileID: 0}
     - target: {fileID: 5376535602228014084, guid: a82cad61f2703c04996bdec41bba738f, type: 3}
       propertyPath: m_LocalPosition.z
