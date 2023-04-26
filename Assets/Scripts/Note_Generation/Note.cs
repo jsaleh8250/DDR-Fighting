@@ -45,10 +45,11 @@ public class Note : MonoBehaviour
             {
                 GameManager.isPressed = true;
                 Destroy(gameObject);
-                if(GameManager.inHealthMode = true)
+                if(GameManager.inHealthMode == true)
                 {
                     healthbar.ADD(.05f);
                 }
+                
                
 
                 AttackButton.Invoke(buttonToPress);
