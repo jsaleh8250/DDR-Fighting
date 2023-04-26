@@ -28217,6 +28217,7 @@ MonoBehaviour:
   boomFX: {fileID: 431222526}
   krackFX: {fileID: 300867857}
   whamFX: {fileID: 1331325109}
+  coverMode: {fileID: 1036227671}
 --- !u!1 &1054491999
 GameObject:
   m_ObjectHideFlags: 0

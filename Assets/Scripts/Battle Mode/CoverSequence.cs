@@ -26,12 +26,16 @@ public class CoverSequence : MonoBehaviour
 
     public GameObject boomFX, krackFX, whamFX;
 
+    public GameObject coverMode;
+
     void Awake()
     {
         player.GetComponent<playerMovement>().Move(0, 0);
         player.GetComponent<playerMovement>().horizontalSpeed = 0f;
         player.GetComponent<playerMovement>().VerticalSpeed = 0f;
         player.GetComponent<Transform>().position = new Vector2(secondCam.transform.position.x - 3f, secondCam.transform.position.y - .35f);
+
+        coverMode.SetActive(true);
     }
 
     public void Start()
@@ -227,6 +231,7 @@ public class CoverSequence : MonoBehaviour
     public void DeleteEnemy()
     {
         Destroy(currentEnemy);
+        coverMode.SetActive(false);
     }
 
 

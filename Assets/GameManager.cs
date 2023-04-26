@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
                 battleSeqOBJ.SetActive(false);
                 coverSeq.SetActive(true);
                 coverSeqOBJ.SetActive(true);
+                secondCam.SetActive(true);
                 Debug.Log("Cover Mode On");
             }
             else
