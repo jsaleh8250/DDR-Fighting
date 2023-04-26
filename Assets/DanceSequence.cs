@@ -17,6 +17,7 @@ public class DanceSequence : MonoBehaviour
 
     public void OnEnable()
     {
+        StartCoroutine(DanceOff(songTime));
         currentEnemyType = player.GetComponent<playerMovement>().currentEnmyType;
         InstantiateEnemy();
         PausePlayer();
@@ -25,11 +26,6 @@ public class DanceSequence : MonoBehaviour
     public void OnDisable()
     {
         DeleteEnemy();
-    }
-
-    void Update()
-    {
-        StartCoroutine(DanceOff(songTime));
     }
 
     void PausePlayer()
@@ -80,6 +76,7 @@ public class DanceSequence : MonoBehaviour
     IEnumerator DanceOff(float songTIme)
     {
         yield return new WaitForSeconds(songTime);
+
         GameManager.inDanceSequence = false;
     }
 }
