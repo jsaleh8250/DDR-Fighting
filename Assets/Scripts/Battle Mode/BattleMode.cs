@@ -8,7 +8,7 @@ public class BattleMode : MonoBehaviour
     public GameObject player;
     public GameObject secondCam;
 
-    public static int buttons = 3;
+    public static int buttons = 7;
 
     //Sequence
     public GameObject[] NotePrefab;

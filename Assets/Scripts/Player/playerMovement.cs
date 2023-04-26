@@ -73,6 +73,7 @@ public class playerMovement : MonoBehaviour
 
     public void Attack(string buttonToPress)
     {
+        /*
         int randNum = Random.Range(1, 3);
         animator.SetTrigger("atk" + randNum);
 
@@ -85,7 +86,7 @@ public class playerMovement : MonoBehaviour
 
         StartCoroutine(attackCooldown(.35f));
 
-
+        */
     }
 
 
