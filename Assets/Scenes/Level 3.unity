@@ -12033,6 +12033,7 @@ MonoBehaviour:
   whamFX: {fileID: 1331325109}
   danceFX: {fileID: 1393198276}
   secondLevel: 0
+  battleMode: {fileID: 606207428}
 --- !u!1 &606637127
 GameObject:
   m_ObjectHideFlags: 0
@@ -31545,6 +31546,7 @@ MonoBehaviour:
   boomFX: {fileID: 431222526}
   krackFX: {fileID: 300867857}
   whamFX: {fileID: 1331325109}
+  coverMode: {fileID: 1036227671}
 --- !u!1 &1054491999
 GameObject:
   m_ObjectHideFlags: 0
@@ -39290,6 +39292,7 @@ MonoBehaviour:
   enemyPrefab3: {fileID: 7393395903032510395, guid: 3d473b0a079afe6458fd86e0bc8f43b6, type: 3}
   currentEnemy: {fileID: 0}
   player: {fileID: 0}
+  danceCam: {fileID: 0}
 --- !u!81 &1701699389
 AudioListener:
   m_ObjectHideFlags: 0
