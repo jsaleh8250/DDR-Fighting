@@ -22500,6 +22500,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 683808831326903235, guid: c5bd1aedf128fa042800fbf547a651b3, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2140026635}
+    - target: {fileID: 683808831326903235, guid: c5bd1aedf128fa042800fbf547a651b3, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1554861945}
     - target: {fileID: 683808831462075862, guid: c5bd1aedf128fa042800fbf547a651b3, type: 3}
       propertyPath: m_Name
       value: SecondCam
@@ -22923,6 +22931,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3060238005646307008, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1554861945}
     - target: {fileID: 3060238005761949379, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
       propertyPath: m_Name
       value: DanceCam
@@ -22932,9 +22944,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3060238005761949406, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
+      propertyPath: Arrows
+      value: 
+      objectReference: {fileID: 1266665044}
+    - target: {fileID: 3060238005761949406, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2140026635}
+    - target: {fileID: 3060238005761949406, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
+      propertyPath: spawner
+      value: 
+      objectReference: {fileID: 1266665043}
     - target: {fileID: 3060238005761949407, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -22983,15 +23003,42 @@ PrefabInstance:
       propertyPath: ScoreText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3060238006153549556, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6484657153361376195, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6484657153361376195, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
 --- !u!1 &1266665041 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3060238005761949379, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
+  m_PrefabInstance: {fileID: 1266665040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1266665042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266665041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5d5960b6be9024aa0d14123623366f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1266665043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3060238006868878334, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
+  m_PrefabInstance: {fileID: 1266665040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1266665044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3060238006107605371, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
   m_PrefabInstance: {fileID: 1266665040}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1282976734

@@ -47,7 +47,7 @@ public class DanceSequence : MonoBehaviour
         player.GetComponent<playerMovement>().VerticalSpeed = 0f;
         player.GetComponent<PlayerInput>().horizontalMove = 0f;
         player.GetComponent<PlayerInput>().verticalMove = 0f;
-        player.GetComponent<Transform>().position = new Vector2(player.transform.position.x, this.transform.position.y - .35f);
+        player.GetComponent<Transform>().position = new Vector2(player.transform.position.x + 3f, this.transform.position.y - .35f);
         currentEnemy.transform.GetChild(0).gameObject.SetActive(true);
     }
 

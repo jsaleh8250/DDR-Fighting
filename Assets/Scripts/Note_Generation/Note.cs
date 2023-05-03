@@ -64,16 +64,17 @@ public class Note : MonoBehaviour
 
                 }else if(Mathf.Abs(transform.position.y) > .90f)
                 {
-                    Debug.Log("Good Hit");
-                    ScoreHandler.instance.GoodHit();
-                    Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
+                    ScoreHandler.instance.PerfectHit();
+                    Debug.Log("Perfect");
+                    Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
+                    
 
                 }
                 else
                 {
-                    ScoreHandler.instance.PerfectHit();
-                    Debug.Log("Perfect");
-                    Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
+                    Debug.Log("Good Hit");
+                    ScoreHandler.instance.GoodHit();
+                    Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
                 }
              
             }
