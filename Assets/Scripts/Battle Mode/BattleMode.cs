@@ -54,6 +54,7 @@ public class BattleMode : MonoBehaviour
 
     void Awake()
     {
+        player = GameObject.FindWithTag("Player");
         InstantiateEnemy();
         firstEnemyGone++;
 

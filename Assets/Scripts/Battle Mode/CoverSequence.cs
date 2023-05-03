@@ -30,6 +30,7 @@ public class CoverSequence : MonoBehaviour
 
     void Awake()
     {
+        player = GameObject.FindWithTag("Player");
         player.GetComponent<playerMovement>().Move(0, 0);
         player.GetComponent<playerMovement>().horizontalSpeed = 0f;
         player.GetComponent<playerMovement>().VerticalSpeed = 0f;
