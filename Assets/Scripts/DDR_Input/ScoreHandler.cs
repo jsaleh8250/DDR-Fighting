@@ -7,7 +7,7 @@ using UnityEngine.UI;
 //This is where all the score it kept of hitting the note perfectly or missing. Keeps track of how many enmies where killed.
 public class ScoreHandler : MonoBehaviour
 {
-    public TextMeshProUGUI ScoreText;
+    //public TextMeshProUGUI ScoreText;
     //public TextMeshProUGUI MultiText;
     //public GameObject next;
 
@@ -25,7 +25,7 @@ public class ScoreHandler : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        ScoreText.text = "Score: 0";
+       // ScoreText.text = "Score: 0";
         //next.SetActive(false);
     }
 
@@ -66,24 +66,24 @@ public class ScoreHandler : MonoBehaviour
         
               
         //MultiText.SetText("Multiplier: x" + combo);
-        ScoreText.SetText("Score: " + currentScore);
+        //ScoreText.SetText("Score: " + currentScore);
      }
 
     public void NormalHit()
     {
-        currentScore += scorePerNote * combo;
+        currentScore += scorePerNote;
         NoteHit();
     }
 
     public void GoodHit()
     {
-        currentScore += ScorePerGoodNote * combo;
+        currentScore += ScorePerGoodNote;
         NoteHit();
     }
 
     public void PerfectHit()
     {
-        currentScore += ScorePerPerfectNote * combo;
+        currentScore += ScorePerPerfectNote;
         NoteHit();
     }
 

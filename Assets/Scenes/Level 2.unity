@@ -5397,6 +5397,11 @@ PrefabInstance:
       objectReference: {fileID: 1554861945}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bac3231595426547b1c10272d8ccf96, type: 3}
+--- !u!1 &729684333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 902860251594407376, guid: 6bac3231595426547b1c10272d8ccf96, type: 3}
+  m_PrefabInstance: {fileID: 729684332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &749956752
 GameObject:
   m_ObjectHideFlags: 0
@@ -25087,17 +25092,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6576650621718263119, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
   m_PrefabInstance: {fileID: 1404470323}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1404470328 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6576650621523938995, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
-  m_PrefabInstance: {fileID: 1404470323}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1419108538
 GameObject:
   m_ObjectHideFlags: 0
@@ -26505,6 +26499,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DanceCam
       objectReference: {fileID: 0}
+    - target: {fileID: 3060238005761949406, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 729684333}
     - target: {fileID: 3060238005761949407, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -26552,7 +26550,11 @@ PrefabInstance:
     - target: {fileID: 3060238006153549556, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
       propertyPath: ScoreText
       value: 
-      objectReference: {fileID: 1404470328}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060238006153549556, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
 --- !u!1 &1537121493 stripped
@@ -27441,6 +27443,7 @@ MonoBehaviour:
   - {fileID: 4581405874365479579}
   randListObject: 0
   percentChance: 0.9
+  notes: []
 --- !u!82 &1700941370
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28962,7 +28965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d4c2386623b984b8702dd70b5e3f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreText: {fileID: 220735883}
 --- !u!1 &1790131384
 GameObject:
   m_ObjectHideFlags: 0
