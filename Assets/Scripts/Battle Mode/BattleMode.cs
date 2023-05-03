@@ -52,6 +52,8 @@ public class BattleMode : MonoBehaviour
 
     public Slider enemyHealthSlider;
 
+    private bool enemyConditional = false;
+
     void Awake()
     {
         player = GameObject.FindWithTag("Player");
@@ -90,7 +92,6 @@ public class BattleMode : MonoBehaviour
     public void OnDisable()
     {
         DeleteEnemy();
-        //GameManager.inBattleMode = false;
         battleMode.SetActive(false);
     }
 
@@ -198,6 +199,7 @@ public class BattleMode : MonoBehaviour
                     }
                     else
                     {
+                        enemyConditional = true;
                         enemyHealthSlider.value--;
                         ChargeAdded();
                         GameManager.inCoverMode = true;
@@ -224,6 +226,7 @@ public class BattleMode : MonoBehaviour
                     }
                     else
                     {
+                        enemyConditional = true;
                         enemyHealthSlider.value--;
                         ChargeAdded();
                         GameManager.inCoverMode = true;
@@ -329,6 +332,8 @@ public class BattleMode : MonoBehaviour
                 }
                 else
                 {
+                    enemyConditional = true;
+                    enemyHealthSlider.value--;
                     ChargeAdded();
                     GameManager.inCoverMode = true;
                 }
@@ -346,6 +351,8 @@ public class BattleMode : MonoBehaviour
                 }
                 else
                 {
+                    enemyConditional = true;
+                    enemyHealthSlider.value--;
                     ChargeAdded();
                     GameManager.inCoverMode = true;
                 }
@@ -392,6 +399,9 @@ public class BattleMode : MonoBehaviour
 
             enemyAnim = enemy.GetComponent<Animator>();
             currentEnemy = enemy;
+            GameManager.inDanceSequence = true;
+            GameManager.inBattleMode = false;
+            ClearNotes();
         }
         else if (currentEnemyType == 3)
         {
@@ -401,6 +411,13 @@ public class BattleMode : MonoBehaviour
 
             enemyAnim = enemy.GetComponent<Animator>();
             currentEnemy = enemy;
+
+            if (Random.value < .5 && !enemyConditional)
+            {
+                GameManager.inDanceSequence = true;
+                GameManager.inBattleMode = false;
+                ClearNotes();
+            }
         }
         else
         {
@@ -436,6 +453,7 @@ public class BattleMode : MonoBehaviour
         currentEnemy.transform.GetChild(0).gameObject.SetActive(false);
         StartCoroutine(KillEnemy());
         enemyHealthSlider.value = 3;
+        enemyConditional = false;
     }
 
     void ChangingAnim(string newState)

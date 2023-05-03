@@ -43,6 +43,9 @@ public class SongManager : MonoBehaviour
     //Chance
     public float percentChance;
 
+    //Note List
+    public List<GameObject> notes;
+
     private void Awake()
     {
         instance = this;
@@ -54,6 +57,11 @@ public class SongManager : MonoBehaviour
         spb = 60f / bpm;
         dspSongTime = (float)AudioSettings.dspTime;
         musicSource.Play();
+    }
+
+    private void OnDisable()
+    {
+        Destroy(notes);
     }
 
     private void Update()
@@ -92,6 +100,8 @@ public class SongManager : MonoBehaviour
             }
         }
         note.transform.parent = parent.transform;
+        notes.Add(note);
+        
     }
     
 

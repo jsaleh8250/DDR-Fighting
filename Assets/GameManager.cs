@@ -107,6 +107,7 @@ public class GameManager : MonoBehaviour
             if (inDanceSequence)
             {
 
+                danceCam.transform.GetComponent<DanceSequence>().enabled = true;
                 secondCam.SetActive(false);
                 mainCam.SetActive(false);
                 battleSeq.SetActive(false);

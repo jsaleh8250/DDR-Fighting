@@ -354,6 +354,7 @@ GameObject:
   - component: {fileID: 3060238005761949376}
   - component: {fileID: 3060238005761949377}
   - component: {fileID: 3060238005761949406}
+  - component: {fileID: 6484657153361376195}
   m_Layer: 8
   m_Name: DanceCam
   m_TagString: MainCamera
@@ -453,6 +454,18 @@ MonoBehaviour:
   currentEnemy: {fileID: 0}
   player: {fileID: 0}
   danceCam: {fileID: 3060238005761949379}
+--- !u!114 &6484657153361376195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3060238005761949379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7e3261b77b96b498ba947b203a6a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3060238005786221619
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,8 +901,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 0}
-  MultiText: {fileID: 0}
-  next: {fileID: 0}
 --- !u!1 &3060238006164660710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,7 +1716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf7a904a777b915498779a78b57e826b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 3060238006107605370}
+  parent: {fileID: 3060238006868878333}
   bpm: 120
   spb: 4
   songPos: 0

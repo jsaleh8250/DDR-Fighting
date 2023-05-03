@@ -18,6 +18,8 @@ public class DanceSequence : MonoBehaviour
 
     public void OnEnable()
     {
+        this.enabled = true;
+        this.transform.GetChild(0).transform.GetChild(0).GetComponent<SongManager>().enabled = true;
         StartCoroutine(DanceOff(songTime));
         currentEnemyType = player.GetComponent<playerMovement>().currentEnmyType;
         InstantiateEnemy();
@@ -34,11 +36,17 @@ public class DanceSequence : MonoBehaviour
     void Start()
     {
         StartCoroutine(DanceOff(songTime));
+        player = GameObject.FindWithTag("Player");
     }
 
 
     void PausePlayer()
     {
+        player.GetComponent<playerMovement>().Move(0, 0);
+        player.GetComponent<playerMovement>().horizontalSpeed = 0f;
+        player.GetComponent<playerMovement>().VerticalSpeed = 0f;
+        player.GetComponent<PlayerInput>().horizontalMove = 0f;
+        player.GetComponent<PlayerInput>().verticalMove = 0f;
         player.GetComponent<Transform>().position = new Vector2(player.transform.position.x, this.transform.position.y - .35f);
         currentEnemy.transform.GetChild(0).gameObject.SetActive(true);
     }
@@ -94,6 +102,7 @@ public class DanceSequence : MonoBehaviour
 
         GameManager.inDanceSequence = false;
         this.enabled = false;
+        this.transform.GetChild(0).transform.GetChild(0).GetComponent<SongManager>().enabled = false;
         UnPausePlayer();
     }
 }
