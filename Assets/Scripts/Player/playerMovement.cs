@@ -17,7 +17,7 @@ public class playerMovement : MonoBehaviour
     private bool facingRight;
 
     public float knockbackTime;
-    public GameObject hitFeedback;
+   // public GameObject hitFeedback;
     public static bool isFighting;
 
     public AudioSource audioSource;
@@ -97,10 +97,10 @@ public class playerMovement : MonoBehaviour
 
     IEnumerator attackCooldown(float delay)
     {
-        hitFeedback.SetActive(true);
+        //hitFeedback.SetActive(true);
         yield return new WaitForSeconds(delay);
         isFighting = false;
-        hitFeedback.SetActive(false);
+        //hitFeedback.SetActive(false);
     }
 
    

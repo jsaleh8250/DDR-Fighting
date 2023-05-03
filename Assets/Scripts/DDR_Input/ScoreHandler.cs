@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class ScoreHandler : MonoBehaviour
 {
     public TextMeshProUGUI ScoreText;
-    public TextMeshProUGUI MultiText;
-    public GameObject next;
+    //public TextMeshProUGUI MultiText;
+    //public GameObject next;
 
     public static ScoreHandler instance;
 
@@ -26,7 +26,7 @@ public class ScoreHandler : MonoBehaviour
     {
         instance = this;
         ScoreText.text = "Score: 0";
-        next.SetActive(false);
+        //next.SetActive(false);
     }
 
     public void Update()
@@ -46,10 +46,10 @@ public class ScoreHandler : MonoBehaviour
             combo = 0;
         }
         
-        if(currentScore > 10000)
+        /*if(currentScore > 10000)
         {
             next.SetActive(true);
-        }
+        } */
         
     }
 
