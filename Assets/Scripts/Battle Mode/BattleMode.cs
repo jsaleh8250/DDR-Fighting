@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleMode : MonoBehaviour
 {
@@ -32,8 +33,8 @@ public class BattleMode : MonoBehaviour
 
     // Amount of times
     public int charges = 0;
-    public static int hits = 3;
-    public static int health = 3;
+    public static int hits = 2;
+    public static int health = 2;
 
     public static int timesCalled;
 
@@ -48,6 +49,8 @@ public class BattleMode : MonoBehaviour
     public static bool firstTry;
 
     public GameObject battleMode;
+
+    public Slider enemyHealthSlider;
 
     void Awake()
     {
@@ -194,6 +197,7 @@ public class BattleMode : MonoBehaviour
                     }
                     else
                     {
+                        enemyHealthSlider.value--;
                         ChargeAdded();
                         GameManager.inCoverMode = true;
                         Debug.Log("Completed Sequence");
@@ -219,6 +223,7 @@ public class BattleMode : MonoBehaviour
                     }
                     else
                     {
+                        enemyHealthSlider.value--;
                         ChargeAdded();
                         GameManager.inCoverMode = true;
                     }
@@ -429,6 +434,7 @@ public class BattleMode : MonoBehaviour
         whamFX.SetActive(false);
         currentEnemy.transform.GetChild(0).gameObject.SetActive(false);
         StartCoroutine(KillEnemy());
+        enemyHealthSlider.value = 3;
     }
 
     void ChangingAnim(string newState)
