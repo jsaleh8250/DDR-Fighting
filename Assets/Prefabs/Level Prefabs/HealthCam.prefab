@@ -116,8 +116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 6576650621523938995}
-  MultiText: {fileID: 0}
-  next: {fileID: 0}
 --- !u!1 &6576650620314493580
 GameObject:
   m_ObjectHideFlags: 0
@@ -2253,7 +2251,7 @@ GameObject:
   - component: {fileID: 6576650622181411308}
   - component: {fileID: 6576650622181411283}
   - component: {fileID: 6576650622181411309}
-  - component: {fileID: 6576650622181411280}
+  - component: {fileID: 3996209400803786930}
   m_Layer: 7
   m_Name: Deletion
   m_TagString: Delete
@@ -2323,7 +2321,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6576650622181411280
+--- !u!114 &3996209400803786930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2332,10 +2330,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6576650622181411311}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8535eed495ae8d49b0a874fca6f8330, type: 3}
+  m_Script: {fileID: 11500000, guid: fbe26fe3b95c5f340b007e4868f970ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
 --- !u!1 &6576650622194551463
 GameObject:
   m_ObjectHideFlags: 0
