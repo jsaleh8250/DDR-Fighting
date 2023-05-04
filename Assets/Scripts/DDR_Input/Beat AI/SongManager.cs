@@ -61,7 +61,7 @@ public class SongManager : MonoBehaviour
 
     private void OnDisable()
     {
-        Destroy(notes);
+        //Destroy(notes);
     }
 
     private void Update()

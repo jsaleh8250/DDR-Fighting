@@ -23013,6 +23013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6484657153361376195, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
+    - {fileID: 3060238006153549556, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
 --- !u!1 &1266665041 stripped
 GameObject:
@@ -26039,6 +26040,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6576650620313391584, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6576650621718263119, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
       propertyPath: m_Name
       value: HealthCam

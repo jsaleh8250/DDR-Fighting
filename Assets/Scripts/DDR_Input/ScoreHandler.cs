@@ -18,18 +18,23 @@ public class ScoreHandler : MonoBehaviour
     int ScorePerGoodNote = 55;
     int ScorePerPerfectNote = 150;
 
+    public static int missedHits;
+    public static int normalHits;
+    public static int goodHits;
+    public static int perfectHits;
+
     public static int combo;
    
     public static bool missedNote = false;
 
-    private void Awake()
+    private void Start()
     {
         instance = this;
-       // ScoreText.text = "Score: 0";
+       //ScoreText.text = "Score: 0";
         //next.SetActive(false);
     }
 
-    public void Update()
+    public void Awake()
     {
         //Debug.Log(Note.isPressed);
         if (GameManager.isPressed)
@@ -73,23 +78,30 @@ public class ScoreHandler : MonoBehaviour
     {
         currentScore += scorePerNote;
         NoteHit();
+        
+        Debug.Log(normalHits++);
     }
 
     public void GoodHit()
     {
         currentScore += ScorePerGoodNote;
         NoteHit();
+
+        Debug.Log(goodHits++);
     }
 
     public void PerfectHit()
     {
         currentScore += ScorePerPerfectNote;
         NoteHit();
+        
+        Debug.Log(perfectHits++);
     }
 
     public void NoteMissed()
     {
        missedNote = false;
+       missedHits++;
     }
 
 }
