@@ -44,7 +44,7 @@ public class SongManager : MonoBehaviour
     public float percentChance;
 
     //Note List
-    public List<GameObject> notes;
+    //public List<GameObject> notes;
 
     private void Awake()
     {
@@ -59,11 +59,17 @@ public class SongManager : MonoBehaviour
         musicSource.Play();
     }
 
+    /*
     private void OnDisable()
     {
-        //Destroy(notes);
+        for (int i = 0; i < notes.Count; i++)
+        {
+            Destroy(notes[i]);
+            notes.Remove(notes[i]);
+            break;
+        }
     }
-
+    */
     private void Update()
     {
         loopPositionInAnalog = loopPosInBeats / bpl;
@@ -100,7 +106,7 @@ public class SongManager : MonoBehaviour
             }
         }
         note.transform.parent = parent.transform;
-        notes.Add(note);
+       // notes.Add(note);
         
     }
     
