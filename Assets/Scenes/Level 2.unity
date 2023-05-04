@@ -23986,6 +23986,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6576650620851724764, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
+      propertyPath: bpl
+      value: 1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 6576650621718263119, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
       propertyPath: m_Name
       value: HealthCam
@@ -29786,7 +29790,7 @@ MonoBehaviour:
   krackFX: {fileID: 683808830680864485}
   whamFX: {fileID: 683808831799992129}
   danceFX: {fileID: 683808831736017712}
-  secondLevel: 0
+  secondLevel: 1
   battleMode: {fileID: 683808830341843504}
   enemyHealthSlider: {fileID: 683808831191442591}
 --- !u!1 &683808830388208550

@@ -32270,14 +32270,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: ScoreText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6484657153361376195, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -32428,6 +32420,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6576650620851724764, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
+      propertyPath: bpl
+      value: 1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 6576650620929274371, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
       propertyPath: player
       value: 
@@ -32435,6 +32431,10 @@ PrefabInstance:
     - target: {fileID: 6576650621718263119, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
       propertyPath: m_Name
       value: HealthCam
+      objectReference: {fileID: 0}
+    - target: {fileID: 6576650621718263119, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6576650621718263219, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
       propertyPath: m_RootOrder

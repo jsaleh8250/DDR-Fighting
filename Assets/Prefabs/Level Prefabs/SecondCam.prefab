@@ -1382,7 +1382,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   Timertext: {fileID: 683808830674474825}
   player: {fileID: 0}
-  maxTime: 7
+  maxTime: 11
 --- !u!1 &683808831341265548
 GameObject:
   m_ObjectHideFlags: 0

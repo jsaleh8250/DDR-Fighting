@@ -26044,6 +26044,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6576650620851724764, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
+      propertyPath: bpl
+      value: 1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 6576650621718263119, guid: dc4bc962c691ca5419ccf81f8109aaa2, type: 3}
       propertyPath: m_Name
       value: HealthCam
