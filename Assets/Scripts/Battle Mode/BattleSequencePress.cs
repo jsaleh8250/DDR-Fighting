@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class BattleSequencePress : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class BattleSequencePress : MonoBehaviour
 
     //Audio
     public AudioSource audioSource;
+
+    public static event Action<string> AttackButton = delegate { };
 
     public void Awake()
     {
@@ -41,6 +44,7 @@ public class BattleSequencePress : MonoBehaviour
     {
         if (Input.GetKeyDown(keyToPress))
         {
+            AttackButton.Invoke(buttonToPress);
             ChangeSprite();
             PlayAudio();
         }

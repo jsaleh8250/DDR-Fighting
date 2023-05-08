@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CoverSequencePress : MonoBehaviour
@@ -16,6 +17,8 @@ public class CoverSequencePress : MonoBehaviour
 
     //Audio
     public AudioSource audioSource;
+
+    public static event Action<string> AttackButton = delegate { };
 
     public void Awake()
     {
@@ -36,6 +39,7 @@ public class CoverSequencePress : MonoBehaviour
     {
         if (Input.GetKeyDown(keyToPress))
         {
+            AttackButton.Invoke(buttonToPress);
             ChangeSprite();
             PlayAudio();
         }

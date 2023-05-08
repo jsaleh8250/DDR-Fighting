@@ -25,8 +25,7 @@ public class Note : MonoBehaviour
     {
         controllerString = "Joystick" + GameManager.DDR_PAD_NUM + buttonToPress;
         keyToPress = (KeyCode)System.Enum.Parse(typeof(KeyCode), controllerString);
-
-                
+        
     }
 
     private void Start()

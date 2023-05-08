@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CoverSequence : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class CoverSequence : MonoBehaviour
     public GameObject boomFX, krackFX, whamFX;
 
     public GameObject coverMode;
-
+    
     void Awake()
     {
         player = GameObject.FindWithTag("Player");
