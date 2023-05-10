@@ -34,16 +34,16 @@ public class playerMovement : MonoBehaviour
 
     void OnDisable()
     {
-        Note.AttackButton -= Attack;
-        BattleSequencePress.AttackButton -= Attack;
-        CoverSequencePress.AttackButton -= Attack;
+        Note.AttackButton -= AttackDanceMode;
+        BattleSequencePress.AttackButton -= AttackBattleMode;
+        CoverSequencePress.AttackButton -= AttackCoverMode;
     }
 
     void OnEnable()
     {
-        Note.AttackButton += Attack;
-        BattleSequencePress.AttackButton += Attack;
-        CoverSequencePress.AttackButton += Attack;
+        Note.AttackButton += AttackDanceMode;
+        BattleSequencePress.AttackButton += AttackBattleMode;
+        CoverSequencePress.AttackButton += AttackCoverMode;
     }
 
 
@@ -75,35 +75,32 @@ public class playerMovement : MonoBehaviour
 
     }
 
-    public void Attack(string buttonToPress)
+    public void AttackBattleMode(string buttonToPress)
     {
-        if (GameManager.inBattleMode)
-        {
-            int randNum = Random.Range(1, 3);
-            animator.SetTrigger("atk" + randNum);
+        int randNum = Random.Range(1, 3);
+        animator.SetTrigger("atk" + randNum);
 
-            isFighting = true;
+        isFighting = true;
 
-            Debug.Log("ATTACK IS PRESSED: ");
+        Debug.Log("ATTACK IS PRESSED: ");
 
-            audioSource.clip = audioClipArray[0];
-            audioSource.Play();
+        audioSource.clip = audioClipArray[0];
+        audioSource.Play();
 
-            StartCoroutine(attackCooldown(.35f));
+        StartCoroutine(attackCooldown(.35f));
 
-        }
-        else if (GameManager.inCoverMode)
-        {
-            animator.SetTrigger("block");
-            audioSource.clip = audioClipArray[0];
-            audioSource.Play();
-        }
-        else if (GameManager.inDanceSequence || GameManager.inHealthMode)
-        {
-            animator.SetTrigger("dance1");
-        }
+    }
 
-      
+    public void AttackDanceMode(string buttonToPress)
+    {
+        animator.SetTrigger("dance1");
+    }
+
+    public void AttackCoverMode(string buttonToPress)
+    {
+        animator.SetTrigger("block");
+        audioSource.clip = audioClipArray[0];
+        audioSource.Play();
     }
 
 
