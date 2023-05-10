@@ -507,7 +507,7 @@ public class BattleMode : MonoBehaviour
 
     IEnumerator PlayDeathAnimationOperation()
     {
-        ChangingAnim("Death");
+        enemyAnim.Play("Death");
         yield return new WaitForSeconds(.5f);
         DeleteEnemy();
     }
