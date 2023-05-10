@@ -32214,6 +32214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DanceCam
       objectReference: {fileID: 0}
+    - target: {fileID: 3060238005761949379, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3060238005761949406, guid: 140c87f037cf8d44b986f4984e192c50, type: 3}
       propertyPath: Arrows
       value: 
