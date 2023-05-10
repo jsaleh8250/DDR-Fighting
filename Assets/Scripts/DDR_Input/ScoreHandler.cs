@@ -27,7 +27,7 @@ public class ScoreHandler : MonoBehaviour
    
     public static bool missedNote = false;
 
-    private void Start()
+    public void Start()
     {
         instance = this;
        //ScoreText.text = "Score: 0";
